@@ -4,6 +4,7 @@ import { socialLinks } from "@/lib/social-links";
 type SocialLinksProps = {
   className?: string;
   showAstrology?: boolean;
+  compact?: boolean;
 };
 
 const iconProps = {
@@ -50,7 +51,11 @@ function AstrologyIcon() {
   );
 }
 
-export function SocialLinks({ className = "", showAstrology = true }: SocialLinksProps) {
+export function SocialLinks({
+  className = "",
+  showAstrology = true,
+  compact = false,
+}: SocialLinksProps) {
   const links = [
     {
       href: socialLinks.instagram,
@@ -79,7 +84,7 @@ export function SocialLinks({ className = "", showAstrology = true }: SocialLink
   ];
 
   return (
-    <div className={`social-links ${className}`}>
+    <div className={`social-links ${compact ? "social-links-compact" : ""} ${className}`}>
       {links.map((link) => (
         <Link
           key={link.label}

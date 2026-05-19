@@ -95,8 +95,8 @@ export function TrainingPage({ locale }: TrainingPageProps) {
         </div>
         <div className="module-grid">
           {content.curriculum.modules.map((module) => (
-            <article className="panel module-card" key={module.date}>
-              <p>{module.date}</p>
+            <article className="panel module-card" key={module.label}>
+              <p>{module.label}</p>
               <h3>{module.title}</h3>
               <span>{module.text}</span>
             </article>

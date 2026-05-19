@@ -24,8 +24,13 @@ export function SiteShell({ children, locale }: SiteShellProps) {
       </a>
       <header className="site-header">
         <Link className="brand-mark" href={`/${locale}`} aria-label="Sarita Shakti home">
-          <span>Sarita</span>
-          <span>Shakti</span>
+          <span className="brand-orbit" aria-hidden="true">
+            <span />
+          </span>
+          <span className="brand-wordmark">
+            <span>Sarita Shakti</span>
+            <small>Yoga & Astrology</small>
+          </span>
         </Link>
 
         <nav className="primary-nav" aria-label="Primary navigation">
@@ -35,6 +40,8 @@ export function SiteShell({ children, locale }: SiteShellProps) {
             </Link>
           ))}
         </nav>
+
+        <SocialLinks className="header-social-links" compact />
 
         <nav className="language-nav" aria-label="Language navigation">
           {locales.map((language) => (

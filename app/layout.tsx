@@ -1,7 +1,21 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import { isLocale } from "@/lib/locales";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-cormorant",
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -25,7 +39,10 @@ export default async function RootLayout({
   const htmlLocale = isLocale(requestLocale) ? requestLocale : "en";
 
   return (
-    <html lang={htmlLocale} className="h-full antialiased">
+    <html
+      lang={htmlLocale}
+      className={`${inter.variable} ${cormorant.variable} h-full antialiased`}
+    >
       <body className="min-h-full">{children}</body>
     </html>
   );
