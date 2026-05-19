@@ -44,28 +44,28 @@ export const aboutContent: Record<Locale, AboutContent> = {
       eyebrow: "Il percorso",
       title: "Un lavoro che ascolta il corpo, la psiche e i cicli.",
       paragraphs: [
-        "Sarita Shakti accompagna persone e gruppi attraverso pratiche che uniscono movimento, respiro, consapevolezza corporea, astrologia psicologica e orientamento interiore.",
-        "Il suo approccio è terapeutico e concreto: non separa ciò che accade nel corpo da ciò che vive nella mente, nelle relazioni e nei momenti di passaggio.",
-        "Questa biografia sarà completata con il testo finale della cliente, così da restare precisa e fedele alla sua storia.",
+        "Diplomata alla Bihar School of Yoga in India nel 2001, Sarita Shakti è riconosciuta come insegnante di yoga in Catalogna e da oltre vent'anni condivide la pratica con persone e gruppi.",
+        "Ha vissuto tre anni alla Bihar School of Yoga, immergendosi nel Karma Yoga e nello studio personale. Il suo nome spirituale, Saritashakti, significa energia che scorre e rappresenta il suo modo di accompagnare: fluire con l'energia della vita.",
+        "Il suo percorso integra yoga, astrologia psicologica, ascolto relazionale e maternità. Ha organizzato programmi internazionali di yoga, introdotto lo yoga nelle scuole ed esplora la pratica come strumento concreto di miglioramento interiore.",
       ],
     },
     contact: {
       eyebrow: "Contatto",
       title: "Per sessioni, ritiri e informazioni pratiche.",
       text:
-        "I dettagli di contatto ufficiali verranno inseriti quando la cliente li confermerà. Per ora la pagina è pronta per accogliere WhatsApp, email, luoghi e link social senza rifare il layout.",
+        "Contatti recuperati dal sito attuale. Da ricontrollare con la cliente prima del lancio, insieme al dominio finale e ai redirect SEO.",
       cards: [
         {
           title: "Luoghi",
-          text: "Barcellona, Milano e Sant Pol de Mar, con sessioni online quando necessario.",
+          text: "Carrer Joan Coromines, 08395 Sant Pol de Mar, Barcelona. Percorsi anche tra Barcellona e Milano.",
         },
         {
           title: "Canali",
-          text: "Da confermare: WhatsApp, email, Instagram e altri riferimenti ufficiali.",
+          text: "saritashakti@gmail.com | +34 665 25 98 59 | Instagram, YouTube e Facebook.",
         },
         {
-          title: "Lingue",
-          text: "Italiano, español e English, con contenuti principali disponibili in tutte e tre.",
+          title: "Formazione",
+          text: "Bihar School of Yoga, astrologia psicologica transpersonale, astrologia medica e psicologica.",
         },
       ],
     },
@@ -85,28 +85,28 @@ export const aboutContent: Record<Locale, AboutContent> = {
       eyebrow: "El recorrido",
       title: "Un trabajo que escucha el cuerpo, la psique y los ciclos.",
       paragraphs: [
-        "Sarita Shakti acompaña a personas y grupos a través de prácticas que unen movimiento, respiración, conciencia corporal, astrología psicológica y orientación interior.",
-        "Su enfoque es terapéutico y concreto: no separa lo que ocurre en el cuerpo de lo que vive en la mente, en las relaciones y en los momentos de cambio.",
-        "Esta biografía se completará con el texto final de la clienta para mantenerse precisa y fiel a su historia.",
+        "Graduada en la Bihar School of Yoga, India, en 2001, Sarita Shakti es reconocida como instructora de yoga en Cataluña y lleva más de veinte años compartiendo la práctica con personas y grupos.",
+        "Vivió tres años en la Bihar School of Yoga, dedicada al Karma Yoga y al estudio personal. Su nombre espiritual, Saritashakti, significa energía que fluye y habla de su manera de acompañar: fluir con la energía de la vida.",
+        "Su camino integra yoga, astrología psicológica, escucha relacional y maternidad. Ha organizado programas internacionales de yoga, introducido yoga en escuelas y entiende la práctica como una herramienta concreta de mejora interior.",
       ],
     },
     contact: {
       eyebrow: "Contacto",
       title: "Para sesiones, retiros e información práctica.",
       text:
-        "Los datos de contacto oficiales se añadirán cuando la clienta los confirme. Por ahora la página queda lista para WhatsApp, email, lugares y redes sin rehacer el diseño.",
+        "Contactos recuperados del sitio actual. Conviene revisarlos con la clienta antes del lanzamiento, junto con el dominio final y los redirects SEO.",
       cards: [
         {
           title: "Lugares",
-          text: "Barcelona, Milán y Sant Pol de Mar, con sesiones online cuando sea necesario.",
+          text: "Carrer Joan Coromines, 08395 Sant Pol de Mar, Barcelona. Procesos también entre Barcelona y Milán.",
         },
         {
           title: "Canales",
-          text: "Por confirmar: WhatsApp, email, Instagram y otras referencias oficiales.",
+          text: "saritashakti@gmail.com | +34 665 25 98 59 | Instagram, YouTube y Facebook.",
         },
         {
-          title: "Idiomas",
-          text: "Italiano, español e English, con contenidos principales disponibles en los tres.",
+          title: "Formación",
+          text: "Bihar School of Yoga, astrología psicológica transpersonal, astrología médica y psicológica.",
         },
       ],
     },
@@ -126,28 +126,28 @@ export const aboutContent: Record<Locale, AboutContent> = {
       eyebrow: "The Path",
       title: "Work that listens to the body, the psyche, and the cycles.",
       paragraphs: [
-        "Sarita Shakti accompanies people and groups through practices that weave movement, breath, body awareness, psychological astrology, and inner orientation.",
-        "Her approach is therapeutic and practical: it does not separate what happens in the body from what lives in the mind, relationships, and moments of transition.",
-        "This biography will be completed with the client's final text so it remains precise and faithful to her story.",
+        "A graduate of the Bihar School of Yoga in India in 2001, Sarita Shakti is recognized as a yoga instructor in Catalonia and has shared yoga with people and groups for more than twenty years.",
+        "She spent three years at the Bihar School of Yoga immersed in Karma Yoga and personal study. Her spiritual name, Saritashakti, means flowing energy and reflects her way of guiding: flowing with the energy of life.",
+        "Her path integrates yoga, psychological astrology, relational listening, and motherhood. She has organized international yoga programs, introduced yoga in schools, and approaches practice as a concrete tool for inner growth.",
       ],
     },
     contact: {
       eyebrow: "Contact",
       title: "For sessions, retreats, and practical details.",
       text:
-        "Official contact details will be added once the client confirms them. For now, the page is ready for WhatsApp, email, locations, and social links without changing the layout.",
+        "Contact details recovered from the current site. They should be checked with the client before launch, alongside the final domain and SEO redirects.",
       cards: [
         {
           title: "Places",
-          text: "Barcelona, Milan, and Sant Pol de Mar, with online sessions when needed.",
+          text: "Carrer Joan Coromines, 08395 Sant Pol de Mar, Barcelona. Work also between Barcelona and Milan.",
         },
         {
           title: "Channels",
-          text: "To confirm: WhatsApp, email, Instagram, and other official references.",
+          text: "saritashakti@gmail.com | +34 665 25 98 59 | Instagram, YouTube, and Facebook.",
         },
         {
-          title: "Languages",
-          text: "Italiano, español, and English, with main content available in all three.",
+          title: "Training",
+          text: "Bihar School of Yoga, transpersonal psychological astrology, medical and psychological astrology.",
         },
       ],
     },
