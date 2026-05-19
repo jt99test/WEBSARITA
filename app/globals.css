@@ -432,6 +432,172 @@ a {
   padding-left: 1.15rem;
 }
 
+.retreats-hero {
+  position: relative;
+  display: flex;
+  min-height: min(780px, calc(100vh - 5rem));
+  align-items: end;
+  overflow: hidden;
+  padding: 8rem max(clamp(1rem, 6vw, 5rem), calc((100vw - 72rem) / 2)) 5rem;
+}
+
+.retreats-hero-image,
+.practical-image {
+  object-fit: cover;
+}
+
+.retreats-hero-image {
+  object-position: center 50%;
+}
+
+.retreats-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(3, 8, 20, 0.1), rgba(3, 8, 20, 0.86)),
+    linear-gradient(90deg, rgba(3, 8, 20, 0.72), rgba(3, 8, 20, 0.18));
+}
+
+.retreats-hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 52rem;
+}
+
+.retreat-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 5rem clamp(1rem, 4vw, 2rem);
+}
+
+.retreat-pillar {
+  min-height: 15rem;
+  padding: 1.25rem;
+}
+
+.retreat-pillar h2 {
+  margin: 0 0 0.8rem;
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  line-height: 1;
+}
+
+.retreat-pillar p,
+.nourishment-copy p,
+.practical-copy p,
+.practical-copy li,
+.practical-list p {
+  color: var(--soft-blue);
+  line-height: 1.65;
+}
+
+.nourishment-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 2rem clamp(1rem, 4vw, 2rem) 6rem;
+}
+
+.nourishment-copy {
+  max-width: 34rem;
+}
+
+.nourishment-copy p {
+  font-size: 1.08rem;
+}
+
+.nourishment-gallery {
+  display: grid;
+  grid-template-columns: 1fr 0.62fr;
+  gap: 1rem;
+  align-items: end;
+}
+
+.nourishment-image {
+  display: block;
+  width: 100%;
+  height: 28rem;
+  border: 1px solid rgba(215, 231, 255, 0.14);
+  border-radius: 0.5rem;
+  object-fit: cover;
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.32),
+    0 0 38px rgba(0, 102, 255, 0.1);
+}
+
+.nourishment-image:nth-child(2) {
+  height: 22rem;
+}
+
+.practical-section {
+  position: relative;
+  min-height: 42rem;
+  overflow: hidden;
+  padding: 5rem max(clamp(1rem, 6vw, 5rem), calc((100vw - 72rem) / 2));
+}
+
+.practical-image {
+  object-position: center;
+}
+
+.practical-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(3, 8, 20, 0.9), rgba(3, 8, 20, 0.2)),
+    linear-gradient(180deg, rgba(3, 8, 20, 0.12), rgba(3, 8, 20, 0.74));
+}
+
+.practical-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 46rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
+}
+
+.practical-copy h2 {
+  margin: 0.75rem 0 1rem;
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.practical-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.practical-list article {
+  border-top: 1px solid rgba(245, 215, 130, 0.5);
+  padding-top: 0.85rem;
+}
+
+.practical-list h3 {
+  margin: 0 0 0.55rem;
+  color: var(--dusty-gold);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.practical-list p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
 .pillar-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -619,8 +785,33 @@ a {
   }
 
   .feature-section,
-  .location-list {
+  .location-list,
+  .retreat-pillars,
+  .nourishment-section,
+  .nourishment-gallery,
+  .practical-list {
     grid-template-columns: 1fr;
+  }
+
+  .retreats-hero {
+    min-height: 74vh;
+    padding-top: 5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .retreats-hero-image {
+    object-position: 52% center;
+  }
+
+  .retreats-hero-overlay {
+    background:
+      linear-gradient(180deg, rgba(3, 8, 20, 0.08), rgba(3, 8, 20, 0.9)),
+      linear-gradient(90deg, rgba(3, 8, 20, 0.78), rgba(3, 8, 20, 0.2));
+  }
+
+  .nourishment-image,
+  .nourishment-image:nth-child(2) {
+    height: 20rem;
   }
 
   .retreat-signal {
