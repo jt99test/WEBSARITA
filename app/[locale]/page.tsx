@@ -33,17 +33,8 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
 
   return (
     <>
-      <section className="hero-section">
-        <Image
-          className="hero-background-image"
-          src="/images/SaritaSpol_MedRes_M59C0305.jpg"
-          alt={content.imageAlt.hero}
-          fill
-          priority
-          sizes="100vw"
-        />
-        <div className="hero-image-overlay" />
-        <div className="hero-copy">
+      <section className="home-hero">
+        <div className="home-hero-copy">
           <p className="eyebrow">{content.eyebrow}</p>
           <h1 className="hero-title">{content.title}</h1>
           <p className="hero-intro">{content.intro}</p>
@@ -57,9 +48,20 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
             </Link>
           </div>
         </div>
+        <div className="home-hero-media">
+          <Image
+            className="home-hero-image"
+            src="/images/SaritaSpol_MedRes_M59C0540.jpg"
+            alt={content.imageAlt.hero}
+            width={1920}
+            height={1080}
+            priority
+            sizes="(max-width: 820px) 100vw, 42vw"
+          />
+        </div>
       </section>
 
-      <section className="content-band" aria-label="Practice areas">
+      <section className="content-band home-pillars-band" aria-label="Practice areas">
         <div className="pillar-grid">
           {content.pillars.map((pillar) => (
             <article className="panel pillar-card" key={pillar.title}>
