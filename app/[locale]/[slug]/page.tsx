@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { AboutPage } from "@/components/about-page";
 import { CoachingPage } from "@/components/coaching-page";
 import { RetreatsPage } from "@/components/retreats-page";
+import { TrainingPage } from "@/components/training-page";
 import { isLocale } from "@/lib/locales";
 import { pageContent, pageSlugs, PageSlug } from "@/lib/page-content";
 import { buildPageMetadata } from "@/lib/site";
@@ -61,6 +62,10 @@ export default async function BasicPage({ params }: BasicPageProps) {
 
   if (slug === "retreats") {
     return <RetreatsPage locale={locale} />;
+  }
+
+  if (slug === "training") {
+    return <TrainingPage locale={locale} />;
   }
 
   return (

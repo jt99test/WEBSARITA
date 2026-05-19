@@ -105,21 +105,21 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
   training: {
     it: {
       eyebrow: "Training",
-      title: "Formazione",
+      title: "Yoga e astrologia psicologica",
       intro:
-        "La pagina training sarà completata quando saranno confermati contenuti, struttura e dettagli dell'offerta.",
+        "Formazioni residenziali e in presenza con yoga, carta natale e astrologia psicologica.",
     },
     es: {
       eyebrow: "Formación",
-      title: "Formación",
+      title: "Yoga y astrología psicológica",
       intro:
-        "La página de formación se completará cuando se confirmen contenidos, estructura y detalles de la oferta.",
+        "Formaciones residenciales y presenciales con yoga, carta natal y astrología psicológica.",
     },
     en: {
       eyebrow: "Training",
-      title: "Training",
+      title: "Yoga and psychological astrology",
       intro:
-        "The training page will be completed once content, structure, and offer details are confirmed.",
+        "Residential and in-person trainings with yoga, natal chart work, and psychological astrology.",
     },
   },
   blog: {
