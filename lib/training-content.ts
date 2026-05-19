@@ -22,6 +22,7 @@ export type TrainingContent = {
   intro: string;
   primaryCta: string;
   secondaryCta: string;
+  priceNote: string;
   imageAlt: {
     hero: string;
     portrait: string;
@@ -99,6 +100,7 @@ export const trainingContent: Record<Locale, TrainingContent> = {
       "Percorsi residenziali e in presenza che uniscono yoga terapeutico, astrologia psicologica e pratica esperienziale.",
     primaryCta: "Chiedi informazioni",
     secondaryCta: "Programma Milano",
+    priceNote: "Prezzo indicativo",
     imageAlt: {
       hero: "Sarita Shakti durante una pratica di yoga in ritiro.",
       portrait: "Sarita Shakti insegna e spiega il lavoro astrologico.",
@@ -159,6 +161,7 @@ export const trainingContent: Record<Locale, TrainingContent> = {
       "Recorridos residenciales y presenciales que unen yoga terapéutico, astrología psicológica y práctica experiencial.",
     primaryCta: "Pedir información",
     secondaryCta: "Programa Milán",
+    priceNote: "Precio orientativo",
     imageAlt: {
       hero: "Sarita Shakti durante una práctica de yoga en retiro.",
       portrait: "Sarita Shakti enseña y explica el trabajo astrológico.",
@@ -219,6 +222,7 @@ export const trainingContent: Record<Locale, TrainingContent> = {
       "Residential and in-person paths combining therapeutic yoga, psychological astrology, and experiential practice.",
     primaryCta: "Ask for details",
     secondaryCta: "Milan program",
+    priceNote: "Guide price",
     imageAlt: {
       hero: "Sarita Shakti during a retreat yoga practice.",
       portrait: "Sarita Shakti teaching and explaining astrological work.",

@@ -54,7 +54,7 @@ export function TrainingPage({ locale }: TrainingPageProps) {
               </div>
               <div>
                 <dt>{offer.price}</dt>
-                <dd>Source price</dd>
+                <dd>{content.priceNote}</dd>
               </div>
             </dl>
             <ul>

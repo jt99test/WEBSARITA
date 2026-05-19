@@ -11,6 +11,12 @@ const navItems = [
   { href: "about", label: { it: "Contatto", es: "Contacto", en: "Contact" } },
 ];
 
+const skipLabels: Record<Locale, string> = {
+  it: "Salta al contenuto",
+  es: "Saltar al contenido",
+  en: "Skip to content",
+};
+
 type SiteShellProps = {
   children: React.ReactNode;
   locale: Locale;
@@ -20,7 +26,7 @@ export function SiteShell({ children, locale }: SiteShellProps) {
   return (
     <div className="site-background min-h-screen text-ivory">
       <a className="skip-link" href="#main">
-        Skip to content
+        {skipLabels[locale]}
       </a>
       <header className="site-header">
         <Link className="brand-mark" href={`/${locale}`} aria-label="Sarita Shakti home">

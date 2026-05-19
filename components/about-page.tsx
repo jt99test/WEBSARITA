@@ -8,6 +8,12 @@ type AboutPageProps = {
   locale: Locale;
 };
 
+const bookingLabels: Record<Locale, string> = {
+  it: "Prenotazioni",
+  es: "Reservas",
+  en: "Booking",
+};
+
 export function AboutPage({ locale }: AboutPageProps) {
   const content = aboutContent[locale];
 
@@ -77,7 +83,7 @@ export function AboutPage({ locale }: AboutPageProps) {
         <div className="contact-actions">
           <SocialLinks />
           <Link className="ghost-gold-button" href={`/${locale}/booking`}>
-            Booking
+            {bookingLabels[locale]}
           </Link>
         </div>
       </section>
