@@ -742,7 +742,7 @@ a {
 
 .contact-card-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
   margin: 2rem 0;
 }
@@ -763,6 +763,56 @@ a {
 
 .contact-card p {
   margin: 0;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.social-link {
+  display: grid;
+  width: 2.8rem;
+  height: 2.8rem;
+  place-items: center;
+  border: 1px solid rgba(245, 215, 130, 0.48);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(7, 20, 55, 0.82), rgba(4, 8, 24, 0.92));
+  color: var(--dusty-gold);
+  transition:
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  border-color: rgba(255, 240, 184, 0.9);
+  color: var(--ivory);
+  transform: translateY(-1px);
+}
+
+.social-link svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.footer-social-links {
+  justify-content: center;
 }
 
 .training-hero {

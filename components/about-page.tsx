@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SocialLinks } from "@/components/social-links";
 import { aboutContent } from "@/lib/about-content";
 import { Locale } from "@/lib/locales";
 
@@ -73,9 +74,12 @@ export function AboutPage({ locale }: AboutPageProps) {
             </article>
           ))}
         </div>
-        <Link className="ghost-gold-button" href={`/${locale}/booking`}>
-          Booking
-        </Link>
+        <div className="contact-actions">
+          <SocialLinks />
+          <Link className="ghost-gold-button" href={`/${locale}/booking`}>
+            Booking
+          </Link>
+        </div>
       </section>
     </>
   );

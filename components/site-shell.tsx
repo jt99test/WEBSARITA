@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SocialLinks } from "@/components/social-links";
 import { Locale, localeLabels, locales } from "@/lib/locales";
 
 const navItems = [
@@ -52,6 +53,7 @@ export function SiteShell({ children, locale }: SiteShellProps) {
 
       <footer className="site-footer">
         <p>Barcelona | Milano | Sant Pol de Mar</p>
+        <SocialLinks className="footer-social-links" />
         <p>SEO redirects and final domain mapping remain launch blockers.</p>
       </footer>
     </div>

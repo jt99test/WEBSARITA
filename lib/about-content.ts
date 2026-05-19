@@ -61,7 +61,11 @@ export const aboutContent: Record<Locale, AboutContent> = {
         },
         {
           title: "Canali",
-          text: "saritashakti@gmail.com | +34 665 25 98 59 | Instagram, YouTube e Facebook.",
+          text: "saritashakti@gmail.com | +34 665 25 98 59 | Instagram @saritastroyoga | YouTube Sarita Shakti Yoga.",
+        },
+        {
+          title: "Astrologia",
+          text: "Il servizio dedicato alle letture astrologiche vive anche su saritaastrology.com.",
         },
         {
           title: "Formazione",
@@ -102,7 +106,11 @@ export const aboutContent: Record<Locale, AboutContent> = {
         },
         {
           title: "Canales",
-          text: "saritashakti@gmail.com | +34 665 25 98 59 | Instagram, YouTube y Facebook.",
+          text: "saritashakti@gmail.com | +34 665 25 98 59 | Instagram @saritastroyoga | YouTube Sarita Shakti Yoga.",
+        },
+        {
+          title: "Astrología",
+          text: "El servicio dedicado a las lecturas astrológicas también vive en saritaastrology.com.",
         },
         {
           title: "Formación",
@@ -143,7 +151,11 @@ export const aboutContent: Record<Locale, AboutContent> = {
         },
         {
           title: "Channels",
-          text: "saritashakti@gmail.com | +34 665 25 98 59 | Instagram, YouTube, and Facebook.",
+          text: "saritashakti@gmail.com | +34 665 25 98 59 | Instagram @saritastroyoga | YouTube Sarita Shakti Yoga.",
+        },
+        {
+          title: "Astrology",
+          text: "The dedicated astrology reading service also lives at saritaastrology.com.",
         },
         {
           title: "Training",
