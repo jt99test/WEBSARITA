@@ -59,7 +59,6 @@ export function SiteShell({ children, locale }: SiteShellProps) {
       <main id="main">{children}</main>
 
       <footer className="site-footer">
-        <p>Barcelona | Milano | Sant Pol de Mar</p>
         <SocialLinks className="footer-social-links" />
         <p>SEO redirects and final domain mapping remain launch blockers.</p>
       </footer>
