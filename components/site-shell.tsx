@@ -5,7 +5,7 @@ const navItems = [
   { href: "", label: { it: "Home", es: "Inicio", en: "Home" } },
   { href: "coaching", label: { it: "Coaching", es: "Coaching", en: "Coaching" } },
   { href: "retreats", label: { it: "Ritiri", es: "Retiros", en: "Retreats" } },
-  { href: "training", label: { it: "Training", es: "Formacion", en: "Training" } },
+  { href: "training", label: { it: "Training", es: "Formación", en: "Training" } },
   { href: "blog", label: { it: "Blog", es: "Blog", en: "Blog" } },
   { href: "about", label: { it: "Contatto", es: "Contacto", en: "Contact" } },
 ];

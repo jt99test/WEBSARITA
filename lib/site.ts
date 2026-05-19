@@ -20,9 +20,9 @@ const homeSeo: Record<Locale, PageSeo> = {
       "Yoga terapeutico, astrologia psicologica e coaching olistico con Sarita Shakti tra Barcellona, Milano e Sant Pol de Mar.",
   },
   es: {
-    title: "Yoga terapeutico y astrologia psicologica",
+    title: "Yoga terapéutico y astrología psicológica",
     description:
-      "Yoga terapeutico, astrologia psicologica y coaching holistico con Sarita Shakti entre Barcelona, Milan y Sant Pol de Mar.",
+      "Yoga terapéutico, astrología psicológica y coaching holístico con Sarita Shakti entre Barcelona, Milán y Sant Pol de Mar.",
   },
   en: {
     title: "Therapeutic yoga and psychological astrology",

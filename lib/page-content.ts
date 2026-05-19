@@ -30,7 +30,7 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
       eyebrow: "About | Contacto",
       title: "Conoce a Sarita",
       intro:
-        "Biografia, ubicaciones, contacto y detalles practicos se completaran con la informacion final de la clienta.",
+        "Biografía, ubicaciones, contacto y detalles prácticos se completarán con la información final de la clienta.",
     },
     en: {
       eyebrow: "About | Contact",
@@ -51,8 +51,8 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
       eyebrow: "Booking",
       title: "Reservas",
       intro:
-        "La pagina de reservas usara un embed reemplazable mientras se decide entre Google Appointment Schedules y Calendly.",
-      note: "Bloqueado por decision de cliente: herramienta de reservas y pagos.",
+        "La página de reservas usará un embed reemplazable mientras se decide entre Google Appointment Schedules y Calendly.",
+      note: "Bloqueado por decisión de cliente: herramienta de reservas y pagos.",
     },
     en: {
       eyebrow: "Booking",
@@ -72,9 +72,9 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
     },
     es: {
       eyebrow: "Servicios",
-      title: "Coaching y astrologia psicologica",
+      title: "Coaching y astrología psicológica",
       intro:
-        "Las ofertas y precios se construiran desde los materiales en docs/client-source, confirmando cualquier discrepancia.",
+        "Las ofertas y precios se construirán desde los materiales en docs/client-source, confirmando cualquier discrepancia.",
       note: "Por confirmar: el lavado intestinal independiente de EUR110.",
     },
     en: {
@@ -96,7 +96,7 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
       eyebrow: "Retiros",
       title: "Retiros en Sant Pol de Mar",
       intro:
-        "Esta seccion espera copy y detalles finales sobre fechas, programa, precios y disponibilidad.",
+        "Esta sección espera copy y detalles finales sobre fechas, programa, precios y disponibilidad.",
     },
     en: {
       eyebrow: "Retreats",
@@ -110,13 +110,13 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
       eyebrow: "Training",
       title: "Formazione",
       intro:
-        "La pagina training sara completata quando saranno confermati contenuti, struttura e dettagli dell'offerta.",
+        "La pagina training sarà completata quando saranno confermati contenuti, struttura e dettagli dell'offerta.",
     },
     es: {
-      eyebrow: "Formacion",
-      title: "Formacion",
+      eyebrow: "Formación",
+      title: "Formación",
       intro:
-        "La pagina de formacion se completara cuando se confirmen contenidos, estructura y detalles de la oferta.",
+        "La página de formación se completará cuando se confirmen contenidos, estructura y detalles de la oferta.",
     },
     en: {
       eyebrow: "Training",
@@ -134,9 +134,9 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
     },
     es: {
       eyebrow: "Blog",
-      title: "Articulos",
+      title: "Artículos",
       intro:
-        "El blog se gestionara en Sanity con entradas filtradas por idioma y variantes no obligatorias.",
+        "El blog se gestionará en Sanity con entradas filtradas por idioma y variantes no obligatorias.",
     },
     en: {
       eyebrow: "Blog",

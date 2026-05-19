@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { homeContent } from "@/lib/home-content";
@@ -33,10 +34,20 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
   return (
     <>
       <section className="hero-section">
+        <Image
+          className="hero-background-image"
+          src="/images/SaritaSpol_MedRes_M59C0305.jpg"
+          alt={content.imageAlt.hero}
+          fill
+          priority
+          sizes="100vw"
+        />
+        <div className="hero-image-overlay" />
         <div className="hero-copy">
           <p className="eyebrow">{content.eyebrow}</p>
           <h1 className="hero-title">{content.title}</h1>
           <p className="hero-intro">{content.intro}</p>
+          <p className="hero-location">{content.locationLine}</p>
           <div className="hero-actions">
             <Link className="primary-button" href={`/${locale}/booking`}>
               {content.primaryCta}
@@ -46,11 +57,6 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
             </Link>
           </div>
         </div>
-
-        <div className="hero-orbit" aria-hidden="true">
-          <div className="orbit-ring" />
-          <div className="orbit-core">SS</div>
-        </div>
       </section>
 
       <section className="content-band" aria-label="Practice areas">
@@ -59,6 +65,43 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
             <article className="panel pillar-card" key={pillar.title}>
               <h2>{pillar.title}</h2>
               <p>{pillar.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="feature-section">
+        <div className="feature-image-wrap">
+          <Image
+            className="feature-image"
+            src="/images/explicacion.jpeg"
+            alt={content.imageAlt.portrait}
+            width={573}
+            height={860}
+            sizes="(max-width: 820px) 100vw, 34vw"
+          />
+        </div>
+        <div className="feature-copy">
+          <p className="eyebrow">{content.feature.eyebrow}</p>
+          <h2 className="section-title">{content.feature.title}</h2>
+          <p>{content.feature.text}</p>
+        </div>
+      </section>
+
+      <section className="retreat-signal" aria-label="Locations">
+        <Image
+          className="retreat-image"
+          src="/images/Yoga playa.jpg"
+          alt={content.imageAlt.practice}
+          fill
+          sizes="100vw"
+        />
+        <div className="retreat-overlay" />
+        <div className="location-list">
+          {content.locations.map((location) => (
+            <article key={location.place}>
+              <h2>{location.place}</h2>
+              <p>{location.text}</p>
             </article>
           ))}
         </div>
