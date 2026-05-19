@@ -598,6 +598,114 @@ a {
   font-size: 0.95rem;
 }
 
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.46fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: clamp(4rem, 9vw, 7rem) clamp(1rem, 4vw, 2rem) 5rem;
+}
+
+.about-hero-copy {
+  max-width: 48rem;
+}
+
+.about-portrait-wrap,
+.about-path-image-wrap {
+  overflow: hidden;
+  border: 1px solid rgba(215, 231, 255, 0.14);
+  border-radius: 0.5rem;
+  background: rgba(6, 19, 49, 0.42);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.32),
+    0 0 38px rgba(0, 102, 255, 0.1);
+}
+
+.about-portrait,
+.about-path-image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.about-portrait {
+  height: auto;
+  max-height: 38rem;
+  object-position: center;
+}
+
+.about-path {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.8fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 1rem clamp(1rem, 4vw, 2rem) 6rem;
+}
+
+.about-path-image {
+  aspect-ratio: 4 / 5;
+  height: auto;
+  object-position: 55% center;
+}
+
+.about-path-copy p,
+.contact-heading p,
+.contact-card p {
+  color: var(--soft-blue);
+  line-height: 1.65;
+}
+
+.about-path-copy p:not(.eyebrow) {
+  font-size: 1.05rem;
+}
+
+.contact-section {
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 1rem clamp(1rem, 4vw, 2rem) 6rem;
+}
+
+.contact-heading {
+  max-width: 48rem;
+}
+
+.contact-heading h2 {
+  margin: 0.75rem 0 1rem;
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.contact-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.contact-card {
+  min-height: 12rem;
+  padding: 1.25rem;
+}
+
+.contact-card h3 {
+  margin: 0 0 0.75rem;
+  color: var(--dusty-gold);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-card p {
+  margin: 0;
+}
+
 .pillar-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -771,6 +879,8 @@ a {
   }
 
   .coaching-hero,
+  .about-hero,
+  .about-path,
   .services-heading,
   .service-grid {
     grid-template-columns: 1fr;
@@ -789,7 +899,8 @@ a {
   .retreat-pillars,
   .nourishment-section,
   .nourishment-gallery,
-  .practical-list {
+  .practical-list,
+  .contact-card-grid {
     grid-template-columns: 1fr;
   }
 

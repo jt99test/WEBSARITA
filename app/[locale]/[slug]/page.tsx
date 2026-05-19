@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { AboutPage } from "@/components/about-page";
 import { CoachingPage } from "@/components/coaching-page";
 import { RetreatsPage } from "@/components/retreats-page";
 import { isLocale } from "@/lib/locales";
@@ -49,6 +50,10 @@ export default async function BasicPage({ params }: BasicPageProps) {
   }
 
   const content = pageContent[slug][locale];
+
+  if (slug === "about") {
+    return <AboutPage locale={locale} />;
+  }
 
   if (slug === "coaching") {
     return <CoachingPage locale={locale} />;
