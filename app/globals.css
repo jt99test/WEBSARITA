@@ -274,6 +274,164 @@ a {
   padding-top: clamp(4rem, 10vw, 8rem);
 }
 
+.coaching-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.48fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: clamp(4rem, 9vw, 7rem) clamp(1rem, 4vw, 2rem) 4rem;
+}
+
+.coaching-hero-copy {
+  max-width: 48rem;
+}
+
+.coaching-hero-image-wrap {
+  overflow: hidden;
+  border: 1px solid rgba(215, 231, 255, 0.14);
+  border-radius: 0.5rem;
+  background: rgba(6, 19, 49, 0.42);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.32),
+    0 0 38px rgba(0, 102, 255, 0.1);
+}
+
+.coaching-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 36rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.services-section {
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 1rem clamp(1rem, 4vw, 2rem) 6rem;
+}
+
+.services-heading {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 0.65fr);
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.services-heading p:last-child {
+  margin: 0;
+  color: var(--soft-blue);
+  line-height: 1.65;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.service-card {
+  display: flex;
+  min-height: 17rem;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem;
+}
+
+.service-card-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: start;
+}
+
+.service-card h2 {
+  margin: 0;
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3vw, 2.45rem);
+  line-height: 1;
+}
+
+.service-card p {
+  margin: 2rem 0 0;
+  color: var(--soft-blue);
+  line-height: 1.65;
+}
+
+.service-price {
+  display: grid;
+  min-width: 5.75rem;
+  justify-items: end;
+  gap: 0.2rem;
+}
+
+.service-price span {
+  color: var(--dusty-gold);
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  line-height: 0.9;
+}
+
+.service-price small {
+  color: rgba(215, 231, 255, 0.72);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.coaching-process {
+  position: relative;
+  overflow: hidden;
+  min-height: 40rem;
+  padding: 5rem max(clamp(1rem, 6vw, 5rem), calc((100vw - 72rem) / 2));
+}
+
+.coaching-process-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.coaching-process-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(3, 8, 20, 0.88), rgba(3, 8, 20, 0.22)),
+    linear-gradient(180deg, rgba(3, 8, 20, 0.14), rgba(3, 8, 20, 0.74));
+}
+
+.coaching-process-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 36rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
+}
+
+.coaching-process-copy h2 {
+  margin: 0.75rem 0 1rem;
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.coaching-process-copy p,
+.coaching-process-copy li {
+  color: var(--soft-blue);
+  line-height: 1.65;
+}
+
+.coaching-process-copy ul {
+  display: grid;
+  gap: 0.7rem;
+  margin: 1.5rem 0 0;
+  padding-left: 1.15rem;
+}
+
 .pillar-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -444,6 +602,20 @@ a {
 
   .pillar-grid {
     grid-template-columns: 1fr;
+  }
+
+  .coaching-hero,
+  .services-heading,
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card-top {
+    grid-template-columns: 1fr;
+  }
+
+  .service-price {
+    justify-items: start;
   }
 
   .feature-section,

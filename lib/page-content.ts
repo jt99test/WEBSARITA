@@ -44,7 +44,7 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
       eyebrow: "Booking",
       title: "Prenotazioni",
       intro:
-        "La pagina prenotazioni usera un embed sostituibile, in attesa della scelta tra Google Appointment Schedules e Calendly.",
+        "La pagina prenotazioni userà un embed sostituibile, in attesa della scelta tra Google Appointment Schedules e Calendly.",
       note: "Bloccato da decisione cliente: strumento di booking e pagamenti.",
     },
     es: {
@@ -67,22 +67,19 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
       eyebrow: "Servizi",
       title: "Coaching e astrologia psicologica",
       intro:
-        "Le offerte e i prezzi verranno costruiti dai materiali in docs/client-source, con conferma richiesta per ogni discrepanza.",
-      note: "Da confermare: il servizio standalone di lavaggio intestinale a EUR110.",
+        "Letture astrologiche, coaching e pratiche di purificazione yogica con prezzi e durate confermati dai materiali cliente.",
     },
     es: {
       eyebrow: "Servicios",
       title: "Coaching y astrología psicológica",
       intro:
-        "Las ofertas y precios se construirán desde los materiales en docs/client-source, confirmando cualquier discrepancia.",
-      note: "Por confirmar: el lavado intestinal independiente de EUR110.",
+        "Lecturas astrológicas, coaching y prácticas de purificación yóguica con precios y duraciones confirmados desde los materiales de la clienta.",
     },
     en: {
       eyebrow: "Services",
       title: "Coaching and psychological astrology",
       intro:
-        "Offerings and prices will be built from docs/client-source, with discrepancies confirmed before launch.",
-      note: "To confirm: standalone intestinal wash at EUR110.",
+        "Astrological readings, coaching, and yogic purification practices with prices and durations confirmed from client materials.",
     },
   },
   retreats: {
@@ -90,7 +87,7 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
       eyebrow: "Ritiri",
       title: "Ritiri a Sant Pol de Mar",
       intro:
-        "Questa sezione attende copy e dettagli finali su date, programma, prezzi e disponibilita.",
+        "Questa sezione attende copy e dettagli finali su date, programma, prezzi e disponibilità.",
     },
     es: {
       eyebrow: "Retiros",
@@ -130,7 +127,7 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
       eyebrow: "Blog",
       title: "Articoli",
       intro:
-        "Il blog sara gestito in Sanity con post filtrati per lingua e varianti non obbligatorie.",
+        "Il blog sarà gestito in Sanity con post filtrati per lingua e varianti non obbligatorie.",
     },
     es: {
       eyebrow: "Blog",
