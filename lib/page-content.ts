@@ -87,19 +87,19 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
       eyebrow: "Ritiri",
       title: "Ritiri a Sant Pol de Mar",
       intro:
-        "Questa sezione attende copy e dettagli finali su date, programma, prezzi e disponibilità.",
+        "Ritiri intimi di yoga, astrologia, detox e nutrimento consapevole sul mare di Sant Pol de Mar.",
     },
     es: {
       eyebrow: "Retiros",
       title: "Retiros en Sant Pol de Mar",
       intro:
-        "Esta sección espera copy y detalles finales sobre fechas, programa, precios y disponibilidad.",
+        "Retiros íntimos de yoga, astrología, detox y alimentación consciente junto al mar de Sant Pol de Mar.",
     },
     en: {
       eyebrow: "Retreats",
       title: "Retreats in Sant Pol de Mar",
       intro:
-        "This section is waiting on final copy and details for dates, program, pricing, and availability.",
+        "Intimate retreats with yoga, astrology, detox, and conscious nourishment by the sea in Sant Pol de Mar.",
     },
   },
   training: {

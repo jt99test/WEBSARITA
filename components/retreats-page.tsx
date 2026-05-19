@@ -30,10 +30,32 @@ export function RetreatsPage({ locale }: RetreatsPageProps) {
             <Link className="primary-button" href={`/${locale}/about`}>
               {content.primaryCta}
             </Link>
-            <a className="ghost-gold-button" href="#includes">
+            <a className="ghost-gold-button" href="#packages">
               {content.secondaryCta}
             </a>
           </div>
+        </div>
+      </section>
+
+      <section className="retreat-packages" id="packages">
+        <div className="retreat-packages-heading">
+          <p className="eyebrow">{content.packages.eyebrow}</p>
+          <h2 className="section-title">{content.packages.title}</h2>
+          <p>{content.packages.text}</p>
+        </div>
+        <div className="retreat-package-grid">
+          {content.packages.items.map((item) => (
+            <article className="panel retreat-package-card" key={item.title}>
+              <div className="retreat-package-top">
+                <div>
+                  <p>{item.duration}</p>
+                  <h3>{item.title}</h3>
+                </div>
+                <span>{item.price}</span>
+              </div>
+              <p>{item.text}</p>
+            </article>
+          ))}
         </div>
       </section>
 

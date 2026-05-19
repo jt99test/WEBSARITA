@@ -5,6 +5,13 @@ type RetreatPillar = {
   text: string;
 };
 
+type RetreatPackage = {
+  title: string;
+  duration: string;
+  price: string;
+  text: string;
+};
+
 export type RetreatsContent = {
   eyebrow: string;
   title: string;
@@ -16,6 +23,12 @@ export type RetreatsContent = {
     breakfast: string;
     food: string;
     sea: string;
+  };
+  packages: {
+    eyebrow: string;
+    title: string;
+    text: string;
+    items: RetreatPackage[];
   };
   pillars: RetreatPillar[];
   nourishment: {
@@ -36,14 +49,50 @@ export const retreatsContent: Record<Locale, RetreatsContent> = {
     eyebrow: "Ritiri | Sant Pol de Mar",
     title: "Ritiri sul mare per tornare al corpo.",
     intro:
-      "Giornate di yoga terapeutico, respiro, alimentazione consapevole e spazio interiore nella luce mediterranea di Sant Pol de Mar.",
+      "Yoga terapeutico, astrologia, alimentazione consapevole e pratiche di purificazione in un formato intimo sul Mediterraneo.",
     primaryCta: "Chiedi informazioni",
-    secondaryCta: "Cosa include",
+    secondaryCta: "Pacchetti",
     imageAlt: {
       hero: "Gruppo in pratica yoga sulla spiaggia di Sant Pol de Mar.",
       breakfast: "Colazione del ritiro con frutta fresca e vista sul mare.",
       food: "Piatto vegetale colorato preparato per il ritiro.",
       sea: "Vista del mare e del paese di Sant Pol de Mar.",
+    },
+    packages: {
+      eyebrow: "Pacchetti",
+      title: "Quattro formati, massimo tre persone.",
+      text:
+        "Il sito attuale presenta ritiri all-inclusive con camera privata per ogni partecipante. Prezzi da ricontrollare prima del lancio, ma già presenti nella fonte cliente.",
+      items: [
+        {
+          title: "Yoga Detox Retreat + Chart Reading",
+          duration: "2 giorni / 1 notte",
+          price: "€335",
+          text:
+            "Routine yoga personalizzata, lezione yoga, lavaggio intestinale breve, consigli nutrizionali e pratica SWAN.",
+        },
+        {
+          title: "Living in Fullness Retreat",
+          duration: "3 giorni / 2 notti",
+          price: "€490",
+          text:
+            "Yoga personalizzato, yoga in spiaggia, bagno in mare facoltativo, lavaggio intestinale breve, nutrizione, SWAN e lettura del tema natale.",
+        },
+        {
+          title: "Yoga and Astrology Retreat",
+          duration: "4 giorni / 3 notti",
+          price: "€670",
+          text:
+            "Yoga, mare, purificazione, teoria di pianeti, segni e case, pratica SWAN, tema natale e lettura dei transiti.",
+        },
+        {
+          title: "Ekadashi Retreat",
+          duration: "2 giorni / 1 notte",
+          price: "€380",
+          text:
+            "Succhi biologici, lavaggio intestinale breve, due lezioni serali di yoga, respiro e meditazione guidata per gruppi fino a tre persone.",
+        },
+      ],
     },
     pillars: [
       {
@@ -51,12 +100,12 @@ export const retreatsContent: Record<Locale, RetreatsContent> = {
         text: "Yoga terapeutico, movimento dolce, respiro e ascolto corporeo per sciogliere tensioni e ritrovare presenza.",
       },
       {
-        title: "Nutrimento",
-        text: "Cucina naturale, colorata e leggera, pensata come parte del processo di purificazione e radicamento.",
+        title: "Purificazione",
+        text: "Il lavaggio intestinale breve viene presentato come supporto per digestione, leggerezza, sonno e vitalità.",
       },
       {
         title: "Integrazione",
-        text: "Momenti di silenzio, condivisione e orientamento interiore per portare la pratica nella vita quotidiana.",
+        text: "Carta natale, transiti e pratica SWAN aiutano a leggere potenziale, blocchi e direzione personale.",
       },
     ],
     nourishment: {
@@ -67,21 +116,21 @@ export const retreatsContent: Record<Locale, RetreatsContent> = {
     },
     practical: {
       eyebrow: "Dettagli pratici",
-      title: "Date e prezzi saranno confermati dalla cliente.",
+      title: "Ritiri intimi sul mare.",
       text:
-        "Questa pagina è pronta per accogliere il programma finale senza inventare logistica non ancora approvata.",
+        "I ritiri sono pensati per un massimo di tre partecipanti, con esperienza personalizzata e camera privata.",
       items: [
         {
           title: "Luogo",
           text: "Sant Pol de Mar, tra mare, natura e spazi di pratica raccolti.",
         },
         {
-          title: "Programma",
-          text: "Da confermare: orari, durata, attività incluse e livello di pratica.",
+          title: "Formato",
+          text: "Pacchetti di 2, 3 o 4 giorni, con attività adattate al percorso scelto.",
         },
         {
           title: "Prenotazione",
-          text: "Da collegare al sistema scelto per booking e pagamenti, quando sarà deciso.",
+          text: "Richiesta informazioni via contatto finché booking e pagamenti non saranno decisi.",
         },
       ],
     },
@@ -90,14 +139,50 @@ export const retreatsContent: Record<Locale, RetreatsContent> = {
     eyebrow: "Retiros | Sant Pol de Mar",
     title: "Retiros junto al mar para volver al cuerpo.",
     intro:
-      "Días de yoga terapéutico, respiración, alimentación consciente y espacio interior en la luz mediterránea de Sant Pol de Mar.",
+      "Yoga terapéutico, astrología, alimentación consciente y prácticas de purificación en un formato íntimo junto al Mediterráneo.",
     primaryCta: "Pedir información",
-    secondaryCta: "Qué incluye",
+    secondaryCta: "Paquetes",
     imageAlt: {
       hero: "Grupo practicando yoga en la playa de Sant Pol de Mar.",
       breakfast: "Desayuno del retiro con fruta fresca y vista al mar.",
       food: "Plato vegetal colorido preparado para el retiro.",
       sea: "Vista del mar y del pueblo de Sant Pol de Mar.",
+    },
+    packages: {
+      eyebrow: "Paquetes",
+      title: "Cuatro formatos, máximo tres personas.",
+      text:
+        "La web actual presenta retiros todo incluido con habitación privada para cada participante. Precios a revisar antes del lanzamiento, pero ya presentes en la fuente de la clienta.",
+      items: [
+        {
+          title: "Yoga Detox Retreat + Chart Reading",
+          duration: "2 días / 1 noche",
+          price: "€335",
+          text:
+            "Rutina de yoga personalizada, clase de yoga, lavado intestinal corto, pautas de nutrición y práctica SWAN.",
+        },
+        {
+          title: "Living in Fullness Retreat",
+          duration: "3 días / 2 noches",
+          price: "€490",
+          text:
+            "Yoga personalizado, yoga en la playa, baño en el mar opcional, lavado intestinal corto, nutrición, SWAN y lectura de carta natal.",
+        },
+        {
+          title: "Yoga and Astrology Retreat",
+          duration: "4 días / 3 noches",
+          price: "€670",
+          text:
+            "Yoga, mar, purificación, teoría de planetas, signos y casas, práctica SWAN, carta natal y lectura de tránsitos.",
+        },
+        {
+          title: "Ekadashi Retreat",
+          duration: "2 días / 1 noche",
+          price: "€380",
+          text:
+            "Zumos ecológicos, lavado intestinal corto, dos clases de yoga al atardecer, respiración y meditación guiada para grupos de hasta tres personas.",
+        },
+      ],
     },
     pillars: [
       {
@@ -105,12 +190,12 @@ export const retreatsContent: Record<Locale, RetreatsContent> = {
         text: "Yoga terapéutico, movimiento suave, respiración y escucha corporal para soltar tensiones y recuperar presencia.",
       },
       {
-        title: "Nutrición",
-        text: "Cocina natural, colorida y ligera, pensada como parte del proceso de purificación y arraigo.",
+        title: "Purificación",
+        text: "El lavado intestinal corto se presenta como apoyo para digestión, ligereza, sueño y vitalidad.",
       },
       {
         title: "Integración",
-        text: "Momentos de silencio, compartir y orientación interior para llevar la práctica a la vida cotidiana.",
+        text: "Carta natal, tránsitos y práctica SWAN ayudan a leer potencial, bloqueos y dirección personal.",
       },
     ],
     nourishment: {
@@ -121,21 +206,21 @@ export const retreatsContent: Record<Locale, RetreatsContent> = {
     },
     practical: {
       eyebrow: "Detalles prácticos",
-      title: "Fechas y precios serán confirmados por la clienta.",
+      title: "Retiros íntimos junto al mar.",
       text:
-        "Esta página queda preparada para recibir el programa final sin inventar logística que todavía no está aprobada.",
+        "Los retiros están pensados para un máximo de tres participantes, con experiencia personalizada y habitación privada.",
       items: [
         {
           title: "Lugar",
           text: "Sant Pol de Mar, entre mar, naturaleza y espacios recogidos de práctica.",
         },
         {
-          title: "Programa",
-          text: "Por confirmar: horarios, duración, actividades incluidas y nivel de práctica.",
+          title: "Formato",
+          text: "Paquetes de 2, 3 o 4 días, con actividades adaptadas al recorrido elegido.",
         },
         {
           title: "Reserva",
-          text: "Se conectará al sistema elegido para reservas y pagos cuando esté decidido.",
+          text: "Solicitud de información por contacto hasta que reservas y pagos estén decididos.",
         },
       ],
     },
@@ -144,14 +229,50 @@ export const retreatsContent: Record<Locale, RetreatsContent> = {
     eyebrow: "Retreats | Sant Pol de Mar",
     title: "Sea-side retreats for coming back to the body.",
     intro:
-      "Days of therapeutic yoga, breath, conscious nourishment, and inner space in the Mediterranean light of Sant Pol de Mar.",
+      "Therapeutic yoga, astrology, conscious nourishment, and purification practices in an intimate Mediterranean format.",
     primaryCta: "Ask for details",
-    secondaryCta: "What is included",
+    secondaryCta: "Packages",
     imageAlt: {
       hero: "Group practicing yoga on the beach in Sant Pol de Mar.",
       breakfast: "Retreat breakfast with fresh fruit and sea view.",
       food: "Colorful plant-based dish prepared for the retreat.",
       sea: "View of the sea and town of Sant Pol de Mar.",
+    },
+    packages: {
+      eyebrow: "Packages",
+      title: "Four formats, maximum three people.",
+      text:
+        "The current site presents all-inclusive retreats with a private room for each participant. Prices should be rechecked before launch, but they are already present in the client source.",
+      items: [
+        {
+          title: "Yoga Detox Retreat + Chart Reading",
+          duration: "2 days / 1 night",
+          price: "€335",
+          text:
+            "Personalized yoga routine, yoga class, short intestinal wash, nutrition insights, and SWAN practice.",
+        },
+        {
+          title: "Living in Fullness Retreat",
+          duration: "3 days / 2 nights",
+          price: "€490",
+          text:
+            "Personalized yoga, beach yoga, optional sea swimming, short intestinal wash, nutrition insights, SWAN, and natal chart reading.",
+        },
+        {
+          title: "Yoga and Astrology Retreat",
+          duration: "4 days / 3 nights",
+          price: "€670",
+          text:
+            "Yoga, sea, purification, theory of planets, signs and houses, SWAN practice, natal chart and transits reading.",
+        },
+        {
+          title: "Ekadashi Retreat",
+          duration: "2 days / 1 night",
+          price: "€380",
+          text:
+            "Organic juices, short intestinal wash, two evening yoga classes, breathwork, and guided meditation for groups up to three people.",
+        },
+      ],
     },
     pillars: [
       {
@@ -159,12 +280,12 @@ export const retreatsContent: Record<Locale, RetreatsContent> = {
         text: "Therapeutic yoga, gentle movement, breath, and body listening to release tension and return to presence.",
       },
       {
-        title: "Nourishment",
-        text: "Natural, colorful, light food designed as part of the process of purification and grounding.",
+        title: "Purification",
+        text: "The short intestinal wash is presented as support for digestion, lightness, sleep, and vitality.",
       },
       {
         title: "Integration",
-        text: "Moments of silence, sharing, and inner orientation for carrying the practice into daily life.",
+        text: "Natal chart work, transits, and SWAN practice help read potential, blocks, and personal direction.",
       },
     ],
     nourishment: {
@@ -175,21 +296,21 @@ export const retreatsContent: Record<Locale, RetreatsContent> = {
     },
     practical: {
       eyebrow: "Practical Details",
-      title: "Dates and prices will be confirmed by the client.",
+      title: "Intimate retreats by the sea.",
       text:
-        "This page is ready for the final program without inventing logistics that have not yet been approved.",
+        "Retreats are designed for a maximum of three participants, with a personalized experience and private room.",
       items: [
         {
           title: "Place",
           text: "Sant Pol de Mar, between the sea, nature, and intimate spaces for practice.",
         },
         {
-          title: "Program",
-          text: "To confirm: schedule, duration, included activities, and practice level.",
+          title: "Format",
+          text: "2, 3, or 4 day packages, with activities adapted to the chosen path.",
         },
         {
           title: "Booking",
-          text: "To connect to the selected booking and payment setup once decided.",
+          text: "Information request via contact until booking and payments are decided.",
         },
       ],
     },
