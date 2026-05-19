@@ -1156,9 +1156,11 @@ a {
 
 .retreat-signal {
   position: relative;
-  min-height: 34rem;
   overflow: hidden;
-  padding: 5rem max(clamp(1rem, 6vw, 5rem), calc((100vw - 72rem) / 2));
+  background:
+    radial-gradient(circle at 76% 42%, rgba(124, 191, 255, 0.09), transparent 20rem),
+    linear-gradient(180deg, rgba(3, 8, 20, 0.16), rgba(3, 8, 20, 0));
+  padding: 4.5rem max(clamp(1rem, 6vw, 5rem), calc((100vw - 72rem) / 2)) 5rem;
 }
 
 .retreat-image {
@@ -1176,17 +1178,15 @@ a {
 
 .location-list {
   position: relative;
-  z-index: 2;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  align-items: end;
-  min-height: 24rem;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: start;
 }
 
 .location-list article {
   border-top: 1px solid rgba(245, 215, 130, 0.56);
-  padding-top: 1rem;
+  padding-top: 1.25rem;
 }
 
 .location-list h2 {
@@ -1336,10 +1336,11 @@ a {
   }
 
   .retreat-signal {
-    min-height: auto;
+    padding-top: 3.5rem;
+    padding-bottom: 4rem;
   }
 
   .location-list {
-    min-height: 25rem;
+    gap: 1.5rem;
   }
 }

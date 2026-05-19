@@ -89,14 +89,6 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
       </section>
 
       <section className="retreat-signal" aria-label="Locations">
-        <Image
-          className="retreat-image"
-          src="/images/Yoga playa.jpg"
-          alt={content.imageAlt.practice}
-          fill
-          sizes="100vw"
-        />
-        <div className="retreat-overlay" />
         <div className="location-list">
           {content.locations.map((location) => (
             <article key={location.place}>
