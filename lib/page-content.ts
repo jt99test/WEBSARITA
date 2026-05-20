@@ -4,7 +4,6 @@ export const pageSlugs = [
   "about",
   "booking",
   "coaching",
-  "retreats",
   "training",
   "blog",
 ] as const;
@@ -24,19 +23,19 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
       eyebrow: "About | Contact",
       title: "Conosci Sarita",
       intro:
-        "Biografia, sedi, contatti e dettagli pratici saranno completati con le informazioni finali della cliente.",
+        "Biografia, percorso, contatti e dettagli pratici per iniziare una sessione con Sarita Shakti.",
     },
     es: {
       eyebrow: "About | Contacto",
       title: "Conoce a Sarita",
       intro:
-        "Biografía, ubicaciones, contacto y detalles prácticos se completarán con la información final de la clienta.",
+        "Biografía, recorrido, contacto y detalles prácticos para empezar una sesión con Sarita Shakti.",
     },
     en: {
       eyebrow: "About | Contact",
       title: "Meet Sarita",
       intro:
-        "Biography, locations, contact details, and practical information will be completed with final client copy.",
+        "Biography, path, contact details, and practical information for starting a session with Sarita Shakti.",
     },
   },
   booking: {
@@ -65,41 +64,21 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
   coaching: {
     it: {
       eyebrow: "Servizi",
-      title: "Coaching e astrologia psicologica",
+      title: "Astrologia psicologica e coaching",
       intro:
-        "Letture astrologiche, coaching e pratiche di purificazione yogica con prezzi e durate confermati dai materiali cliente.",
+        "Letture astrologiche, coaching online, pacchetti brevi e pratiche yogiche con prezzi e durate confermati dalla cliente.",
     },
     es: {
       eyebrow: "Servicios",
-      title: "Coaching y astrología psicológica",
+      title: "Astrología psicológica y coaching",
       intro:
-        "Lecturas astrológicas, coaching y prácticas de purificación yóguica con precios y duraciones confirmados desde los materiales de la clienta.",
+        "Lecturas astrológicas, coaching online, packs breves y prácticas yóguicas con precios y duraciones confirmados por la clienta.",
     },
     en: {
       eyebrow: "Services",
-      title: "Coaching and psychological astrology",
+      title: "Psychological astrology and coaching",
       intro:
-        "Astrological readings, coaching, and yogic purification practices with prices and durations confirmed from client materials.",
-    },
-  },
-  retreats: {
-    it: {
-      eyebrow: "Ritiri",
-      title: "Ritiri a Sant Pol de Mar",
-      intro:
-        "Ritiri intimi di yoga, astrologia, detox e nutrimento consapevole sul mare di Sant Pol de Mar.",
-    },
-    es: {
-      eyebrow: "Retiros",
-      title: "Retiros en Sant Pol de Mar",
-      intro:
-        "Retiros íntimos de yoga, astrología, detox y alimentación consciente junto al mar de Sant Pol de Mar.",
-    },
-    en: {
-      eyebrow: "Retreats",
-      title: "Retreats in Sant Pol de Mar",
-      intro:
-        "Intimate retreats with yoga, astrology, detox, and conscious nourishment by the sea in Sant Pol de Mar.",
+        "Astrology readings, online coaching, short packs, and yogic practices with prices and durations confirmed by the client.",
     },
   },
   training: {
@@ -107,19 +86,19 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
       eyebrow: "Training",
       title: "Yoga e astrologia psicologica",
       intro:
-        "Formazioni residenziali e in presenza con yoga, carta natale e astrologia psicologica.",
+        "Formazioni e percorsi di studio con yoga, carta natale e astrologia psicologica.",
     },
     es: {
       eyebrow: "Formación",
       title: "Yoga y astrología psicológica",
       intro:
-        "Formaciones residenciales y presenciales con yoga, carta natal y astrología psicológica.",
+        "Formaciones y procesos de estudio con yoga, carta natal y astrología psicológica.",
     },
     en: {
       eyebrow: "Training",
       title: "Yoga and psychological astrology",
       intro:
-        "Residential and in-person trainings with yoga, natal chart work, and psychological astrology.",
+        "Trainings and study processes with yoga, natal chart work, and psychological astrology.",
     },
   },
   blog: {

@@ -48,7 +48,7 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
           <p className="eyebrow">{content.eyebrow}</p>
           <h1 className="hero-title">{content.title}</h1>
           <p className="hero-intro">{content.intro}</p>
-          <p className="hero-location">{content.locationLine}</p>
+          <p className="hero-location">{content.serviceLine}</p>
           <div className="hero-actions">
             <Link className="primary-button" href={`/${locale}/booking`}>
               {content.primaryCta}
@@ -86,6 +86,9 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
           <p className="eyebrow">{content.feature.eyebrow}</p>
           <h2 className="section-title">{content.feature.title}</h2>
           <p>{content.feature.text}</p>
+          <Link className="ghost-gold-button" href={`/${locale}/about`}>
+            {content.feature.cta}
+          </Link>
         </div>
       </section>
 
@@ -105,16 +108,6 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
         </div>
       </section>
 
-      <section className="retreat-signal" aria-label="Locations">
-        <div className="location-list">
-          {content.locations.map((location) => (
-            <article key={location.place}>
-              <h2>{location.place}</h2>
-              <p>{location.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
     </>
   );
 }

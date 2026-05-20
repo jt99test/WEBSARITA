@@ -1,13 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SocialLinks } from "@/components/social-links";
 import { NavMenu } from "@/components/nav-menu";
+import { SocialLinks } from "@/components/social-links";
 import { Locale, localeLabels, locales } from "@/lib/locales";
 
 const navItems = [
   { href: "", label: { it: "Home", es: "Inicio", en: "Home" } },
   { href: "coaching", label: { it: "Coaching", es: "Coaching", en: "Coaching" } },
-  { href: "retreats", label: { it: "Ritiri", es: "Retiros", en: "Retreats" } },
   { href: "training", label: { it: "Training", es: "Formación", en: "Training" } },
   { href: "blog", label: { it: "Blog", es: "Blog", en: "Blog" } },
   { href: "about", label: { it: "Contatto", es: "Contacto", en: "Contact" } },

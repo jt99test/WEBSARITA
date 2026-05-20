@@ -1126,6 +1126,11 @@ a {
   font-size: 1.08rem;
 }
 
+.feature-copy .ghost-gold-button {
+  display: inline-flex;
+  margin-top: 1.25rem;
+}
+
 .astrology-signal {
   margin: 0 auto;
   max-width: 72rem;

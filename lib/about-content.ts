@@ -33,7 +33,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     eyebrow: "About | Contact",
     title: "Sarita Shakti",
     intro:
-      "Insegnante e accompagnatrice in percorsi di yoga terapeutico, astrologia psicologica e coaching olistico tra Barcellona, Milano e Sant Pol de Mar.",
+      "Insegnante e accompagnatrice in percorsi di yoga terapeutico, astrologia psicologica e coaching olistico.",
     primaryCta: "Scrivi a Sarita",
     secondaryCta: "Leggi il percorso",
     imageAlt: {
@@ -51,17 +51,17 @@ export const aboutContent: Record<Locale, AboutContent> = {
     },
     contact: {
       eyebrow: "Contatto",
-      title: "Per sessioni, ritiri e informazioni pratiche.",
+      title: "Per letture astrologiche, coaching e sessioni di yoga terapeutico.",
       text:
-        "Contatti recuperati dal sito attuale. Da ricontrollare con la cliente prima del lancio, insieme al dominio finale e ai redirect SEO.",
+        "Le sessioni possono iniziare online o tramite contatto diretto. Prima del lancio ricontrolleremo con la cliente i recapiti finali e il flusso di prenotazione.",
       cards: [
-        {
-          title: "Luoghi",
-          text: "Carrer Joan Coromines, 08395 Sant Pol de Mar, Barcelona. Percorsi anche tra Barcellona e Milano.",
-        },
         {
           title: "Canali",
           text: "saritashakti@gmail.com | +34 665 25 98 59 | Instagram @saritastroyoga | YouTube Sarita Shakti Yoga.",
+        },
+        {
+          title: "Sessioni",
+          text: "Letture astrologiche, coaching online, sessioni mensili, pacchetti brevi e pratiche di yoga terapeutico.",
         },
         {
           title: "Astrologia",
@@ -78,7 +78,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     eyebrow: "About | Contacto",
     title: "Sarita Shakti",
     intro:
-      "Profesora y acompañante en procesos de yoga terapéutico, astrología psicológica y coaching holístico entre Barcelona, Milán y Sant Pol de Mar.",
+      "Profesora y acompañante en procesos de yoga terapéutico, astrología psicológica y coaching holístico.",
     primaryCta: "Escribir a Sarita",
     secondaryCta: "Leer el recorrido",
     imageAlt: {
@@ -96,17 +96,17 @@ export const aboutContent: Record<Locale, AboutContent> = {
     },
     contact: {
       eyebrow: "Contacto",
-      title: "Para sesiones, retiros e información práctica.",
+      title: "Para lecturas astrológicas, coaching y sesiones de yoga terapéutico.",
       text:
-        "Contactos recuperados del sitio actual. Conviene revisarlos con la clienta antes del lanzamiento, junto con el dominio final y los redirects SEO.",
+        "Las sesiones pueden empezar online o a través de contacto directo. Antes del lanzamiento revisaremos con la clienta los datos finales y el flujo de reservas.",
       cards: [
-        {
-          title: "Lugares",
-          text: "Carrer Joan Coromines, 08395 Sant Pol de Mar, Barcelona. Procesos también entre Barcelona y Milán.",
-        },
         {
           title: "Canales",
           text: "saritashakti@gmail.com | +34 665 25 98 59 | Instagram @saritastroyoga | YouTube Sarita Shakti Yoga.",
+        },
+        {
+          title: "Sesiones",
+          text: "Lecturas astrológicas, coaching online, sesiones mensuales, packs breves y prácticas de yoga terapéutico.",
         },
         {
           title: "Astrología",
@@ -123,7 +123,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     eyebrow: "About | Contact",
     title: "Sarita Shakti",
     intro:
-      "Teacher and guide in therapeutic yoga, psychological astrology, and holistic coaching between Barcelona, Milan, and Sant Pol de Mar.",
+      "Teacher and guide in therapeutic yoga, psychological astrology, and holistic coaching.",
     primaryCta: "Write to Sarita",
     secondaryCta: "Read the path",
     imageAlt: {
@@ -141,17 +141,17 @@ export const aboutContent: Record<Locale, AboutContent> = {
     },
     contact: {
       eyebrow: "Contact",
-      title: "For sessions, retreats, and practical details.",
+      title: "For astrology readings, coaching, and therapeutic yoga sessions.",
       text:
-        "Contact details recovered from the current site. They should be checked with the client before launch, alongside the final domain and SEO redirects.",
+        "Sessions can begin online or through direct contact. Before launch, we will recheck final contact details and the booking flow with the client.",
       cards: [
-        {
-          title: "Places",
-          text: "Carrer Joan Coromines, 08395 Sant Pol de Mar, Barcelona. Work also between Barcelona and Milan.",
-        },
         {
           title: "Channels",
           text: "saritashakti@gmail.com | +34 665 25 98 59 | Instagram @saritastroyoga | YouTube Sarita Shakti Yoga.",
+        },
+        {
+          title: "Sessions",
+          text: "Astrology readings, online coaching, monthly sessions, short packs, and therapeutic yoga practices.",
         },
         {
           title: "Astrology",

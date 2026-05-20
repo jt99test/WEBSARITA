@@ -4,7 +4,7 @@ export type HomeContent = {
   eyebrow: string;
   title: string;
   intro: string;
-  locationLine: string;
+  serviceLine: string;
   primaryCta: string;
   secondaryCta: string;
   pillars: Array<{
@@ -20,6 +20,7 @@ export type HomeContent = {
     eyebrow: string;
     title: string;
     text: string;
+    cta: string;
   };
   astrology: {
     eyebrow: string;
@@ -27,10 +28,6 @@ export type HomeContent = {
     text: string;
     cta: string;
   };
-  locations: Array<{
-    place: string;
-    text: string;
-  }>;
 };
 
 export const homeContent: Record<Locale, HomeContent> = {
@@ -38,165 +35,126 @@ export const homeContent: Record<Locale, HomeContent> = {
     eyebrow: "Yoga terapeutico | Astrologia psicologica | Coaching",
     title: "Sarita Shakti",
     intro:
-      "Uno spazio di ascolto profondo per integrare corpo, psiche e cielo attraverso pratiche terapeutiche, letture astrologiche e percorsi olistici.",
-    locationLine: "Barcellona | Milano | Sant Pol de Mar",
+      "Sessioni e percorsi per integrare corpo, psiche e cielo attraverso astrologia psicologica, coaching e pratiche terapeutiche.",
+    serviceLine: "Letture astrologiche | coaching online | yoga terapeutico",
     primaryCta: "Prenota una sessione",
-    secondaryCta: "Scopri i percorsi",
+    secondaryCta: "Vedi i servizi",
     pillars: [
       {
-        title: "Yoga terapeutico",
-        text: "Pratiche personalizzate per ritrovare presenza, mobilità e radicamento.",
-      },
-      {
         title: "Astrologia psicologica",
-        text: "La carta natale come mappa di consapevolezza, talenti e cicli interiori.",
+        text: "Letture di carta natale, sinastria e rivoluzione solare per comprendere talenti, relazioni e cicli interiori.",
       },
       {
-        title: "Coaching olistico",
-        text: "Un accompagnamento concreto per trasformare intuizioni in scelte quotidiane.",
+        title: "Coaching astrologico",
+        text: "Sessioni singole, mensili e pacchetti brevi per trasformare la comprensione in scelte concrete.",
+      },
+      {
+        title: "Yoga terapeutico",
+        text: "Pratiche personalizzate e ascolto somatico per ritrovare presenza, mobilità e radicamento.",
       },
     ],
     imageAlt: {
       hero: "Sarita Shakti in meditazione davanti al tramonto sul mare.",
-      practice: "Gruppo di yoga sulla spiaggia durante un ritiro.",
+      practice: "Gruppo di yoga in pratica all'aperto.",
       portrait: "Sarita Shakti durante una spiegazione in cerchio.",
     },
     feature: {
-      eyebrow: "Un lavoro integrato",
-      title: "Dal corpo alla carta natale, senza separare ciò che vive insieme.",
+      eyebrow: "About Sarita",
+      title: "Un percorso tra yoga, astrologia e accompagnamento umano.",
       text:
-        "Le sessioni possono unire ascolto somatico, movimento, astrologia psicologica e coaching. La direzione è semplice: più presenza, più chiarezza e strumenti concreti da portare nella vita quotidiana.",
+        "Sarita Shakti accompagna persone e gruppi da oltre vent'anni. La sua formazione unisce Bihar School of Yoga, astrologia psicologica e un modo di lavorare concreto: ascoltare ciò che accade nel corpo, leggerlo anche attraverso la carta natale e trasformarlo in presenza quotidiana.",
+      cta: "Conosci Sarita",
     },
     astrology: {
       eyebrow: "Sarita Astrology",
       title: "Vuoi iniziare dalla carta natale?",
       text:
-        "Ho creato Sarita Astrology come spazio dedicato alle letture astrologiche online: una porta semplice per esplorare il tema natale prima di entrare in un percorso personale.",
+        "Sarita Astrology è lo spazio dedicato alle letture astrologiche online: una porta semplice per esplorare il tema natale, la sinastria o l'anno astrologico prima di entrare in un percorso personale.",
       cta: "Visita il sito di astrologia",
     },
-    locations: [
-      {
-        place: "Barcellona",
-        text: "Sessioni, pratiche e percorsi individuali in presenza quando disponibile.",
-      },
-      {
-        place: "Milano",
-        text: "Incontri e consulenze legate ai periodi di lavoro in Italia.",
-      },
-      {
-        place: "Sant Pol de Mar",
-        text: "Ritiri sul mare con yoga, nutrimento, silenzio e pratiche di integrazione.",
-      },
-    ],
   },
   es: {
     eyebrow: "Yoga terapéutico | Astrología psicológica | Coaching",
     title: "Sarita Shakti",
     intro:
-      "Un espacio de escucha profunda para integrar cuerpo, psique y cielo a través de prácticas terapéuticas, lecturas astrológicas y procesos holísticos.",
-    locationLine: "Barcelona | Milán | Sant Pol de Mar",
+      "Sesiones y procesos para integrar cuerpo, psique y cielo a través de astrología psicológica, coaching y prácticas terapéuticas.",
+    serviceLine: "Lecturas astrológicas | coaching online | yoga terapéutico",
     primaryCta: "Reservar una sesión",
-    secondaryCta: "Ver acompañamientos",
+    secondaryCta: "Ver servicios",
     pillars: [
       {
-        title: "Yoga terapéutico",
-        text: "Prácticas personalizadas para recuperar presencia, movilidad y arraigo.",
-      },
-      {
         title: "Astrología psicológica",
-        text: "La carta natal como mapa de conciencia, talentos y ciclos interiores.",
+        text: "Lecturas de carta natal, sinastría y revolución solar para comprender talentos, relaciones y ciclos interiores.",
       },
       {
-        title: "Coaching holístico",
-        text: "Un acompañamiento práctico para convertir la claridad en decisiones diarias.",
+        title: "Coaching astrológico",
+        text: "Sesiones individuales, mensuales y packs breves para transformar la comprensión en decisiones concretas.",
+      },
+      {
+        title: "Yoga terapéutico",
+        text: "Prácticas personalizadas y escucha somática para recuperar presencia, movilidad y arraigo.",
       },
     ],
     imageAlt: {
       hero: "Sarita Shakti meditando frente al atardecer en el mar.",
-      practice: "Grupo de yoga en la playa durante un retiro.",
+      practice: "Grupo de yoga practicando al aire libre.",
       portrait: "Sarita Shakti explicando una práctica en círculo.",
     },
     feature: {
-      eyebrow: "Un trabajo integrado",
-      title: "Del cuerpo a la carta natal, sin separar lo que vive unido.",
+      eyebrow: "Sobre Sarita",
+      title: "Un recorrido entre yoga, astrología y acompañamiento humano.",
       text:
-        "Las sesiones pueden unir escucha somática, movimiento, astrología psicológica y coaching. La dirección es sencilla: más presencia, más claridad y herramientas concretas para la vida cotidiana.",
+        "Sarita Shakti acompaña a personas y grupos desde hace más de veinte años. Su formación une Bihar School of Yoga, astrología psicológica y una forma de trabajar concreta: escuchar lo que ocurre en el cuerpo, leerlo también a través de la carta natal y convertirlo en presencia cotidiana.",
+      cta: "Conocer a Sarita",
     },
     astrology: {
       eyebrow: "Sarita Astrology",
       title: "¿Quieres empezar por tu carta natal?",
       text:
-        "He creado Sarita Astrology como un espacio dedicado a las lecturas astrológicas online: una puerta sencilla para explorar la carta natal antes de entrar en un proceso personal.",
+        "Sarita Astrology es el espacio dedicado a las lecturas astrológicas online: una puerta sencilla para explorar tu carta natal, la sinastría o el año astrológico antes de entrar en un proceso personal.",
       cta: "Visitar la web de astrología",
     },
-    locations: [
-      {
-        place: "Barcelona",
-        text: "Sesiones, prácticas y procesos individuales presenciales cuando esté disponible.",
-      },
-      {
-        place: "Milán",
-        text: "Encuentros y consultas vinculadas a sus periodos de trabajo en Italia.",
-      },
-      {
-        place: "Sant Pol de Mar",
-        text: "Retiros junto al mar con yoga, nutrición, silencio y prácticas de integración.",
-      },
-    ],
   },
   en: {
     eyebrow: "Therapeutic yoga | Psychological astrology | Coaching",
     title: "Sarita Shakti",
     intro:
-      "A space for deep listening where body, psyche, and sky meet through therapeutic practice, astrological insight, and holistic coaching.",
-    locationLine: "Barcelona | Milan | Sant Pol de Mar",
+      "Sessions and short processes for integrating body, psyche, and sky through psychological astrology, coaching, and therapeutic practice.",
+    serviceLine: "Astrology readings | online coaching | therapeutic yoga",
     primaryCta: "Book a session",
-    secondaryCta: "Explore the work",
+    secondaryCta: "View services",
     pillars: [
       {
-        title: "Therapeutic yoga",
-        text: "Personalized practices for presence, mobility, and grounded regulation.",
-      },
-      {
         title: "Psychological astrology",
-        text: "The natal chart as a map of awareness, gifts, and inner cycles.",
+        text: "Natal chart, synastry, and solar revolution readings for understanding gifts, relationships, and inner cycles.",
       },
       {
-        title: "Holistic coaching",
-        text: "Practical support for turning insight into embodied daily choices.",
+        title: "Astrological coaching",
+        text: "Single sessions, monthly support, and short packs for turning insight into concrete choices.",
+      },
+      {
+        title: "Therapeutic yoga",
+        text: "Personalized practices and somatic listening for presence, mobility, and grounded regulation.",
       },
     ],
     imageAlt: {
       hero: "Sarita Shakti meditating at sunset by the sea.",
-      practice: "Yoga group practicing on the beach during a retreat.",
+      practice: "Yoga group practicing outdoors.",
       portrait: "Sarita Shakti explaining a practice in circle.",
     },
     feature: {
-      eyebrow: "Integrated Work",
-      title: "From the body to the birth chart, without splitting what belongs together.",
+      eyebrow: "About Sarita",
+      title: "A path between yoga, astrology, and human guidance.",
       text:
-        "Sessions can weave somatic listening, movement, psychological astrology, and coaching. The direction is simple: more presence, more clarity, and practical tools for everyday life.",
+        "Sarita Shakti has guided people and groups for more than twenty years. Her training brings together the Bihar School of Yoga, psychological astrology, and a grounded way of working: listening to what happens in the body, reading it through the natal chart, and turning it into everyday presence.",
+      cta: "Meet Sarita",
     },
     astrology: {
       eyebrow: "Sarita Astrology",
       title: "Want to begin with your birth chart?",
       text:
-        "I created Sarita Astrology as a dedicated space for online astrology readings: a simple doorway into the natal chart before entering a personal process.",
+        "Sarita Astrology is the dedicated space for online astrology readings: a simple doorway into the natal chart, synastry, or the astrological year before entering a personal process.",
       cta: "Visit the astrology website",
     },
-    locations: [
-      {
-        place: "Barcelona",
-        text: "Sessions, practices, and individual processes in person when available.",
-      },
-      {
-        place: "Milan",
-        text: "Consultations and meetings connected to her periods of work in Italy.",
-      },
-      {
-        place: "Sant Pol de Mar",
-        text: "Sea-side retreats with yoga, nourishment, silence, and integration practices.",
-      },
-    ],
   },
 };

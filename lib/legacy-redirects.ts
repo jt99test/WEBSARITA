@@ -17,12 +17,27 @@ export const legacyRedirects: LegacyRedirect[] = [
   },
   {
     source: "/retirosyogayastrologia",
-    destination: "/it/retreats",
+    destination: "/es/coaching",
     statusCode: 301,
   },
   {
     source: "/retreats",
-    destination: "/it/retreats",
+    destination: "/en/coaching",
+    statusCode: 301,
+  },
+  {
+    source: "/it/retreats",
+    destination: "/it/coaching",
+    statusCode: 301,
+  },
+  {
+    source: "/es/retreats",
+    destination: "/es/coaching",
+    statusCode: 301,
+  },
+  {
+    source: "/en/retreats",
+    destination: "/en/coaching",
     statusCode: 301,
   },
   {

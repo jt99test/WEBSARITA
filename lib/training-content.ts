@@ -102,7 +102,7 @@ export const trainingContent: Record<Locale, TrainingContent> = {
     secondaryCta: "Programma Milano",
     priceNote: "Prezzo indicativo",
     imageAlt: {
-      hero: "Sarita Shakti durante una pratica di yoga in ritiro.",
+      hero: "Sarita Shakti durante una pratica di yoga.",
       portrait: "Sarita Shakti insegna e spiega il lavoro astrologico.",
     },
     offers: [
@@ -163,7 +163,7 @@ export const trainingContent: Record<Locale, TrainingContent> = {
     secondaryCta: "Programa Milán",
     priceNote: "Precio orientativo",
     imageAlt: {
-      hero: "Sarita Shakti durante una práctica de yoga en retiro.",
+      hero: "Sarita Shakti durante una práctica de yoga.",
       portrait: "Sarita Shakti enseña y explica el trabajo astrológico.",
     },
     offers: [
@@ -224,7 +224,7 @@ export const trainingContent: Record<Locale, TrainingContent> = {
     secondaryCta: "Milan program",
     priceNote: "Guide price",
     imageAlt: {
-      hero: "Sarita Shakti during a retreat yoga practice.",
+      hero: "Sarita Shakti during a yoga practice.",
       portrait: "Sarita Shakti teaching and explaining astrological work.",
     },
     offers: [
