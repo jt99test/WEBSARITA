@@ -1235,12 +1235,14 @@ a {
 .astrology-choice-art {
   position: relative;
   display: grid;
+  gap: 1rem;
   place-items: center;
-  min-height: 19rem;
+  align-content: center;
+  min-height: 17rem;
   overflow: hidden;
   border: 1px solid rgba(245, 215, 130, 0.28);
   background:
-    radial-gradient(circle at 50% 42%, rgba(245, 215, 130, 0.08), transparent 8rem),
+    radial-gradient(circle at 50% 45%, rgba(245, 215, 130, 0.1), transparent 8rem),
     linear-gradient(180deg, rgba(7, 20, 55, 0.48), rgba(3, 8, 20, 0.24));
   text-align: center;
 }
@@ -1255,44 +1257,38 @@ a {
 }
 
 .astrology-choice-art::before {
-  width: 13rem;
-  height: 13rem;
+  width: 12rem;
+  height: 12rem;
 }
 
 .astrology-choice-art::after {
-  width: 18rem;
-  height: 18rem;
+  width: 16rem;
+  height: 16rem;
   transform: rotate(16deg) scaleY(0.56);
   border-color: rgba(245, 215, 130, 0.2);
 }
 
-.astrology-choice-domain,
-.astrology-choice-label,
-.astrology-choice-line {
+.astrology-choice-logo,
+.astrology-choice-label {
   position: relative;
   z-index: 1;
 }
 
-.astrology-choice-domain {
-  max-width: 14rem;
-  color: var(--ivory);
-  font-family: var(--font-serif);
-  font-size: clamp(2rem, 3vw, 3rem);
-  line-height: 0.92;
-}
-
-.astrology-choice-line {
-  width: 4rem;
-  height: 1px;
-  margin: 1.35rem 0 1rem;
-  background: rgba(245, 215, 130, 0.55);
+.astrology-choice-logo {
+  width: clamp(6.5rem, 12vw, 9rem);
+  height: auto;
+  filter:
+    drop-shadow(0 0 18px rgba(245, 215, 130, 0.22))
+    drop-shadow(0 0 28px rgba(124, 191, 255, 0.1));
 }
 
 .astrology-choice-label {
+  max-width: 16rem;
   color: var(--dusty-gold);
   font-size: 0.74rem;
   font-weight: 800;
   letter-spacing: 0.14em;
+  line-height: 1.35;
   text-transform: uppercase;
 }
 

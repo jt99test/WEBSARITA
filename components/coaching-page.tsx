@@ -71,8 +71,13 @@ export function CoachingPage({ locale }: CoachingPageProps) {
             <p>{content.astrologySite.text}</p>
           </div>
           <div className="astrology-choice-art" aria-hidden="true">
-            <span className="astrology-choice-domain">SaritaAstrology.com</span>
-            <span className="astrology-choice-line" />
+            <Image
+              className="astrology-choice-logo"
+              src="/brand/sarita-logo-transparent.png"
+              alt=""
+              width={240}
+              height={234}
+            />
             <span className="astrology-choice-label">{content.astrologySite.visualLabel}</span>
           </div>
           <Link
