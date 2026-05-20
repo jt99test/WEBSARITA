@@ -2,6 +2,14 @@ import type { NextConfig } from "next";
 import { legacyRedirects } from "./lib/legacy-redirects";
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+      },
+    ],
+  },
   async redirects() {
     return legacyRedirects;
   },
