@@ -70,15 +70,10 @@ export function CoachingPage({ locale }: CoachingPageProps) {
             <h2>{content.astrologySite.title}</h2>
             <p>{content.astrologySite.text}</p>
           </div>
-          <div className="astrology-choice-table" aria-label={content.astrologySite.title}>
-            <div className="astrology-choice-row">
-              <span>{content.astrologySite.directTitle}</span>
-              <p>{content.astrologySite.directValue}</p>
-            </div>
-            <div className="astrology-choice-row">
-              <span>{content.astrologySite.websiteTitle}</span>
-              <p>{content.astrologySite.websiteValue}</p>
-            </div>
+          <div className="astrology-choice-art" aria-hidden="true">
+            <span className="astrology-choice-domain">SaritaAstrology.com</span>
+            <span className="astrology-choice-line" />
+            <span className="astrology-choice-label">{content.astrologySite.visualLabel}</span>
           </div>
           <Link
             className="ghost-gold-button"

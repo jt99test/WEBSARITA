@@ -1232,41 +1232,68 @@ a {
   line-height: 1.65;
 }
 
-.astrology-choice-table {
+.astrology-choice-art {
+  position: relative;
   display: grid;
-  align-self: stretch;
-  border: 1px solid rgba(245, 215, 130, 0.3);
-  background: rgba(3, 8, 20, 0.22);
+  place-items: center;
+  min-height: 19rem;
+  overflow: hidden;
+  border: 1px solid rgba(245, 215, 130, 0.28);
+  background:
+    radial-gradient(circle at 50% 42%, rgba(245, 215, 130, 0.08), transparent 8rem),
+    linear-gradient(180deg, rgba(7, 20, 55, 0.48), rgba(3, 8, 20, 0.24));
+  text-align: center;
 }
 
-.astrology-choice-row {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
-  align-items: center;
-  gap: 1rem;
-  min-height: 5.5rem;
-  padding: 1rem 1.1rem;
+.astrology-choice-art::before,
+.astrology-choice-art::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(215, 231, 255, 0.16);
+  border-radius: 999px;
+  pointer-events: none;
 }
 
-.astrology-choice-row + .astrology-choice-row {
-  border-top: 1px solid rgba(245, 215, 130, 0.22);
+.astrology-choice-art::before {
+  width: 13rem;
+  height: 13rem;
 }
 
-.astrology-choice-row span {
+.astrology-choice-art::after {
+  width: 18rem;
+  height: 18rem;
+  transform: rotate(16deg) scaleY(0.56);
+  border-color: rgba(245, 215, 130, 0.2);
+}
+
+.astrology-choice-domain,
+.astrology-choice-label,
+.astrology-choice-line {
+  position: relative;
+  z-index: 1;
+}
+
+.astrology-choice-domain {
+  max-width: 14rem;
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 0.92;
+}
+
+.astrology-choice-line {
+  width: 4rem;
+  height: 1px;
+  margin: 1.35rem 0 1rem;
+  background: rgba(245, 215, 130, 0.55);
+}
+
+.astrology-choice-label {
   color: var(--dusty-gold);
   font-size: 0.74rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
-  line-height: 1.25;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-}
-
-.astrology-choice-row p {
-  margin: 0;
-  color: rgba(255, 250, 240, 0.9);
-  font-family: var(--font-serif);
-  font-size: clamp(1.35rem, 2vw, 1.8rem);
-  line-height: 1;
 }
 
 .astrology-choice-panel .ghost-gold-button {
@@ -1738,14 +1765,8 @@ a {
     text-align: center;
   }
 
-  .astrology-choice-row {
-    grid-template-columns: 1fr;
-    gap: 0.45rem;
-    min-height: auto;
-  }
-
-  .astrology-choice-row p {
-    margin-inline: auto;
+  .astrology-choice-art {
+    min-height: 15rem;
   }
 
   .astrology-choice-panel .ghost-gold-button {
