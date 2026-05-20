@@ -66,13 +66,63 @@ export const legacyRedirects: LegacyRedirect[] = [
     statusCode: 301,
   },
   {
+    source: "/book-online",
+    destination: "/it/booking",
+    statusCode: 301,
+  },
+  {
     source: "/booking",
     destination: "/it/booking",
     statusCode: 301,
   },
   {
+    source: "/gift-card",
+    destination: "/it/coaching",
+    statusCode: 301,
+  },
+  {
+    source: "/search",
+    destination: "/it/blog",
+    statusCode: 301,
+  },
+  {
     source: "/blog",
     destination: "/es/blog",
+    statusCode: 301,
+  },
+  {
+    source: "/post/retreat-in-spain-unwind-and-rejuvenate-with-yoga-and-meditation",
+    destination: "/en/coaching",
+    statusCode: 301,
+  },
+  {
+    source: "/post/i-allow-myself-to-think-differently",
+    destination: "/en/blog/i-allow-myself-to-think-differently",
+    statusCode: 301,
+  },
+  {
+    source: "/post/astrological-coaching",
+    destination: "/en/coaching",
+    statusCode: 301,
+  },
+  {
+    source: "/post/discover-the-ultimate-yoga-retreat-on-the-costa-brava",
+    destination: "/en/coaching",
+    statusCode: 301,
+  },
+  {
+    source: "/post/new-roots-new-moon-in-taurus-and-the-path-to-authenticity",
+    destination: "/en/blog/new-roots-new-moon-in-taurus-and-the-path-to-authenticity",
+    statusCode: 301,
+  },
+  {
+    source: "/post/eclipse-with-south-node-in-virgo-and-full-moon-on-march-14-2025-a-call-to-integrate-chaos-and-order",
+    destination: "/en/blog/eclipse-with-south-node-in-virgo-and-full-moon-on-march-14-2025-a-call-to-integrate-chaos-and-order",
+    statusCode: 301,
+  },
+  {
+    source: "/post/fullmooninleoshinewithauthenticity",
+    destination: "/en/blog/fullmooninleoshinewithauthenticity",
     statusCode: 301,
   },
   {
@@ -173,6 +223,41 @@ export const legacyRedirects: LegacyRedirect[] = [
   {
     source: "/es/post/las-fases-de-mercurio-retr%C3%B3grado-y-su-lenguaje-pre-sombra-retrogradaci%C3%B3n-y-post-sombra",
     destination: "/es/blog/las-fases-de-mercurio-retrogrado-y-su-lenguaje-pre-sombra-retrogradacion-y-post-sombra",
+    statusCode: 301,
+  },
+  {
+    source: "/service-page/intestinal-wash-and-astrology-coach",
+    destination: "/it/coaching",
+    statusCode: 301,
+  },
+  {
+    source: "/service-page/one-on-one-yoga-session-with-astrologica",
+    destination: "/it/coaching",
+    statusCode: 301,
+  },
+  {
+    source: "/service-page/monthly-astrological-coaching-session",
+    destination: "/it/coaching",
+    statusCode: 301,
+  },
+  {
+    source: "/service-page/solar-return-reading",
+    destination: "/it/coaching",
+    statusCode: 301,
+  },
+  {
+    source: "/service-page/psychological-astrology-reading",
+    destination: "/it/coaching",
+    statusCode: 301,
+  },
+  {
+    source: "/service-page/psychological-synastry",
+    destination: "/it/coaching",
+    statusCode: 301,
+  },
+  {
+    source: "/service-page/short-intestinal-wash",
+    destination: "/it/coaching",
     statusCode: 301,
   },
 ];
