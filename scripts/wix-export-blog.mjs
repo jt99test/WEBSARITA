@@ -62,6 +62,15 @@ function wixHeaders() {
   return headers;
 }
 
+function redactHeaders(headers) {
+  return Object.fromEntries(
+    Object.entries(headers).map(([key, value]) => [
+      key,
+      key.toLowerCase() === "authorization" ? "Bearer ***" : value,
+    ]),
+  );
+}
+
 async function wixRequest(url, options) {
   const response = await fetch(url, options);
   const text = await response.text();
@@ -296,6 +305,7 @@ function report(posts, sanityDrafts) {
 
 async function main() {
   await loadEnv();
+  console.log("Using Wix headers:", redactHeaders(wixHeaders()));
   const posts = await fetchAllPosts();
   const sanityDrafts = posts.map(toSanityDraft);
 
