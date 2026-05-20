@@ -1131,6 +1131,34 @@ a {
   margin-top: 1.25rem;
 }
 
+.reviews-signal {
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 0 clamp(1rem, 4vw, 2rem) 5rem;
+}
+
+.reviews-signal-inner {
+  border-block: 1px solid rgba(245, 215, 130, 0.36);
+  padding: clamp(1.35rem, 4vw, 2.25rem) 0;
+  text-align: center;
+}
+
+.reviews-signal-inner h2 {
+  margin: 0.65rem auto 0.85rem;
+  max-width: 48rem;
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+}
+
+.reviews-signal-inner p:not(.eyebrow) {
+  margin: 0 auto;
+  max-width: 42rem;
+  color: var(--soft-blue);
+  line-height: 1.65;
+}
+
 .astrology-signal {
   margin: 0 auto;
   max-width: 72rem;
@@ -1164,6 +1192,54 @@ a {
 .astrology-signal-panel .ghost-gold-button {
   justify-self: center;
   margin-top: 0.5rem;
+}
+
+.astrology-choice-section {
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 0 clamp(1rem, 4vw, 2rem) 6rem;
+}
+
+.astrology-choice-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(14rem, 0.42fr);
+  gap: clamp(1.25rem, 4vw, 2.5rem);
+  align-items: center;
+  padding: clamp(1.35rem, 4vw, 2rem);
+}
+
+.astrology-choice-panel h2 {
+  margin: 0.75rem 0 1rem;
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1;
+}
+
+.astrology-choice-panel p:not(.eyebrow) {
+  margin: 0;
+  color: var(--soft-blue);
+  line-height: 1.65;
+}
+
+.astrology-choice-points {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.astrology-choice-points span {
+  border: 1px solid rgba(245, 215, 130, 0.3);
+  border-radius: 999px;
+  padding: 0.85rem 1rem;
+  color: rgba(255, 250, 240, 0.9);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.astrology-choice-panel .ghost-gold-button {
+  justify-self: start;
 }
 
 .retreat-signal {
@@ -1603,6 +1679,7 @@ a {
   .about-path,
   .services-heading,
   .service-grid,
+  .astrology-choice-panel,
   .training-offers,
   .module-grid,
   .feature-section,
@@ -1624,6 +1701,14 @@ a {
 
   .service-price {
     justify-items: center;
+  }
+
+  .astrology-choice-panel {
+    text-align: center;
+  }
+
+  .astrology-choice-panel .ghost-gold-button {
+    justify-self: stretch;
   }
 
   /* ── Misc layout adjustments ──────────────────────── */

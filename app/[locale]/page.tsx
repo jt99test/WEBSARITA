@@ -50,10 +50,10 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
           <p className="hero-intro">{content.intro}</p>
           <p className="hero-location">{content.serviceLine}</p>
           <div className="hero-actions">
-            <Link className="primary-button" href={`/${locale}/booking`}>
+            <Link className="primary-button" href={`/${locale}/coaching`}>
               {content.primaryCta}
             </Link>
-            <Link className="ghost-gold-button" href={`/${locale}/coaching`}>
+            <Link className="ghost-gold-button" href={`/${locale}/booking`}>
               {content.secondaryCta}
             </Link>
           </div>
@@ -68,6 +68,14 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
               <p>{pillar.text}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="reviews-signal" aria-label={content.reviews.eyebrow}>
+        <div className="reviews-signal-inner">
+          <p className="eyebrow">{content.reviews.eyebrow}</p>
+          <h2>{content.reviews.title}</h2>
+          <p>{content.reviews.text}</p>
         </div>
       </section>
 

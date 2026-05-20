@@ -11,6 +11,11 @@ export type HomeContent = {
     title: string;
     text: string;
   }>;
+  reviews: {
+    eyebrow: string;
+    title: string;
+    text: string;
+  };
   imageAlt: {
     hero: string;
     practice: string;
@@ -35,24 +40,30 @@ export const homeContent: Record<Locale, HomeContent> = {
     eyebrow: "Yoga terapeutico | Astrologia psicologica | Coaching",
     title: "Sarita Shakti",
     intro:
-      "Sessioni e percorsi per integrare corpo, psiche e cielo attraverso astrologia psicologica, coaching e pratiche terapeutiche.",
-    serviceLine: "Letture astrologiche | coaching online | yoga terapeutico",
-    primaryCta: "Prenota una sessione",
-    secondaryCta: "Vedi i servizi",
+      "Letture astrologiche e accompagnamento personale per capire dove sei, cosa si muove dentro di te e quali passi concreti puoi fare ora.",
+    serviceLine: "Astrologia psicologica | coaching online | yoga terapeutico",
+    primaryCta: "Vedi i servizi",
+    secondaryCta: "Prenota una chiamata",
     pillars: [
       {
         title: "Astrologia psicologica",
-        text: "Letture di carta natale, sinastria e rivoluzione solare per comprendere talenti, relazioni e cicli interiori.",
+        text: "Carta natale, sinastria e rivoluzione solare lette con Sarita: uno spazio personale, umano e psicologico.",
       },
       {
         title: "Coaching astrologico",
-        text: "Sessioni singole, mensili e pacchetti brevi per trasformare la comprensione in scelte concrete.",
+        text: "Sessioni singole, mensili e pacchetti brevi per trasformare una lettura in decisioni, pratica e continuità.",
       },
       {
         title: "Yoga terapeutico",
         text: "Pratiche personalizzate e ascolto somatico per ritrovare presenza, mobilità e radicamento.",
       },
     ],
+    reviews: {
+      eyebrow: "Google Reviews",
+      title: "Esperienze reali, integrate nel design del sito.",
+      text:
+        "Qui entreranno alcune recensioni verificate da Google, selezionate e presentate con lo stesso stile del sito invece di un widget generico.",
+    },
     imageAlt: {
       hero: "Sarita Shakti in meditazione davanti al tramonto sul mare.",
       practice: "Gruppo di yoga in pratica all'aperto.",
@@ -67,34 +78,40 @@ export const homeContent: Record<Locale, HomeContent> = {
     },
     astrology: {
       eyebrow: "Sarita Astrology",
-      title: "Vuoi iniziare dalla carta natale?",
+      title: "Vuoi una lettura più accessibile e immediata?",
       text:
-        "Sarita Astrology è lo spazio dedicato alle letture astrologiche online: una porta semplice per esplorare il tema natale, la sinastria o l'anno astrologico prima di entrare in un percorso personale.",
-      cta: "Visita il sito di astrologia",
+        "SaritaAstrology.com offre letture astrologiche online generate dal sito: sono più economiche e rapide, ma meno personalizzate. Questo sito è per capire Sarita, scegliere un servizio con lei e prenotare un accompagnamento umano.",
+      cta: "Vai a SaritaAstrology.com",
     },
   },
   es: {
     eyebrow: "Yoga terapéutico | Astrología psicológica | Coaching",
     title: "Sarita Shakti",
     intro:
-      "Sesiones y procesos para integrar cuerpo, psique y cielo a través de astrología psicológica, coaching y prácticas terapéuticas.",
-    serviceLine: "Lecturas astrológicas | coaching online | yoga terapéutico",
-    primaryCta: "Reservar una sesión",
-    secondaryCta: "Ver servicios",
+      "Lecturas astrológicas y acompañamiento personal para entender dónde estás, qué se mueve dentro de ti y qué pasos concretos puedes dar ahora.",
+    serviceLine: "Astrología psicológica | coaching online | yoga terapéutico",
+    primaryCta: "Ver servicios",
+    secondaryCta: "Reservar una llamada",
     pillars: [
       {
         title: "Astrología psicológica",
-        text: "Lecturas de carta natal, sinastría y revolución solar para comprender talentos, relaciones y ciclos interiores.",
+        text: "Carta natal, sinastría y revolución solar leídas con Sarita: un espacio personal, humano y psicológico.",
       },
       {
         title: "Coaching astrológico",
-        text: "Sesiones individuales, mensuales y packs breves para transformar la comprensión en decisiones concretas.",
+        text: "Sesiones individuales, mensuales y packs breves para transformar una lectura en decisiones, práctica y continuidad.",
       },
       {
         title: "Yoga terapéutico",
         text: "Prácticas personalizadas y escucha somática para recuperar presencia, movilidad y arraigo.",
       },
     ],
+    reviews: {
+      eyebrow: "Google Reviews",
+      title: "Experiencias reales, integradas en el diseño del sitio.",
+      text:
+        "Aquí irán algunas reseñas verificadas de Google, seleccionadas y presentadas con el estilo propio del sitio en vez de un widget genérico.",
+    },
     imageAlt: {
       hero: "Sarita Shakti meditando frente al atardecer en el mar.",
       practice: "Grupo de yoga practicando al aire libre.",
@@ -109,34 +126,40 @@ export const homeContent: Record<Locale, HomeContent> = {
     },
     astrology: {
       eyebrow: "Sarita Astrology",
-      title: "¿Quieres empezar por tu carta natal?",
+      title: "¿Quieres una lectura más accesible e inmediata?",
       text:
-        "Sarita Astrology es el espacio dedicado a las lecturas astrológicas online: una puerta sencilla para explorar tu carta natal, la sinastría o el año astrológico antes de entrar en un proceso personal.",
-      cta: "Visitar la web de astrología",
+        "SaritaAstrology.com ofrece lecturas astrológicas online generadas por la web: son más económicas y rápidas, pero menos personalizadas. Este sitio es para conocer a Sarita, elegir un servicio con ella y reservar un acompañamiento humano.",
+      cta: "Ir a SaritaAstrology.com",
     },
   },
   en: {
     eyebrow: "Therapeutic yoga | Psychological astrology | Coaching",
     title: "Sarita Shakti",
     intro:
-      "Sessions and short processes for integrating body, psyche, and sky through psychological astrology, coaching, and therapeutic practice.",
-    serviceLine: "Astrology readings | online coaching | therapeutic yoga",
-    primaryCta: "Book a session",
-    secondaryCta: "View services",
+      "Astrology readings and personal guidance to understand where you are, what is moving inside you, and what concrete steps you can take now.",
+    serviceLine: "Psychological astrology | online coaching | therapeutic yoga",
+    primaryCta: "View services",
+    secondaryCta: "Book a call",
     pillars: [
       {
         title: "Psychological astrology",
-        text: "Natal chart, synastry, and solar revolution readings for understanding gifts, relationships, and inner cycles.",
+        text: "Natal chart, synastry, and solar revolution readings with Sarita: personal, human, and psychologically grounded.",
       },
       {
         title: "Astrological coaching",
-        text: "Single sessions, monthly support, and short packs for turning insight into concrete choices.",
+        text: "Single sessions, monthly support, and short packs for turning a reading into decisions, practice, and continuity.",
       },
       {
         title: "Therapeutic yoga",
         text: "Personalized practices and somatic listening for presence, mobility, and grounded regulation.",
       },
     ],
+    reviews: {
+      eyebrow: "Google Reviews",
+      title: "Real client experiences, integrated into the site design.",
+      text:
+        "This area will hold a small set of verified Google reviews, selected and rendered in the site's own style instead of a generic widget.",
+    },
     imageAlt: {
       hero: "Sarita Shakti meditating at sunset by the sea.",
       practice: "Yoga group practicing outdoors.",
@@ -151,10 +174,10 @@ export const homeContent: Record<Locale, HomeContent> = {
     },
     astrology: {
       eyebrow: "Sarita Astrology",
-      title: "Want to begin with your birth chart?",
+      title: "Want a more accessible, immediate reading?",
       text:
-        "Sarita Astrology is the dedicated space for online astrology readings: a simple doorway into the natal chart, synastry, or the astrological year before entering a personal process.",
-      cta: "Visit the astrology website",
+        "SaritaAstrology.com offers online astrology readings generated by the website: they are cheaper and faster, but less personalized. This site is for understanding Sarita, choosing a service with her, and booking human guidance.",
+      cta: "Go to SaritaAstrology.com",
     },
   },
 };

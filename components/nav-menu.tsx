@@ -6,8 +6,15 @@ import { Locale, localeLabels, locales } from "@/lib/locales";
 
 const navItems = [
   { href: "", label: { it: "Home", es: "Inicio", en: "Home" } },
-  { href: "coaching", label: { it: "Coaching", es: "Coaching", en: "Coaching" } },
-  { href: "training", label: { it: "Training", es: "Formación", en: "Training" } },
+  { href: "coaching", label: { it: "Servizi", es: "Servicios", en: "Services" } },
+  {
+    href: "training",
+    label: {
+      it: "Formazione in presenza",
+      es: "Formación presencial",
+      en: "In-person training",
+    },
+  },
   { href: "blog", label: { it: "Blog", es: "Blog", en: "Blog" } },
   { href: "about", label: { it: "Contatto", es: "Contacto", en: "Contact" } },
 ];

@@ -83,22 +83,22 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
   },
   training: {
     it: {
-      eyebrow: "Training",
-      title: "Yoga e astrologia psicologica",
+      eyebrow: "Formazione in presenza",
+      title: "Formazione in yoga e astrologia psicologica",
       intro:
-        "Formazioni e percorsi di studio con yoga, carta natale e astrologia psicologica.",
+        "Percorsi di studio in presenza con yoga, carta natale e astrologia psicologica.",
     },
     es: {
-      eyebrow: "Formación",
-      title: "Yoga y astrología psicológica",
+      eyebrow: "Formación presencial",
+      title: "Formación en yoga y astrología psicológica",
       intro:
-        "Formaciones y procesos de estudio con yoga, carta natal y astrología psicológica.",
+        "Procesos de estudio presenciales con yoga, carta natal y astrología psicológica.",
     },
     en: {
-      eyebrow: "Training",
-      title: "Yoga and psychological astrology",
+      eyebrow: "In-person training",
+      title: "Yoga and psychological astrology training",
       intro:
-        "Trainings and study processes with yoga, natal chart work, and psychological astrology.",
+        "In-person study processes with yoga, natal chart work, and psychological astrology.",
     },
   },
   blog: {
