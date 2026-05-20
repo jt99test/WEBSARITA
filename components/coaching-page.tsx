@@ -71,8 +71,14 @@ export function CoachingPage({ locale }: CoachingPageProps) {
             <p>{content.astrologySite.text}</p>
           </div>
           <div className="astrology-choice-points" aria-label={content.astrologySite.title}>
-            <span>{content.astrologySite.directLabel}</span>
-            <span>{content.astrologySite.websiteLabel}</span>
+            <div>
+              <span>01</span>
+              <p>{content.astrologySite.directLabel}</p>
+            </div>
+            <div>
+              <span>02</span>
+              <p>{content.astrologySite.websiteLabel}</p>
+            </div>
           </div>
           <Link
             className="ghost-gold-button"
