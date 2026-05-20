@@ -96,7 +96,13 @@ async function wixRequest(url, options) {
 }
 
 async function queryPostsPage(offset, limit) {
-  return wixRequest("https://www.wixapis.com/v3/posts/query", {
+  const url = new URL("https://www.wixapis.com/v3/posts/query");
+  for (const field of ["CONTENT_TEXT", "RICH_CONTENT", "URL", "SEO", "METRICS"]) {
+    url.searchParams.append("fieldsToInclude", field);
+    url.searchParams.append("fieldsets", field);
+  }
+
+  return wixRequest(url.toString(), {
     method: "POST",
     headers: wixHeaders(),
     body: JSON.stringify({
@@ -112,11 +118,43 @@ async function listPostsPage(offset, limit) {
   const url = new URL("https://www.wixapis.com/v3/posts");
   url.searchParams.set("paging.limit", String(limit));
   url.searchParams.set("paging.offset", String(offset));
+  for (const field of ["CONTENT_TEXT", "RICH_CONTENT", "URL", "SEO", "METRICS"]) {
+    url.searchParams.append("fieldsToInclude", field);
+    url.searchParams.append("fieldsets", field);
+  }
 
   return wixRequest(url, {
     method: "GET",
     headers: wixHeaders(),
   });
+}
+
+async function getPost(postId) {
+  const endpoints = [
+    new URL(`https://www.wixapis.com/v3/posts/${postId}`),
+    new URL(`https://www.wixapis.com/blog/v3/posts/${postId}`),
+  ];
+
+  for (const url of endpoints) {
+    for (const field of ["CONTENT_TEXT", "RICH_CONTENT", "URL", "SEO", "METRICS"]) {
+      url.searchParams.append("fieldsToInclude", field);
+      url.searchParams.append("fieldsets", field);
+    }
+  }
+
+  for (const url of endpoints) {
+    try {
+      const response = await wixRequest(url, {
+        method: "GET",
+        headers: wixHeaders(),
+      });
+      return response?.post ?? response;
+    } catch {
+      // Try the next documented/legacy endpoint.
+    }
+  }
+
+  return null;
 }
 
 function getPostsFromResponse(response) {
@@ -171,6 +209,19 @@ async function fetchAllPosts() {
   return posts;
 }
 
+async function hydratePosts(posts) {
+  const hydrated = [];
+
+  for (let index = 0; index < posts.length; index += 1) {
+    const post = posts[index];
+    const detailed = await getPost(post.id);
+    hydrated.push(detailed ? { ...post, ...detailed } : post);
+    console.log(`Hydrated ${index + 1}/${posts.length} posts`);
+  }
+
+  return hydrated;
+}
+
 function slugify(value) {
   return String(value ?? "")
     .normalize("NFD")
@@ -223,11 +274,44 @@ function plainPortableText(text) {
   }));
 }
 
+function richContentToText(richContent) {
+  const parts = [];
+
+  function walk(value) {
+    if (!value || typeof value !== "object") return;
+
+    if (typeof value.text === "string") {
+      parts.push(value.text);
+    }
+
+    if (Array.isArray(value.nodes)) {
+      parts.push("\n\n");
+      value.nodes.forEach(walk);
+      parts.push("\n\n");
+    }
+
+    for (const child of Object.values(value)) {
+      if (Array.isArray(child)) child.forEach(walk);
+      else if (child && typeof child === "object") walk(child);
+    }
+  }
+
+  walk(richContent);
+
+  return parts
+    .join("")
+    .replace(/\n{3,}/g, "\n\n")
+    .replace(/[ \t]+\n/g, "\n")
+    .trim();
+}
+
 function toSanityDraft(post) {
   const title = post.title ?? post.seoData?.tags?.title ?? "Untitled post";
   const language = pickLanguage(post);
   const slug = slugify(post.slug ?? post.url?.path?.split("/").pop() ?? title);
-  const contentText = post.contentText ?? post.excerpt ?? post.description ?? "";
+  const richText = richContentToText(post.richContent);
+  const contentText =
+    post.contentText ?? richText ?? post.excerpt ?? post.description ?? "";
   const seoTitle = post.seoData?.tags?.title ?? post.seoTitle ?? title;
   const seoDescription =
     post.seoData?.tags?.description ??
@@ -263,6 +347,7 @@ function toSanityDraft(post) {
       sourceUrl: legacyWixUrl,
       coverMedia: post.coverMedia ?? post.media ?? null,
       hasRichContent: Boolean(post.richContent),
+      hasContentText: Boolean(post.contentText),
       isRetreatRelated: /retreat|retiro|ritiri|costa-brava|spain/i.test(
         `${title} ${legacyWixUrl}`,
       ),
@@ -306,7 +391,7 @@ function report(posts, sanityDrafts) {
 async function main() {
   await loadEnv();
   console.log("Using Wix headers:", redactHeaders(wixHeaders()));
-  const posts = await fetchAllPosts();
+  const posts = await hydratePosts(await fetchAllPosts());
   const sanityDrafts = posts.map(toSanityDraft);
 
   await mkdir(outDir, { recursive: true });
