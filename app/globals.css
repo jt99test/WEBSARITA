@@ -77,6 +77,8 @@ a {
 }
 
 .site-header {
+  position: relative;
+  z-index: 10;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
@@ -135,6 +137,7 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.35rem 0.9rem;
+  min-width: 0;
   color: var(--soft-blue);
   font-size: 0.74rem;
   font-weight: 700;
@@ -148,6 +151,13 @@ a {
     color 160ms ease,
     border-color 160ms ease,
     background 160ms ease;
+}
+
+.primary-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0.2rem 0;
 }
 
 .primary-nav a:hover,

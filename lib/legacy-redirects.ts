@@ -16,6 +16,21 @@ export const legacyRedirects: LegacyRedirect[] = [
     statusCode: 301,
   },
   {
+    source: "/it/servizi",
+    destination: "/it/coaching",
+    statusCode: 301,
+  },
+  {
+    source: "/es/servicios",
+    destination: "/es/coaching",
+    statusCode: 301,
+  },
+  {
+    source: "/en/services",
+    destination: "/en/coaching",
+    statusCode: 301,
+  },
+  {
     source: "/retirosyogayastrologia",
     destination: "/es/coaching",
     statusCode: 301,
