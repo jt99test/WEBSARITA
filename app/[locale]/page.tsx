@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { homeContent } from "@/lib/home-content";
 import { isLocale } from "@/lib/locales";
+import { socialLinks } from "@/lib/social-links";
 import { buildPageMetadata, getHomeSeo } from "@/lib/site";
 
 type LocalePageProps = {
@@ -85,6 +86,22 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
           <p className="eyebrow">{content.feature.eyebrow}</p>
           <h2 className="section-title">{content.feature.title}</h2>
           <p>{content.feature.text}</p>
+        </div>
+      </section>
+
+      <section className="astrology-signal">
+        <div className="panel astrology-signal-panel">
+          <p className="eyebrow">{content.astrology.eyebrow}</p>
+          <h2>{content.astrology.title}</h2>
+          <p>{content.astrology.text}</p>
+          <Link
+            className="ghost-gold-button"
+            href={socialLinks.astrology}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {content.astrology.cta}
+          </Link>
         </div>
       </section>
 

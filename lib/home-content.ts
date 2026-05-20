@@ -21,6 +21,12 @@ export type HomeContent = {
     title: string;
     text: string;
   };
+  astrology: {
+    eyebrow: string;
+    title: string;
+    text: string;
+    cta: string;
+  };
   locations: Array<{
     place: string;
     text: string;
@@ -60,6 +66,13 @@ export const homeContent: Record<Locale, HomeContent> = {
       title: "Dal corpo alla carta natale, senza separare ciò che vive insieme.",
       text:
         "Le sessioni possono unire ascolto somatico, movimento, astrologia psicologica e coaching. La direzione è semplice: più presenza, più chiarezza e strumenti concreti da portare nella vita quotidiana.",
+    },
+    astrology: {
+      eyebrow: "Sarita Astrology",
+      title: "Vuoi iniziare dalla carta natale?",
+      text:
+        "Ho creato Sarita Astrology come spazio dedicato alle letture astrologiche online: una porta semplice per esplorare il tema natale prima di entrare in un percorso personale.",
+      cta: "Visita il sito di astrologia",
     },
     locations: [
       {
@@ -109,6 +122,13 @@ export const homeContent: Record<Locale, HomeContent> = {
       text:
         "Las sesiones pueden unir escucha somática, movimiento, astrología psicológica y coaching. La dirección es sencilla: más presencia, más claridad y herramientas concretas para la vida cotidiana.",
     },
+    astrology: {
+      eyebrow: "Sarita Astrology",
+      title: "¿Quieres empezar por tu carta natal?",
+      text:
+        "He creado Sarita Astrology como un espacio dedicado a las lecturas astrológicas online: una puerta sencilla para explorar la carta natal antes de entrar en un proceso personal.",
+      cta: "Visitar la web de astrología",
+    },
     locations: [
       {
         place: "Barcelona",
@@ -156,6 +176,13 @@ export const homeContent: Record<Locale, HomeContent> = {
       title: "From the body to the birth chart, without splitting what belongs together.",
       text:
         "Sessions can weave somatic listening, movement, psychological astrology, and coaching. The direction is simple: more presence, more clarity, and practical tools for everyday life.",
+    },
+    astrology: {
+      eyebrow: "Sarita Astrology",
+      title: "Want to begin with your birth chart?",
+      text:
+        "I created Sarita Astrology as a dedicated space for online astrology readings: a simple doorway into the natal chart before entering a personal process.",
+      cta: "Visit the astrology website",
     },
     locations: [
       {

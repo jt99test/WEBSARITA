@@ -14,7 +14,8 @@ const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-cormorant",
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -41,7 +42,7 @@ export default async function RootLayout({
   return (
     <html
       lang={htmlLocale}
-      className={`${inter.variable} ${cormorant.variable} h-full antialiased`}
+      className={`${cormorant.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full">{children}</body>
     </html>

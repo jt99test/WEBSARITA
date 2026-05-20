@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SocialLinks } from "@/components/social-links";
+import { NavMenu } from "@/components/nav-menu";
 import { Locale, localeLabels, locales } from "@/lib/locales";
 
 const navItems = [
@@ -30,9 +32,14 @@ export function SiteShell({ children, locale }: SiteShellProps) {
       </a>
       <header className="site-header">
         <Link className="brand-mark" href={`/${locale}`} aria-label="Sarita Shakti home">
-          <span className="brand-orbit" aria-hidden="true">
-            <span />
-          </span>
+          <Image
+            className="brand-logo-image"
+            src="/brand/sarita-logo-transparent.png"
+            alt=""
+            width={240}
+            height={234}
+            priority
+          />
           <span className="brand-wordmark">
             <span>Sarita Shakti</span>
             <small>Yoga & Astrology</small>
@@ -47,26 +54,28 @@ export function SiteShell({ children, locale }: SiteShellProps) {
           ))}
         </nav>
 
-        <SocialLinks className="header-social-links" compact />
-
-        <nav className="language-nav" aria-label="Language navigation">
-          {locales.map((language) => (
-            <Link
-              key={language}
-              aria-current={language === locale ? "page" : undefined}
-              href={`/${language}`}
-            >
-              {localeLabels[language].slice(0, 2)}
-            </Link>
-          ))}
-        </nav>
+        <div className="header-end">
+          <SocialLinks className="header-social-links" compact />
+          <nav className="language-nav" aria-label="Language navigation">
+            {locales.map((language) => (
+              <Link
+                key={language}
+                aria-current={language === locale ? "page" : undefined}
+                href={`/${language}`}
+              >
+                {localeLabels[language].slice(0, 2)}
+              </Link>
+            ))}
+          </nav>
+          <NavMenu locale={locale} />
+        </div>
       </header>
 
       <main id="main">{children}</main>
 
       <footer className="site-footer">
         <SocialLinks className="footer-social-links" />
-        <p>SEO redirects and final domain mapping remain launch blockers.</p>
+        <p>© Sarita Shakti</p>
       </footer>
     </div>
   );

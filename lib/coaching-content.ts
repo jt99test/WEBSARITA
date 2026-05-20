@@ -40,7 +40,7 @@ export const coachingContent: Record<Locale, CoachingContent> = {
       support: "Sarita Shakti in pratica al tramonto sul mare.",
     },
     servicesIntro:
-      "Prezzi e durate confermati dai materiali cliente. Il pagamento online resta da decidere prima della pagina Booking.",
+      "Sessioni individuali adattate a ciò che è più vivo nel momento, attraverso il corpo, la carta e la parola.",
     services: [
       {
         title: "Lavaggio intestinale",
@@ -115,7 +115,7 @@ export const coachingContent: Record<Locale, CoachingContent> = {
       support: "Sarita Shakti practicando al atardecer junto al mar.",
     },
     servicesIntro:
-      "Precios y duraciones confirmados desde los materiales de la clienta. El pago online sigue pendiente antes de cerrar la página de reservas.",
+      "Sesiones individuales adaptadas a lo que está más presente — a través del cuerpo, la carta y la conversación.",
     services: [
       {
         title: "Lavado intestinal",
@@ -190,7 +190,7 @@ export const coachingContent: Record<Locale, CoachingContent> = {
       support: "Sarita Shakti practicing at sunset by the sea.",
     },
     servicesIntro:
-      "Prices and durations are confirmed from client materials. Online payment remains undecided before the Booking page is finalized.",
+      "Individual sessions adapted to what is most present — through the body, the chart, and conversation.",
     services: [
       {
         title: "Intestinal wash",
