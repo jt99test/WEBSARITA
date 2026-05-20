@@ -15,6 +15,8 @@ export type HomeContent = {
     eyebrow: string;
     title: string;
     text: string;
+    cta: string;
+    countLabel: string;
   };
   imageAlt: {
     hero: string;
@@ -60,9 +62,11 @@ export const homeContent: Record<Locale, HomeContent> = {
     ],
     reviews: {
       eyebrow: "Google Reviews",
-      title: "Esperienze reali, integrate nel design del sito.",
+      title: "Esperienze reali con Sarita.",
       text:
-        "Qui entreranno alcune recensioni verificate da Google, selezionate e presentate con lo stesso stile del sito invece di un widget generico.",
+        "Una selezione di recensioni verificate da Google, presentate nello stile del sito invece di un widget generico.",
+      cta: "Vedi su Google",
+      countLabel: "recensioni",
     },
     imageAlt: {
       hero: "Sarita Shakti in meditazione davanti al tramonto sul mare.",
@@ -108,9 +112,11 @@ export const homeContent: Record<Locale, HomeContent> = {
     ],
     reviews: {
       eyebrow: "Google Reviews",
-      title: "Experiencias reales, integradas en el diseño del sitio.",
+      title: "Experiencias reales con Sarita.",
       text:
-        "Aquí irán algunas reseñas verificadas de Google, seleccionadas y presentadas con el estilo propio del sitio en vez de un widget genérico.",
+        "Una selección de reseñas verificadas de Google, presentadas con el estilo propio del sitio en vez de un widget genérico.",
+      cta: "Ver en Google",
+      countLabel: "reseñas",
     },
     imageAlt: {
       hero: "Sarita Shakti meditando frente al atardecer en el mar.",
@@ -156,9 +162,11 @@ export const homeContent: Record<Locale, HomeContent> = {
     ],
     reviews: {
       eyebrow: "Google Reviews",
-      title: "Real client experiences, integrated into the site design.",
+      title: "Real client experiences with Sarita.",
       text:
-        "This area will hold a small set of verified Google reviews, selected and rendered in the site's own style instead of a generic widget.",
+        "A small set of verified Google reviews, rendered in the site's own style instead of a generic widget.",
+      cta: "View on Google",
+      countLabel: "reviews",
     },
     imageAlt: {
       hero: "Sarita Shakti meditating at sunset by the sea.",

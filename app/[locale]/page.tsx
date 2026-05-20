@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { GoogleReviewsSection } from "@/components/google-reviews-section";
+import { getGoogleReviews } from "@/lib/google-reviews";
 import { homeContent } from "@/lib/home-content";
 import { isLocale } from "@/lib/locales";
 import { socialLinks } from "@/lib/social-links";
@@ -31,6 +33,7 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
   }
 
   const content = homeContent[locale];
+  const googleReviews = await getGoogleReviews(locale);
 
   return (
     <>
@@ -71,13 +74,15 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
         </div>
       </section>
 
-      <section className="reviews-signal" aria-label={content.reviews.eyebrow}>
-        <div className="reviews-signal-inner">
-          <p className="eyebrow">{content.reviews.eyebrow}</p>
-          <h2>{content.reviews.title}</h2>
-          <p>{content.reviews.text}</p>
-        </div>
-      </section>
+      <GoogleReviewsSection
+        locale={locale}
+        summary={googleReviews}
+        eyebrow={content.reviews.eyebrow}
+        title={content.reviews.title}
+        text={content.reviews.text}
+        cta={content.reviews.cta}
+        emptyLabel={content.reviews.countLabel}
+      />
 
       <section className="feature-section">
         <div className="feature-image-wrap">
