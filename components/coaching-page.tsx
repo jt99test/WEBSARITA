@@ -70,14 +70,14 @@ export function CoachingPage({ locale }: CoachingPageProps) {
             <h2>{content.astrologySite.title}</h2>
             <p>{content.astrologySite.text}</p>
           </div>
-          <div className="astrology-choice-points" aria-label={content.astrologySite.title}>
-            <div>
-              <span>01</span>
-              <p>{content.astrologySite.directLabel}</p>
+          <div className="astrology-choice-table" aria-label={content.astrologySite.title}>
+            <div className="astrology-choice-row">
+              <span>{content.astrologySite.directTitle}</span>
+              <p>{content.astrologySite.directValue}</p>
             </div>
-            <div>
-              <span>02</span>
-              <p>{content.astrologySite.websiteLabel}</p>
+            <div className="astrology-choice-row">
+              <span>{content.astrologySite.websiteTitle}</span>
+              <p>{content.astrologySite.websiteValue}</p>
             </div>
           </div>
           <Link
