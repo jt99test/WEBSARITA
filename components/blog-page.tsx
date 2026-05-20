@@ -14,6 +14,7 @@ type BlogPostListItem = {
   mainImage?: {
     alt?: string;
   };
+  wixCoverImageUrl?: string;
 };
 
 const labels: Record<
@@ -65,11 +66,15 @@ export async function BlogPage({ locale }: { locale: Locale }) {
       <div className="blog-grid">
         {posts.map((post) => (
           <article className="panel blog-card" key={post._id}>
-            {post.mainImage ? (
+            {post.mainImage || post.wixCoverImageUrl ? (
               <Image
                 className="blog-card-image"
-                src={urlForImage(post.mainImage).width(900).height(620).url()}
-                alt={post.mainImage.alt ?? ""}
+                src={
+                  post.mainImage
+                    ? urlForImage(post.mainImage).width(900).height(620).url()
+                    : post.wixCoverImageUrl!
+                }
+                alt={post.mainImage?.alt ?? ""}
                 width={900}
                 height={620}
               />

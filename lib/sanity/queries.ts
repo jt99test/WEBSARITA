@@ -10,7 +10,8 @@ export const blogPostListQuery = groq`
     mainImage {
       ...,
       "alt": alt
-    }
+    },
+    wixCoverImageUrl
   }
 `;
 
@@ -33,6 +34,7 @@ export const blogPostBySlugQuery = groq`
       ...,
       "alt": alt
     },
+    wixCoverImageUrl,
     body,
     seoTitle,
     seoDescription,

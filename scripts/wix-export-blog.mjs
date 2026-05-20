@@ -5,6 +5,8 @@ const root = process.cwd();
 const outDir = path.join(root, "docs", "generated");
 const rawOut = path.join(outDir, "wix-blog-posts.raw.json");
 const sanityOut = path.join(outDir, "wix-blog-posts.sanity.ndjson");
+const sanityImportOut = path.join(outDir, "wix-blog-posts.import.ndjson");
+const excludedOut = path.join(outDir, "wix-blog-posts.excluded-retreats.json");
 const reportOut = path.join(outDir, "wix-blog-posts.report.md");
 
 function readDotEnv(text) {
@@ -305,10 +307,86 @@ function richContentToText(richContent) {
     .trim();
 }
 
+function wixTextToChildren(nodes = [], prefix) {
+  const markDefs = [];
+  const children = [];
+
+  for (const [index, node] of nodes.entries()) {
+    if (node.type !== "TEXT") continue;
+
+    const text = node.textData?.text ?? "";
+    const marks = [];
+
+    for (const decoration of node.textData?.decorations ?? []) {
+      if (decoration.type === "BOLD") marks.push("strong");
+      if (decoration.type === "ITALIC") marks.push("em");
+      if (decoration.type === "UNDERLINE") marks.push("underline");
+      if (decoration.type === "LINK" && decoration.linkData?.link?.url) {
+        const key = `${prefix}-link-${markDefs.length}`;
+        markDefs.push({
+          _type: "link",
+          _key: key,
+          href: decoration.linkData.link.url,
+          blank: decoration.linkData.link.target === "BLANK",
+        });
+        marks.push(key);
+      }
+    }
+
+    children.push({
+      _type: "span",
+      _key: `${prefix}-span-${index}`,
+      text,
+      marks,
+    });
+  }
+
+  return { children, markDefs };
+}
+
+function richContentToPortableText(richContent) {
+  if (!richContent?.nodes?.length) return [];
+
+  return richContent.nodes.flatMap((node, index) => {
+    if (!["PARAGRAPH", "HEADING"].includes(node.type)) return [];
+
+    const { children, markDefs } = wixTextToChildren(node.nodes, `block-${index}`);
+    if (!children.length || children.every((child) => !child.text.trim())) return [];
+
+    const level = node.headingData?.level;
+    const style =
+      node.type === "HEADING"
+        ? level === 2
+          ? "h2"
+          : "h3"
+        : "normal";
+
+    return [
+      {
+        _type: "block",
+        _key: `block-${index}`,
+        style,
+        markDefs,
+        children,
+      },
+    ];
+  });
+}
+
+function wixCoverImageUrl(post) {
+  return (
+    post.media?.wixMedia?.image?.url ??
+    post.coverMedia?.wixMedia?.image?.url ??
+    post.media?.image?.url ??
+    undefined
+  );
+}
+
 function toSanityDraft(post) {
   const title = post.title ?? post.seoData?.tags?.title ?? "Untitled post";
   const language = pickLanguage(post);
   const slug = slugify(post.slug ?? post.url?.path?.split("/").pop() ?? title);
+  const richPortableText = richContentToPortableText(post.richContent);
   const richText = richContentToText(post.richContent);
   const contentText =
     post.contentText ?? richText ?? post.excerpt ?? post.description ?? "";
@@ -337,7 +415,8 @@ function toSanityDraft(post) {
       post.publishedDate ??
       post.createdDate ??
       new Date().toISOString(),
-    body: plainPortableText(contentText),
+    body: richPortableText.length ? richPortableText : plainPortableText(contentText),
+    wixCoverImageUrl: wixCoverImageUrl(post),
     seoTitle,
     seoDescription,
     legacyWixUrl,
@@ -367,6 +446,9 @@ function report(posts, sanityDrafts) {
     "",
     `Fetched posts: ${posts.length}`,
     `Sanity drafts: ${sanityDrafts.length}`,
+    `Importable non-retreat posts: ${
+      sanityDrafts.filter((post) => !post.wixMigration.isRetreatRelated).length
+    }`,
     "",
     "## By Language",
     "",
@@ -393,14 +475,27 @@ async function main() {
   console.log("Using Wix headers:", redactHeaders(wixHeaders()));
   const posts = await hydratePosts(await fetchAllPosts());
   const sanityDrafts = posts.map(toSanityDraft);
+  const importableDrafts = sanityDrafts.filter(
+    (post) => !post.wixMigration.isRetreatRelated,
+  );
+  const excludedDrafts = sanityDrafts.filter(
+    (post) => post.wixMigration.isRetreatRelated,
+  );
 
   await mkdir(outDir, { recursive: true });
   await writeFile(rawOut, `${JSON.stringify(posts, null, 2)}\n`);
   await writeFile(sanityOut, `${sanityDrafts.map((post) => JSON.stringify(post)).join("\n")}\n`);
+  await writeFile(
+    sanityImportOut,
+    `${importableDrafts.map((post) => JSON.stringify(post)).join("\n")}\n`,
+  );
+  await writeFile(excludedOut, `${JSON.stringify(excludedDrafts, null, 2)}\n`);
   await writeFile(reportOut, report(posts, sanityDrafts));
 
   console.log(`Wrote ${rawOut}`);
   console.log(`Wrote ${sanityOut}`);
+  console.log(`Wrote ${sanityImportOut}`);
+  console.log(`Wrote ${excludedOut}`);
   console.log(`Wrote ${reportOut}`);
 }
 

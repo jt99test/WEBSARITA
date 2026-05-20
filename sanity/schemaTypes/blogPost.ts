@@ -66,6 +66,14 @@ export const blogPost = defineType({
       ],
     }),
     defineField({
+      name: "wixCoverImageUrl",
+      title: "Migrated Wix cover image URL",
+      description:
+        "Temporary source image from Wix. Replace with Main image later if desired.",
+      type: "url",
+      readOnly: true,
+    }),
+    defineField({
       name: "body",
       title: "Article body",
       type: "array",

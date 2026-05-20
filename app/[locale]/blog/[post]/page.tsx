@@ -25,6 +25,7 @@ type BlogPost = {
   mainImage?: {
     alt?: string;
   };
+  wixCoverImageUrl?: string;
   body?: PortableTextBlock[];
   seoTitle?: string;
   seoDescription?: string;
@@ -103,11 +104,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         ) : null}
       </header>
 
-      {article.mainImage ? (
+      {article.mainImage || article.wixCoverImageUrl ? (
         <Image
           className="blog-post-image"
-          src={urlForImage(article.mainImage).width(1400).height(820).url()}
-          alt={article.mainImage.alt ?? ""}
+          src={
+            article.mainImage
+              ? urlForImage(article.mainImage).width(1400).height(820).url()
+              : article.wixCoverImageUrl!
+          }
+          alt={article.mainImage?.alt ?? ""}
           width={1400}
           height={820}
           priority
