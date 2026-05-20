@@ -101,6 +101,11 @@ export const legacyRedirects: LegacyRedirect[] = [
     statusCode: 301,
   },
   {
+    source: "/post/luna-nuova-in-toro-16-maggio-2026-semina-quello-che-vuoi-davvero-sostenere",
+    destination: "/it/blog/luna-nuova-in-toro-16-maggio-2026-semina-quello-che-vuoi-davvero-sostenere",
+    statusCode: 301,
+  },
+  {
     source: "/post/astrological-coaching",
     destination: "/en/coaching",
     statusCode: 301,
