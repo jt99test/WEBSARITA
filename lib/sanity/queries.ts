@@ -41,3 +41,23 @@ export const blogPostBySlugQuery = groq`
     legacyWixUrl
   }
 `;
+
+export const trainingOffersQuery = groq`
+  *[
+    _type == "trainingOffer" &&
+    language == $locale &&
+    isVisible == true &&
+    status != "past"
+  ] | order(sortOrder asc, _createdAt asc) {
+    _id,
+    title,
+    status,
+    location,
+    dateLabel,
+    price,
+    summary,
+    details,
+    ctaLabel,
+    ctaUrl
+  }
+`;

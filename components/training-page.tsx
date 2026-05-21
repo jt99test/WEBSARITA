@@ -1,14 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Locale } from "@/lib/locales";
-import { trainingContent } from "@/lib/training-content";
+import { TrainingOffer, trainingContent } from "@/lib/training-content";
 
 type TrainingPageProps = {
   locale: Locale;
+  offers?: TrainingOffer[];
 };
 
-export function TrainingPage({ locale }: TrainingPageProps) {
+export function TrainingPage({ locale, offers }: TrainingPageProps) {
   const content = trainingContent[locale];
+  const trainingOffers = offers?.length ? offers : content.offers;
 
   return (
     <>
@@ -40,7 +42,7 @@ export function TrainingPage({ locale }: TrainingPageProps) {
       </section>
 
       <section className="training-offers" aria-label="Training options">
-        {content.offers.map((offer) => (
+        {trainingOffers.map((offer) => (
           <article className="panel training-offer-card" key={offer.title}>
             <div>
               <p className="eyebrow">{offer.eyebrow}</p>
@@ -52,16 +54,30 @@ export function TrainingPage({ locale }: TrainingPageProps) {
                 <dt>{offer.place}</dt>
                 <dd>{offer.date}</dd>
               </div>
-              <div>
-                <dt>{offer.price}</dt>
-                <dd>{content.priceNote}</dd>
-              </div>
+              {offer.price ? (
+                <div>
+                  <dt>{offer.price}</dt>
+                  <dd>{content.priceNote}</dd>
+                </div>
+              ) : null}
             </dl>
-            <ul>
-              {offer.details.map((detail) => (
-                <li key={detail}>{detail}</li>
-              ))}
-            </ul>
+            {offer.details.length ? (
+              <ul>
+                {offer.details.map((detail) => (
+                  <li key={detail}>{detail}</li>
+                ))}
+              </ul>
+            ) : null}
+            {offer.ctaLabel ? (
+              <Link
+                className="ghost-gold-button"
+                href={offer.ctaUrl ?? `/${locale}/about#contact`}
+                target={offer.ctaUrl?.startsWith("http") ? "_blank" : undefined}
+                rel={offer.ctaUrl?.startsWith("http") ? "noreferrer" : undefined}
+              >
+                {offer.ctaLabel}
+              </Link>
+            ) : null}
           </article>
         ))}
       </section>

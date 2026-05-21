@@ -1,6 +1,6 @@
 import { Locale } from "./locales";
 
-type TrainingOffer = {
+export type TrainingOffer = {
   eyebrow: string;
   title: string;
   place: string;
@@ -8,6 +8,8 @@ type TrainingOffer = {
   price: string;
   text: string;
   details: string[];
+  ctaLabel?: string;
+  ctaUrl?: string;
 };
 
 type TrainingModule = {
