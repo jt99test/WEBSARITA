@@ -183,11 +183,12 @@ a {
 
 .language-nav a {
   display: grid;
-  min-width: 2.15rem;
-  min-height: 2.15rem;
+  width: 40px;
+  height: 40px;
   place-items: center;
   border: 1px solid rgba(215, 231, 255, 0.16);
   border-radius: 999px;
+  background: rgba(4, 13, 32, 0.72);
   color: var(--soft-blue);
   font-size: 0.72rem;
   font-weight: 800;
@@ -852,7 +853,7 @@ a {
   place-items: center;
   border: 1px solid rgba(245, 215, 130, 0.48);
   border-radius: 999px;
-  background: linear-gradient(180deg, rgba(7, 20, 55, 0.82), rgba(4, 8, 24, 0.92));
+  background: rgba(4, 13, 32, 0.72);
   color: var(--dusty-gold);
   transition:
     border-color 160ms ease,
@@ -886,8 +887,8 @@ a {
 }
 
 .social-links-compact .social-link {
-  width: 2.15rem;
-  height: 2.15rem;
+  width: 40px;
+  height: 40px;
 }
 
 .social-links-compact .social-link svg {
