@@ -61,7 +61,6 @@ export function SiteShell({ children, locale }: SiteShellProps) {
         </nav>
 
         <div className="header-end">
-          <SocialLinks className="header-social-links" compact />
           <nav className="language-nav" aria-label="Language navigation">
             {locales.map((language) => (
               <Link
