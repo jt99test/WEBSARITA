@@ -43,22 +43,19 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
       eyebrow: "Booking",
       title: "Prenotazioni",
       intro:
-        "La pagina prenotazioni userà un embed sostituibile, in attesa della scelta tra Google Appointment Schedules e Calendly.",
-      note: "Bloccato da decisione cliente: strumento di booking e pagamenti.",
+        "Prenota una sessione con Sarita attraverso Calendly o contattala per coordinare un'alternativa.",
     },
     es: {
       eyebrow: "Booking",
       title: "Reservas",
       intro:
-        "La página de reservas usará un embed reemplazable mientras se decide entre Google Appointment Schedules y Calendly.",
-      note: "Bloqueado por decisión de cliente: herramienta de reservas y pagos.",
+        "Reserva una sesión con Sarita a través de Calendly o contáctala para coordinar una alternativa.",
     },
     en: {
       eyebrow: "Booking",
       title: "Booking",
       intro:
-        "The booking page will use a swappable embed while Google Appointment Schedules vs Calendly is confirmed.",
-      note: "Blocked by client decision: booking tool and payments.",
+        "Book a session with Sarita through Calendly or contact her to coordinate another option.",
     },
   },
   coaching: {

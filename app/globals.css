@@ -1425,15 +1425,98 @@ a {
 }
 
 .blog-section,
-.blog-post-section {
+.blog-post-section,
+.booking-section {
   margin: 0 auto;
   max-width: 78rem;
   padding: clamp(4rem, 9vw, 7rem) clamp(1rem, 4vw, 2rem) 6rem;
 }
 
-.blog-heading {
+.blog-heading,
+.booking-heading {
   max-width: 48rem;
   margin-bottom: 2rem;
+}
+
+.booking-heading p:not(.eyebrow) {
+  color: var(--soft-blue);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.booking-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(17rem, 0.36fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.booking-embed-panel {
+  overflow: hidden;
+  padding: 0;
+}
+
+.booking-embed-panel iframe {
+  display: block;
+  width: 100%;
+  min-height: 46rem;
+  border: 0;
+  background: var(--ivory);
+}
+
+.booking-pending {
+  display: grid;
+  min-height: 28rem;
+  place-items: center;
+  align-content: center;
+  gap: 1rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.booking-pending h2 {
+  margin: 0;
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+}
+
+.booking-pending p:not(.eyebrow) {
+  margin: 0;
+  max-width: 34rem;
+  color: var(--soft-blue);
+  line-height: 1.7;
+}
+
+.booking-side-note {
+  display: grid;
+  gap: 1.25rem;
+  border-left: 1px solid rgba(245, 215, 130, 0.32);
+  padding-left: 1.25rem;
+  position: sticky;
+  top: 6rem;
+}
+
+.booking-side-note span {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--dusty-gold);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.booking-side-note p {
+  margin: 0;
+  color: var(--soft-blue);
+  line-height: 1.7;
+}
+
+.booking-side-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .blog-grid {
@@ -1749,8 +1832,13 @@ a {
   }
 
   .reviews-signal-inner,
-  .review-card-grid {
+  .review-card-grid,
+  .booking-layout {
     grid-template-columns: 1fr;
+  }
+
+  .booking-side-note {
+    position: static;
   }
 }
 
@@ -2059,6 +2147,8 @@ a {
   .blog-heading,
   .blog-card-copy,
   .blog-post-header,
+  .booking-heading,
+  .booking-side-note,
   .reviews-copy,
   .reviews-score-panel,
   .review-card {
