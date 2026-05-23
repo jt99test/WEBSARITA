@@ -3,7 +3,9 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { PortableText } from "@portabletext/react";
 import type { PortableTextBlock } from "@portabletext/types";
+import { getBlogPostAlternates } from "@/lib/blog-alternates";
 import { isLocale, locales } from "@/lib/locales";
+import { getRequestOrigin } from "@/lib/request-origin";
 import { sanityClient } from "@/lib/sanity/client";
 import { urlForImage } from "@/lib/sanity/image";
 import { blogPostBySlugQuery, blogPostSlugsQuery } from "@/lib/sanity/queries";
@@ -70,11 +72,25 @@ export async function generateMetadata({
     return {};
   }
 
-  return buildPageMetadata(locale, {
-    title: article.seoTitle ?? article.title,
-    description: article.seoDescription ?? article.excerpt ?? article.title,
-    path: `blog/${article.slug}`,
-  });
+  const blogAlternates = getBlogPostAlternates(locale, article.slug);
+
+  return buildPageMetadata(
+    locale,
+    {
+      title: article.seoTitle ?? article.title,
+      description: article.seoDescription ?? article.excerpt ?? article.title,
+      path: `blog/${article.slug}`,
+    },
+    {
+      origin: await getRequestOrigin(),
+      languages: Object.fromEntries(
+        Object.entries(blogAlternates).map(([alternateLocale, alternateSlug]) => [
+          alternateLocale,
+          `/${alternateLocale}/blog/${alternateSlug}`,
+        ]),
+      ),
+    },
+  );
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {

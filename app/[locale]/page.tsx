@@ -6,6 +6,7 @@ import { GoogleReviewsSection } from "@/components/google-reviews-section";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { homeContent } from "@/lib/home-content";
 import { isLocale } from "@/lib/locales";
+import { getRequestOrigin } from "@/lib/request-origin";
 import { socialLinks } from "@/lib/social-links";
 import { buildPageMetadata, getHomeSeo } from "@/lib/site";
 
@@ -22,7 +23,9 @@ export async function generateMetadata({
     return {};
   }
 
-  return buildPageMetadata(locale, getHomeSeo(locale));
+  return buildPageMetadata(locale, getHomeSeo(locale), {
+    origin: await getRequestOrigin(),
+  });
 }
 
 export default async function LocaleHomePage({ params }: LocalePageProps) {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import { isLocale } from "@/lib/locales";
+import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -19,9 +20,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.youryogapills.org",
-  ),
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: "Sarita Shakti",
     template: "%s | Sarita Shakti",

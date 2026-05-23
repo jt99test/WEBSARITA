@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import { Locale, locales } from "./locales";
 
+const vercelUrl = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : undefined;
+
 export const siteConfig = {
   name: "Sarita Shakti",
   legacyDomain: "https://www.youryogapills.org",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.youryogapills.org",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? vercelUrl ?? "http://localhost:3000",
 };
 
 type PageSeo = {
@@ -49,16 +53,39 @@ export function buildAlternates(path = ""): Metadata["alternates"] {
   };
 }
 
-export function buildPageMetadata(locale: Locale, seo: PageSeo): Metadata {
+type PageMetadataOptions = {
+  origin?: string;
+  languages?: Partial<Record<Locale, string>>;
+};
+
+function metadataUrl(path: string, origin?: string) {
+  return origin ? new URL(path, origin).toString() : path;
+}
+
+export function buildPageMetadata(
+  locale: Locale,
+  seo: PageSeo,
+  options: PageMetadataOptions = {},
+): Metadata {
+  const canonicalPath = buildLocalizedPath(locale, seo.path);
+  const languagePaths =
+    options.languages ??
+    Object.fromEntries(
+      locales.map((alternateLocale) => [
+        alternateLocale,
+        buildLocalizedPath(alternateLocale, seo.path),
+      ]),
+    );
+
   return {
     title: seo.title,
     description: seo.description,
     alternates: {
-      canonical: buildLocalizedPath(locale, seo.path),
+      canonical: metadataUrl(canonicalPath, options.origin),
       languages: Object.fromEntries(
-        locales.map((alternateLocale) => [
+        Object.entries(languagePaths).map(([alternateLocale, alternatePath]) => [
           alternateLocale,
-          buildLocalizedPath(alternateLocale, seo.path),
+          metadataUrl(alternatePath, options.origin),
         ]),
       ),
     },

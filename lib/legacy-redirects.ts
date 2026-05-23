@@ -1,3 +1,5 @@
+import { blogPostRedirects } from "./blog-redirects";
+
 type LegacyRedirect = {
   source: string;
   destination: string;
@@ -5,6 +7,7 @@ type LegacyRedirect = {
 };
 
 export const legacyRedirects: LegacyRedirect[] = [
+  ...blogPostRedirects,
   {
     source: "/info",
     destination: "/it/about",

@@ -7,6 +7,7 @@ import { CoachingPage } from "@/components/coaching-page";
 import { TrainingPage } from "@/components/training-page";
 import { isLocale, Locale } from "@/lib/locales";
 import { pageContent, pageSlugs, PageSlug } from "@/lib/page-content";
+import { getRequestOrigin } from "@/lib/request-origin";
 import { sanityClient } from "@/lib/sanity/client";
 import { trainingOffersQuery } from "@/lib/sanity/queries";
 import { buildPageMetadata } from "@/lib/site";
@@ -92,6 +93,8 @@ export async function generateMetadata({
     title: content.title,
     description: content.intro,
     path: slug,
+  }, {
+    origin: await getRequestOrigin(),
   });
 }
 
