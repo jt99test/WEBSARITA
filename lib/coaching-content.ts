@@ -37,7 +37,7 @@ export type CoachingContent = {
 export const coachingContent: Record<Locale, CoachingContent> = {
   it: {
     eyebrow: "Servizi | Astrologia psicologica | Yoga terapeutico",
-    title: "Servizi di astrologia psicologica e coaching",
+    title: "Servizi di astrologia psicologica a Barcellona",
     intro:
       "Letture, sessioni online e percorsi brevi per comprendere i movimenti interiori, accompagnare decisioni e integrare i cicli astrologici nella vita quotidiana.",
     primaryCta: "Prenota una sessione",
@@ -134,7 +134,7 @@ export const coachingContent: Record<Locale, CoachingContent> = {
   },
   es: {
     eyebrow: "Servicios | Astrología psicológica | Yoga terapéutico",
-    title: "Servicios de astrología psicológica y coaching",
+    title: "Servicios de astrología psicológica en Barcelona",
     intro:
       "Lecturas, sesiones online y procesos breves para comprender los movimientos interiores, acompañar decisiones e integrar los ciclos astrológicos en la vida cotidiana.",
     primaryCta: "Reservar una sesión",
@@ -231,7 +231,7 @@ export const coachingContent: Record<Locale, CoachingContent> = {
   },
   en: {
     eyebrow: "Services | Psychological Astrology | Therapeutic Yoga",
-    title: "Psychological astrology and coaching services",
+    title: "Psychological astrology services in Barcelona",
     intro:
       "Readings, online sessions, and short coaching processes for understanding inner movement, supporting decisions, and integrating astrological cycles into daily life.",
     primaryCta: "Book a session",

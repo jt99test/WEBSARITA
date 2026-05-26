@@ -15,7 +15,7 @@ type BookingContent = {
 const content: Record<Locale, BookingContent> = {
   it: {
     eyebrow: "Booking",
-    title: "Prenota una sessione con Sarita",
+    title: "Prenota astrologia psicologica a Barcellona",
     intro:
       "Scegli l'orario più adatto e prenota direttamente da Calendly. Se non trovi disponibilità, puoi scrivere a Sarita per coordinare un'alternativa.",
     embedTitle: "Calendly booking",
@@ -27,7 +27,7 @@ const content: Record<Locale, BookingContent> = {
   },
   es: {
     eyebrow: "Booking",
-    title: "Reserva una sesión con Sarita",
+    title: "Reserva astrología psicológica en Barcelona",
     intro:
       "Elige el horario que mejor te encaje y reserva directamente desde Calendly. Si no encuentras disponibilidad, puedes escribir a Sarita para coordinar una alternativa.",
     embedTitle: "Reservas Calendly",
@@ -39,7 +39,7 @@ const content: Record<Locale, BookingContent> = {
   },
   en: {
     eyebrow: "Booking",
-    title: "Book a session with Sarita",
+    title: "Book psychological astrology in Barcelona",
     intro:
       "Choose the time that works best and book directly through Calendly. If you do not find availability, you can contact Sarita to coordinate another option.",
     embedTitle: "Calendly booking",

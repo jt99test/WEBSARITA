@@ -21,39 +21,39 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
   about: {
     it: {
       eyebrow: "About | Contact",
-      title: "Conosci Sarita",
+      title: "Sarita Shakti, astrologa psicologica a Barcellona",
       intro:
-        "Biografia, percorso, contatti e dettagli pratici per iniziare una sessione con Sarita Shakti.",
+        "Biografia, contatti e percorso di Sarita Shakti per astrologia psicologica, carta natale e yoga terapeutico a Barcellona.",
     },
     es: {
       eyebrow: "About | Contacto",
-      title: "Conoce a Sarita",
+      title: "Sarita Shakti, astróloga psicológica en Barcelona",
       intro:
-        "Biografía, recorrido, contacto y detalles prácticos para empezar una sesión con Sarita Shakti.",
+        "Biografía, contacto y recorrido de Sarita Shakti para astrología psicológica, carta natal y yoga terapéutico en Barcelona.",
     },
     en: {
       eyebrow: "About | Contact",
-      title: "Meet Sarita",
+      title: "Sarita Shakti, psychological astrologer in Barcelona",
       intro:
-        "Biography, path, contact details, and practical information for starting a session with Sarita Shakti.",
+        "Biography, contact, and Sarita Shakti's path in psychological astrology, natal chart readings, and therapeutic yoga in Barcelona.",
     },
   },
   booking: {
     it: {
       eyebrow: "Booking",
-      title: "Prenotazioni",
+      title: "Prenota astrologia psicologica a Barcellona",
       intro:
         "Prenota una sessione con Sarita attraverso Calendly o contattala per coordinare un'alternativa.",
     },
     es: {
       eyebrow: "Booking",
-      title: "Reservas",
+      title: "Reserva astrología psicológica en Barcelona",
       intro:
         "Reserva una sesión con Sarita a través de Calendly o contáctala para coordinar una alternativa.",
     },
     en: {
       eyebrow: "Booking",
-      title: "Booking",
+      title: "Book psychological astrology in Barcelona",
       intro:
         "Book a session with Sarita through Calendly or contact her to coordinate another option.",
     },
@@ -61,19 +61,19 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
   coaching: {
     it: {
       eyebrow: "Servizi",
-      title: "Astrologia psicologica e coaching",
+      title: "Astrologia psicologica e coaching a Barcellona",
       intro:
         "Letture astrologiche, coaching online, pacchetti brevi e pratiche yogiche con prezzi e durate confermati dalla cliente.",
     },
     es: {
       eyebrow: "Servicios",
-      title: "Astrología psicológica y coaching",
+      title: "Astrología psicológica y coaching en Barcelona",
       intro:
         "Lecturas astrológicas, coaching online, packs breves y prácticas yóguicas con precios y duraciones confirmados por la clienta.",
     },
     en: {
       eyebrow: "Services",
-      title: "Psychological astrology and coaching",
+      title: "Psychological astrology and coaching in Barcelona",
       intro:
         "Astrology readings, online coaching, short packs, and yogic practices with prices and durations confirmed by the client.",
     },
@@ -81,19 +81,19 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
   training: {
     it: {
       eyebrow: "Corsi di meditazione",
-      title: "Corsi di meditazione a Milano",
+      title: "Corsi di meditazione e yoga terapeutico a Barcellona",
       intro:
         "Percorsi mensili in presenza ad Alma Matters Milano per iniziare o approfondire la pratica meditativa.",
     },
     es: {
       eyebrow: "Cursos de meditación",
-      title: "Cursos de meditación en Milán",
+      title: "Cursos de meditación y yoga terapéutico en Barcelona",
       intro:
         "Recorridos mensuales presenciales en Alma Matters Milano para empezar o profundizar la práctica meditativa.",
     },
     en: {
       eyebrow: "Meditation courses",
-      title: "Meditation courses in Milan",
+      title: "Meditation and therapeutic yoga courses in Barcelona",
       intro:
         "Monthly in-person paths at Alma Matters Milano for beginning or deepening meditation practice.",
     },

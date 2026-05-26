@@ -40,7 +40,7 @@ export type HomeContent = {
 export const homeContent: Record<Locale, HomeContent> = {
   it: {
     eyebrow: "Yoga terapeutico | Astrologia psicologica | Coaching",
-    title: "Sarita Shakti",
+    title: "Astrologia psicologica Barcellona con Sarita Shakti",
     intro:
       "Letture astrologiche e accompagnamento personale per capire dove sei, cosa si muove dentro di te e quali passi concreti puoi fare ora.",
     serviceLine: "Astrologia psicologica | coaching online | yoga terapeutico",
@@ -90,7 +90,7 @@ export const homeContent: Record<Locale, HomeContent> = {
   },
   es: {
     eyebrow: "Yoga terapéutico | Astrología psicológica | Coaching",
-    title: "Sarita Shakti",
+    title: "Astrología psicológica Barcelona con Sarita Shakti",
     intro:
       "Lecturas astrológicas y acompañamiento personal para entender dónde estás, qué se mueve dentro de ti y qué pasos concretos puedes dar ahora.",
     serviceLine: "Astrología psicológica | coaching online | yoga terapéutico",
@@ -140,7 +140,7 @@ export const homeContent: Record<Locale, HomeContent> = {
   },
   en: {
     eyebrow: "Therapeutic yoga | Psychological astrology | Coaching",
-    title: "Sarita Shakti",
+    title: "Psychological astrology Barcelona with Sarita Shakti",
     intro:
       "Astrology readings and personal guidance to understand where you are, what is moving inside you, and what concrete steps you can take now.",
     serviceLine: "Psychological astrology | online coaching | therapeutic yoga",

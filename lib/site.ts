@@ -22,19 +22,19 @@ type PageSeo = {
 
 const homeSeo: Record<Locale, PageSeo> = {
   it: {
-    title: "Astrologia psicologica, coaching e yoga terapeutico",
+    title: "Sarita Shakti | Astrologia psicologica Barcellona",
     description:
-      "Letture astrologiche, coaching online e yoga terapeutico con Sarita Shakti.",
+      "Astrologia psicologica a Barcellona, yoga terapeutico e carta natale con Sarita Shakti.",
   },
   es: {
-    title: "Astrología psicológica, coaching y yoga terapéutico",
+    title: "Sarita Shakti | Astrología Psicológica Barcelona",
     description:
-      "Lecturas astrológicas, coaching online y yoga terapéutico con Sarita Shakti.",
+      "Astrología psicológica Barcelona, yoga terapéutico y carta natal con Sarita Shakti.",
   },
   en: {
-    title: "Psychological astrology, coaching, and therapeutic yoga",
+    title: "Sarita Shakti | Psychological Astrology Barcelona",
     description:
-      "Astrology readings, online coaching, and therapeutic yoga with Sarita Shakti.",
+      "Psychological astrology in Barcelona, therapeutic yoga, and natal chart readings with Sarita Shakti.",
   },
 };
 

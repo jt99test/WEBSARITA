@@ -31,7 +31,7 @@ export type AboutContent = {
 export const aboutContent: Record<Locale, AboutContent> = {
   it: {
     eyebrow: "About | Contact",
-    title: "Sarita Shakti",
+    title: "Sarita Shakti, astrologa psicologica a Barcellona",
     intro:
       "Insegnante e accompagnatrice in percorsi di yoga terapeutico, astrologia psicologica e coaching olistico.",
     primaryCta: "Scrivi a Sarita",
@@ -76,7 +76,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
   },
   es: {
     eyebrow: "About | Contacto",
-    title: "Sarita Shakti",
+    title: "Sarita Shakti, astróloga psicológica en Barcelona",
     intro:
       "Profesora y acompañante en procesos de yoga terapéutico, astrología psicológica y coaching holístico.",
     primaryCta: "Escribir a Sarita",
@@ -121,7 +121,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
   },
   en: {
     eyebrow: "About | Contact",
-    title: "Sarita Shakti",
+    title: "Sarita Shakti, psychological astrologer in Barcelona",
     intro:
       "Teacher and guide in therapeutic yoga, psychological astrology, and holistic coaching.",
     primaryCta: "Write to Sarita",
