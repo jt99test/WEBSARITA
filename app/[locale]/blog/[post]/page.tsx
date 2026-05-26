@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { PortableText } from "@portabletext/react";
 import type { PortableTextBlock } from "@portabletext/types";
+import Link from "next/link";
 import { getBlogPostAlternates } from "@/lib/blog-alternates";
 import { isLocale, locales } from "@/lib/locales";
 import { getRequestOrigin } from "@/lib/request-origin";
@@ -36,6 +37,33 @@ type BlogPost = {
 type BlogPostSlug = {
   language: string;
   slug: string;
+};
+
+const relatedLinks = {
+  it: {
+    heading: "Ti può interessare anche",
+    links: [
+      { href: "/it/coaching", label: "Astrologia psicologica a Barcellona" },
+      { href: "/it/coaching#services", label: "Carta natale e coaching astrologico" },
+      { href: "/it/training", label: "Yoga terapeutico e meditazione" },
+    ],
+  },
+  es: {
+    heading: "También te puede interesar",
+    links: [
+      { href: "/es/coaching", label: "Astrología psicológica Barcelona" },
+      { href: "/es/coaching#services", label: "Carta natal Barcelona" },
+      { href: "/es/training", label: "Yoga terapéutico Barcelona" },
+    ],
+  },
+  en: {
+    heading: "You may also be interested in",
+    links: [
+      { href: "/en/coaching", label: "Psychological astrology in Barcelona" },
+      { href: "/en/coaching#services", label: "Natal chart readings" },
+      { href: "/en/training", label: "Therapeutic yoga and meditation" },
+    ],
+  },
 };
 
 async function getPost(locale: string, slug: string) {
@@ -138,6 +166,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <div className="blog-post-body">
         {article.body ? <PortableText value={article.body} /> : null}
       </div>
+
+      <aside className="panel related-links-panel">
+        <h2>{relatedLinks[locale].heading}</h2>
+        <div className="related-links-list">
+          {relatedLinks[locale].links.map((link) => (
+            <Link className="ghost-gold-button" href={link.href} key={link.href}>
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      </aside>
     </article>
   );
 }

@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/json-ld";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { homeContent } from "@/lib/home-content";
 import { isLocale } from "@/lib/locales";
+import { getLocalizedPagePath } from "@/lib/page-routes";
 import { getRequestOrigin } from "@/lib/request-origin";
 import { socialLinks } from "@/lib/social-links";
 import { buildPageMetadata, getHomeSeo } from "@/lib/site";
@@ -14,6 +15,27 @@ import { buildHomeStructuredData } from "@/lib/structured-data";
 
 type LocalePageProps = {
   params: Promise<{ locale: string }>;
+};
+
+const faqTeaser = {
+  it: {
+    eyebrow: "Domande frequenti",
+    title: "Hai dubbi prima di prenotare?",
+    text: "Leggi le risposte su astrologia psicologica, carta natale, coaching e yoga terapeutico.",
+    cta: "FAQ astrologia psicologica",
+  },
+  es: {
+    eyebrow: "Preguntas frecuentes",
+    title: "¿Tienes dudas antes de reservar?",
+    text: "Lee respuestas sobre astrología psicológica Barcelona, carta natal, coaching astrológico y yoga terapéutico.",
+    cta: "FAQ astrología psicológica",
+  },
+  en: {
+    eyebrow: "FAQ",
+    title: "Questions before booking?",
+    text: "Read answers about psychological astrology, natal charts, astrological coaching, and therapeutic yoga.",
+    cta: "Psychological astrology FAQ",
+  },
 };
 
 export async function generateMetadata({
@@ -123,6 +145,20 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
             rel="noreferrer"
           >
             {content.astrology.cta}
+          </Link>
+        </div>
+      </section>
+
+      <section className="astrology-signal">
+        <div className="panel astrology-signal-panel">
+          <p className="eyebrow">{faqTeaser[locale].eyebrow}</p>
+          <h2>{faqTeaser[locale].title}</h2>
+          <p>{faqTeaser[locale].text}</p>
+          <Link
+            className="ghost-gold-button"
+            href={`/${locale}/${getLocalizedPagePath(locale, "faq")}`}
+          >
+            {faqTeaser[locale].cta}
           </Link>
         </div>
       </section>

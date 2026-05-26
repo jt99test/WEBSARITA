@@ -3,8 +3,21 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Locale, localeLabels, locales } from "@/lib/locales";
+import { getLocalizedPagePath } from "@/lib/page-routes";
 
-const navItems = [
+type NavItem =
+  | {
+      href: string;
+      route?: never;
+      label: Record<Locale, string>;
+    }
+  | {
+      href?: never;
+      route: "reviews";
+      label: Record<Locale, string>;
+    };
+
+const navItems: NavItem[] = [
   { href: "", label: { it: "Home", es: "Inicio", en: "Home" } },
   { href: "coaching", label: { it: "Servizi", es: "Servicios", en: "Services" } },
   {
@@ -14,6 +27,10 @@ const navItems = [
       es: "Meditación",
       en: "Meditation",
     },
+  },
+  {
+    route: "reviews" as const,
+    label: { it: "Recensioni", es: "Reseñas", en: "Reviews" },
   },
   { href: "blog", label: { it: "Blog", es: "Blog", en: "Blog" } },
   { href: "about", label: { it: "Contatto", es: "Contacto", en: "Contact" } },
@@ -73,9 +90,13 @@ export function NavMenu({ locale }: { locale: Locale }) {
 
             <ul className="nav-drawer-links">
               {navItems.map((item) => (
-                <li key={item.href}>
+                <li key={"route" in item ? item.route : item.href}>
                   <Link
-                    href={`/${locale}${item.href ? `/${item.href}` : ""}`}
+                    href={
+                      item.route
+                        ? `/${locale}/${getLocalizedPagePath(locale, item.route)}`
+                        : `/${locale}${item.href ? `/${item.href}` : ""}`
+                    }
                     onClick={() => setOpen(false)}
                   >
                     {item.label[locale]}
