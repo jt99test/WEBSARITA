@@ -31,10 +31,10 @@ export function TrainingPage({ locale, offers }: TrainingPageProps) {
         <div className="training-hero-image-wrap">
           <Image
             className="training-hero-image"
-            src="/images/Iglesia Yoga Master .jpg"
+            src="/images/meditation-course-still-life.jpeg"
             alt={content.imageAlt.hero}
-            width={1200}
-            height={1600}
+            width={1536}
+            height={1024}
             priority
             sizes="(max-width: 820px) 100vw, 36vw"
           />
@@ -85,7 +85,7 @@ export function TrainingPage({ locale, offers }: TrainingPageProps) {
       <section className="training-method">
         <Image
           className="training-method-image"
-          src="/images/explicacion.jpeg"
+          src="/images/meditation-course-seated.jpeg"
           alt={content.imageAlt.portrait}
           fill
           sizes="100vw"
