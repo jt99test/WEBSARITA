@@ -187,7 +187,7 @@ export const trainingContent: Record<Locale, TrainingContent> = {
   },
   es: {
     eyebrow: "Cursos | Meditación en Milán",
-    title: "Cursos de meditación y yoga terapéutico en Barcelona.",
+    title: "Cursos de meditación y yoga terapéutico en Milán.",
     intro:
       "Dos recorridos mensuales presenciales en Alma Matters Milano: uno para empezar y otro para profundizar la práctica según la tradición yóguica.",
     primaryCta: "Pedir información",
@@ -250,7 +250,7 @@ export const trainingContent: Record<Locale, TrainingContent> = {
   },
   en: {
     eyebrow: "Courses | Meditation in Milan",
-    title: "Meditation and therapeutic yoga courses in Barcelona.",
+    title: "Meditation and therapeutic yoga courses in Milan.",
     intro:
       "Two monthly in-person paths at Alma Matters Milano: one for beginners and one for deepening practice through the yogic tradition.",
     primaryCta: "Ask for details",

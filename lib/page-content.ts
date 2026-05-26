@@ -87,13 +87,13 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
     },
     es: {
       eyebrow: "Cursos de meditación",
-      title: "Cursos de meditación y yoga terapéutico en Barcelona",
+      title: "Cursos de meditación y yoga terapéutico en Milán",
       intro:
         "Recorridos mensuales presenciales en Alma Matters Milano para empezar o profundizar la práctica meditativa.",
     },
     en: {
       eyebrow: "Meditation courses",
-      title: "Meditation and therapeutic yoga courses in Barcelona",
+      title: "Meditation and therapeutic yoga courses in Milan",
       intro:
         "Monthly in-person paths at Alma Matters Milano for beginning or deepening meditation practice.",
     },
