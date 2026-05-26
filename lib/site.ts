@@ -8,7 +8,10 @@ const vercelUrl = process.env.VERCEL_URL
 export const siteConfig = {
   name: "Sarita Shakti",
   legacyDomain: "https://www.youryogapills.org",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? vercelUrl ?? "http://localhost:3000",
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    vercelUrl ??
+    "https://websarita.vercel.app",
 };
 
 type PageSeo = {
@@ -46,9 +49,12 @@ export function buildLocalizedPath(locale: Locale, path = "") {
 
 export function buildAlternates(path = ""): Metadata["alternates"] {
   return {
-    canonical: buildLocalizedPath("it", path),
+    canonical: buildLocalizedPath("es", path),
     languages: Object.fromEntries(
-      locales.map((locale) => [locale, buildLocalizedPath(locale, path)]),
+      [
+        ...locales.map((locale) => [locale, buildLocalizedPath(locale, path)]),
+        ["x-default", buildLocalizedPath("es", path)],
+      ],
     ),
   };
 }
@@ -59,7 +65,7 @@ type PageMetadataOptions = {
 };
 
 function metadataUrl(path: string, origin?: string) {
-  return origin ? new URL(path, origin).toString() : path;
+  return new URL(path, origin ?? siteConfig.url).toString();
 }
 
 export function buildPageMetadata(
@@ -76,6 +82,8 @@ export function buildPageMetadata(
         buildLocalizedPath(alternateLocale, seo.path),
       ]),
     );
+  const defaultPath =
+    languagePaths.es ?? buildLocalizedPath("es", seo.path);
 
   return {
     title: seo.title,
@@ -83,7 +91,10 @@ export function buildPageMetadata(
     alternates: {
       canonical: metadataUrl(canonicalPath, options.origin),
       languages: Object.fromEntries(
-        Object.entries(languagePaths).map(([alternateLocale, alternatePath]) => [
+        [
+          ...Object.entries(languagePaths),
+          ["x-default", defaultPath],
+        ].map(([alternateLocale, alternatePath]) => [
           alternateLocale,
           metadataUrl(alternatePath, options.origin),
         ]),
