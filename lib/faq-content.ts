@@ -5,11 +5,16 @@ export type FaqItem = {
   answer: string;
 };
 
-export const faqContent: Record<Locale, { title: string; intro: string; items: FaqItem[] }> = {
+export const faqContent: Record<
+  Locale,
+  { title: string; intro: string; teaserTitle: string; cta: string; items: FaqItem[] }
+> = {
   es: {
     title: "Preguntas frecuentes sobre astrología psicológica Barcelona",
     intro:
       "Respuestas claras para entender cómo trabaja Sarita Shakti con astrología psicológica, carta natal, coaching astrológico y yoga terapéutico en Barcelona y online.",
+    teaserTitle: "¿Tienes dudas antes de reservar?",
+    cta: "FAQ astrología psicológica",
     items: [
       {
         question: "¿Qué es la astrología psicológica?",
@@ -67,6 +72,8 @@ export const faqContent: Record<Locale, { title: string; intro: string; items: F
     title: "Domande frequenti su astrologia psicologica e yoga terapeutico",
     intro:
       "Risposte semplici per capire come Sarita Shakti lavora con astrologia psicologica, carta natale, coaching astrologico e yoga terapeutico a Barcellona e online.",
+    teaserTitle: "Hai dubbi prima di prenotare?",
+    cta: "FAQ astrologia psicologica",
     items: [
       {
         question: "Che cos'è l'astrologia psicologica?",
@@ -124,6 +131,8 @@ export const faqContent: Record<Locale, { title: string; intro: string; items: F
     title: "FAQ about psychological astrology and therapeutic yoga",
     intro:
       "Clear answers about how Sarita Shakti works with psychological astrology, natal charts, astrological coaching, and therapeutic yoga in Barcelona and online.",
+    teaserTitle: "Questions before booking?",
+    cta: "Psychological astrology FAQ",
     items: [
       {
         question: "What is psychological astrology?",

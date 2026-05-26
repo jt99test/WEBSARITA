@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { FaqAccordion } from "@/components/faq-accordion";
 import { GoogleReviewsSection } from "@/components/google-reviews-section";
 import { JsonLd } from "@/components/json-ld";
+import { faqContent } from "@/lib/faq-content";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { homeContent } from "@/lib/home-content";
 import { isLocale } from "@/lib/locales";
@@ -20,21 +22,15 @@ type LocalePageProps = {
 const faqTeaser = {
   it: {
     eyebrow: "Domande frequenti",
-    title: "Hai dubbi prima di prenotare?",
     text: "Leggi le risposte su astrologia psicologica, carta natale, coaching e yoga terapeutico.",
-    cta: "FAQ astrologia psicologica",
   },
   es: {
     eyebrow: "Preguntas frecuentes",
-    title: "¿Tienes dudas antes de reservar?",
     text: "Lee respuestas sobre astrología psicológica Barcelona, carta natal, coaching astrológico y yoga terapéutico.",
-    cta: "FAQ astrología psicológica",
   },
   en: {
     eyebrow: "FAQ",
-    title: "Questions before booking?",
     text: "Read answers about psychological astrology, natal charts, astrological coaching, and therapeutic yoga.",
-    cta: "Psychological astrology FAQ",
   },
 };
 
@@ -60,7 +56,9 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
   }
 
   const content = homeContent[locale];
+  const faq = faqContent[locale];
   const googleReviews = await getGoogleReviews(locale);
+  const faqPath = `/${locale}/${getLocalizedPagePath(locale, "faq")}`;
 
   return (
     <>
@@ -149,20 +147,21 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
         </div>
       </section>
 
-      <section className="astrology-signal">
-        <div className="panel astrology-signal-panel">
+      <section className="home-faq-section">
+        <div className="home-faq-heading">
           <p className="eyebrow">{faqTeaser[locale].eyebrow}</p>
-          <h2>{faqTeaser[locale].title}</h2>
+          <h2>
+            <Link href={faqPath}>{faq.teaserTitle}</Link>
+          </h2>
           <p>{faqTeaser[locale].text}</p>
-          <Link
-            className="ghost-gold-button"
-            href={`/${locale}/${getLocalizedPagePath(locale, "faq")}`}
-          >
-            {faqTeaser[locale].cta}
+        </div>
+        <FaqAccordion items={faq.items.slice(0, 3)} />
+        <div className="home-faq-actions">
+          <Link className="ghost-gold-button" href={faqPath}>
+            {faq.cta}
           </Link>
         </div>
       </section>
-
     </>
   );
 }
