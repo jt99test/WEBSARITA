@@ -148,18 +148,18 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
       </section>
 
       <section className="home-faq-section">
-        <div className="home-faq-heading">
-          <p className="eyebrow">{faqTeaser[locale].eyebrow}</p>
-          <h2>
-            <Link href={faqPath}>{faq.teaserTitle}</Link>
-          </h2>
-          <p>{faqTeaser[locale].text}</p>
-        </div>
-        <FaqAccordion items={faq.items.slice(0, 3)} />
-        <div className="home-faq-actions">
-          <Link className="ghost-gold-button" href={faqPath}>
-            {faq.cta}
-          </Link>
+        <div className="home-faq-panel panel">
+          <div className="home-faq-heading">
+            <p className="eyebrow">{faqTeaser[locale].eyebrow}</p>
+            <h2>
+              <Link href={faqPath}>{faq.teaserTitle}</Link>
+            </h2>
+            <p>{faqTeaser[locale].text}</p>
+            <Link className="ghost-gold-button" href={faqPath}>
+              {faq.cta}
+            </Link>
+          </div>
+          <FaqAccordion items={faq.items.slice(0, 3)} />
         </div>
       </section>
     </>
