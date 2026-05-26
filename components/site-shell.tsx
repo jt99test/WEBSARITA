@@ -10,9 +10,9 @@ const navItems = [
   {
     href: "training",
     label: {
-      it: "Formazione in presenza",
-      es: "Formación presencial",
-      en: "In-person training",
+      it: "Meditazione",
+      es: "Meditación",
+      en: "Meditation",
     },
   },
   { href: "blog", label: { it: "Blog", es: "Blog", en: "Blog" } },

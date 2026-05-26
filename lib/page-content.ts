@@ -80,22 +80,22 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
   },
   training: {
     it: {
-      eyebrow: "Formazione in presenza",
-      title: "Formazione in yoga e astrologia psicologica",
+      eyebrow: "Corsi di meditazione",
+      title: "Corsi di meditazione a Milano",
       intro:
-        "Percorsi di studio in presenza con yoga, carta natale e astrologia psicologica.",
+        "Percorsi mensili in presenza ad Alma Matters Milano per iniziare o approfondire la pratica meditativa.",
     },
     es: {
-      eyebrow: "Formación presencial",
-      title: "Formación en yoga y astrología psicológica",
+      eyebrow: "Cursos de meditación",
+      title: "Cursos de meditación en Milán",
       intro:
-        "Procesos de estudio presenciales con yoga, carta natal y astrología psicológica.",
+        "Recorridos mensuales presenciales en Alma Matters Milano para empezar o profundizar la práctica meditativa.",
     },
     en: {
-      eyebrow: "In-person training",
-      title: "Yoga and psychological astrology training",
+      eyebrow: "Meditation courses",
+      title: "Meditation courses in Milan",
       intro:
-        "In-person study processes with yoga, natal chart work, and psychological astrology.",
+        "Monthly in-person paths at Alma Matters Milano for beginning or deepening meditation practice.",
     },
   },
   blog: {
