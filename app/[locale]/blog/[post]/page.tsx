@@ -53,7 +53,7 @@ const relatedLinks = {
     links: [
       { href: "/es/coaching", label: "Astrología psicológica Barcelona" },
       { href: "/es/coaching#services", label: "Carta natal Barcelona" },
-      { href: "/es/training", label: "Yoga terapéutico Milán" },
+      { href: "/es/training", label: "Yoga terapéutico Barcelona" },
     ],
   },
   en: {
