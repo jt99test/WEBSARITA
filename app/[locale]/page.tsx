@@ -3,12 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GoogleReviewsSection } from "@/components/google-reviews-section";
+import { JsonLd } from "@/components/json-ld";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { homeContent } from "@/lib/home-content";
 import { isLocale } from "@/lib/locales";
 import { getRequestOrigin } from "@/lib/request-origin";
 import { socialLinks } from "@/lib/social-links";
 import { buildPageMetadata, getHomeSeo } from "@/lib/site";
+import { buildHomeStructuredData } from "@/lib/structured-data";
 
 type LocalePageProps = {
   params: Promise<{ locale: string }>;
@@ -40,6 +42,7 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
 
   return (
     <>
+      <JsonLd data={buildHomeStructuredData(locale)} />
       <section className="hero-section">
         <Image
           className="hero-background-image"
