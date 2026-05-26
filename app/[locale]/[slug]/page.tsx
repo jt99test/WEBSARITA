@@ -4,9 +4,12 @@ import { AboutPage } from "@/components/about-page";
 import { BlogPage } from "@/components/blog-page";
 import { BookingPage } from "@/components/booking-page";
 import { CoachingPage } from "@/components/coaching-page";
+import { FaqPage } from "@/components/faq-page";
+import { ReviewsPage } from "@/components/reviews-page";
 import { TrainingPage } from "@/components/training-page";
 import { isLocale, Locale } from "@/lib/locales";
-import { pageContent, pageSlugs, PageSlug } from "@/lib/page-content";
+import { pageContent, PageSlug } from "@/lib/page-content";
+import { getPageStaticParams, resolvePageRoute } from "@/lib/page-routes";
 import { getRequestOrigin } from "@/lib/request-origin";
 import { sanityClient } from "@/lib/sanity/client";
 import { trainingOffersQuery } from "@/lib/sanity/queries";
@@ -19,10 +22,6 @@ type BasicPageProps = {
     slug: string;
   }>;
 };
-
-function isPageSlug(value: string): value is PageSlug {
-  return pageSlugs.includes(value as PageSlug);
-}
 
 type SanityTrainingOffer = {
   _id: string;
@@ -58,6 +57,43 @@ const trainingStatusLabels: Record<
   },
 };
 
+const specialPageSeo = {
+  reviews: {
+    it: {
+      title: "Recensioni e Testimonianze — Sarita Shakti",
+      description:
+        "Recensioni di Sarita Shakti, astrologa psicologica a Barcellona con oltre 170 recensioni a 5 stelle su Google.",
+    },
+    es: {
+      title: "Reseñas y Testimonios — Sarita Shakti",
+      description:
+        "Reseñas de Sarita Shakti, astróloga psicológica en Barcelona con más de 170 reseñas de 5 estrellas en Google.",
+    },
+    en: {
+      title: "Reviews and Testimonials — Sarita Shakti",
+      description:
+        "Reviews for Sarita Shakti, psychological astrologer in Barcelona with more than 170 five-star Google reviews.",
+    },
+  },
+  faq: {
+    it: {
+      title: "Domande frequenti su astrologia psicologica",
+      description:
+        "Domande frequenti su astrologia psicologica, carta natale, coaching astrologico e yoga terapeutico.",
+    },
+    es: {
+      title: "Preguntas frecuentes sobre astrología psicológica Barcelona",
+      description:
+        "Preguntas frecuentes sobre astrología psicológica Barcelona, carta natal, coaching astrológico y yoga terapéutico.",
+    },
+    en: {
+      title: "FAQ about psychological astrology",
+      description:
+        "FAQ about psychological astrology, natal charts, astrological coaching, and therapeutic yoga.",
+    },
+  },
+} satisfies Record<"reviews" | "faq", Record<Locale, { title: string; description: string }>>;
+
 function mapTrainingOffers(locale: Locale, offers: SanityTrainingOffer[]): TrainingOffer[] {
   return offers.map((offer) => ({
     eyebrow: trainingStatusLabels[locale][offer.status ?? "upcoming"],
@@ -73,9 +109,7 @@ function mapTrainingOffers(locale: Locale, offers: SanityTrainingOffer[]): Train
 }
 
 export function generateStaticParams() {
-  return pageSlugs.flatMap((slug) =>
-    ["it", "es", "en"].map((locale) => ({ locale, slug })),
-  );
+  return getPageStaticParams();
 }
 
 export async function generateMetadata({
@@ -83,43 +117,73 @@ export async function generateMetadata({
 }: BasicPageProps): Promise<Metadata> {
   const { locale, slug } = await params;
 
-  if (!isLocale(locale) || !isPageSlug(slug)) {
+  if (!isLocale(locale)) {
     return {};
   }
 
-  const content = pageContent[slug][locale];
+  const route = resolvePageRoute(locale, slug);
 
-  return buildPageMetadata(locale, {
-    title: content.title,
-    description: content.intro,
-    path: slug,
-  }, {
-    origin: await getRequestOrigin(),
-  });
+  if (!route) {
+    return {};
+  }
+
+  const seo =
+    route === "reviews" || route === "faq"
+      ? specialPageSeo[route][locale]
+      : {
+          title: pageContent[route][locale].title,
+          description: pageContent[route][locale].intro,
+        };
+
+  return buildPageMetadata(
+    locale,
+    {
+      title: seo.title,
+      description: seo.description,
+      path: slug,
+    },
+    {
+      origin: await getRequestOrigin(),
+    },
+  );
 }
 
 export default async function BasicPage({ params }: BasicPageProps) {
   const { locale, slug } = await params;
 
-  if (!isLocale(locale) || !isPageSlug(slug)) {
+  if (!isLocale(locale)) {
     notFound();
   }
 
-  const content = pageContent[slug][locale];
+  const route = resolvePageRoute(locale, slug);
 
-  if (slug === "about") {
+  if (!route) {
+    notFound();
+  }
+
+  if (route === "reviews") {
+    return <ReviewsPage locale={locale} />;
+  }
+
+  if (route === "faq") {
+    return <FaqPage locale={locale} />;
+  }
+
+  const content = pageContent[route as PageSlug][locale];
+
+  if (route === "about") {
     return <AboutPage locale={locale} />;
   }
 
-  if (slug === "booking") {
+  if (route === "booking") {
     return <BookingPage locale={locale} />;
   }
 
-  if (slug === "coaching") {
+  if (route === "coaching") {
     return <CoachingPage locale={locale} />;
   }
 
-  if (slug === "training") {
+  if (route === "training") {
     const sanityOffers = await sanityClient.fetch<SanityTrainingOffer[]>(
       trainingOffersQuery,
       { locale },
@@ -129,7 +193,7 @@ export default async function BasicPage({ params }: BasicPageProps) {
     return <TrainingPage locale={locale} offers={mapTrainingOffers(locale, sanityOffers)} />;
   }
 
-  if (slug === "blog") {
+  if (route === "blog") {
     return <BlogPage locale={locale} />;
   }
 

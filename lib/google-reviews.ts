@@ -100,7 +100,7 @@ export async function getGoogleReviews(locale: Locale): Promise<GoogleReviewsSum
       rating: place.rating ?? fallbackSummary.rating,
       reviewCount: place.userRatingCount ?? fallbackSummary.reviewCount,
       googleMapsUrl: place.googleMapsUri ?? fallbackSummary.googleMapsUrl,
-      reviews: reviews.slice(0, 3),
+      reviews: reviews.slice(0, 5),
       isLive: true,
     };
   } catch {

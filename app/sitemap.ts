@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getBlogPostAlternates } from "@/lib/blog-alternates";
 import { isLocale, Locale, locales } from "@/lib/locales";
-import { pageSlugs } from "@/lib/page-content";
+import { getAllPageRoutes, getLocalizedPagePath, PageRouteKey } from "@/lib/page-routes";
 import { sanityClient } from "@/lib/sanity/client";
 import { blogPostSlugsQuery } from "@/lib/sanity/queries";
 import { buildLocalizedPath, siteConfig } from "@/lib/site";
@@ -24,6 +24,20 @@ function localizedAlternates(path = "") {
           absoluteUrl(buildLocalizedPath(locale, path)),
         ]),
         ["x-default", absoluteUrl(buildLocalizedPath("es", path))],
+      ],
+    ),
+  };
+}
+
+function pageRouteAlternates(key: PageRouteKey) {
+  return {
+    languages: Object.fromEntries(
+      [
+        ...locales.map((locale) => [
+          locale,
+          absoluteUrl(buildLocalizedPath(locale, getLocalizedPagePath(locale, key))),
+        ]),
+        ["x-default", absoluteUrl(buildLocalizedPath("es", getLocalizedPagePath("es", key)))],
       ],
     ),
   };
@@ -56,13 +70,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     alternates: localizedAlternates(),
   }));
 
-  const pageEntries = pageSlugs.flatMap((slug) =>
+  const pageEntries = getAllPageRoutes().flatMap(({ key }) =>
     locales.map((locale) => ({
-      url: absoluteUrl(buildLocalizedPath(locale, slug)),
+      url: absoluteUrl(buildLocalizedPath(locale, getLocalizedPagePath(locale, key))),
       lastModified: now,
       changeFrequency: "monthly" as const,
-      priority: slug === "blog" ? 0.7 : 0.85,
-      alternates: localizedAlternates(slug),
+      priority: key === "blog" ? 0.7 : 0.85,
+      alternates: pageRouteAlternates(key),
     })),
   );
 

@@ -1261,6 +1261,26 @@ a {
   color: var(--ivory);
 }
 
+.faq-list {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem auto 0;
+  max-width: 58rem;
+}
+
+.faq-item h2 {
+  color: var(--gold);
+  font-family: var(--font-cormorant);
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  margin: 0 0 0.65rem;
+}
+
+.faq-item p {
+  color: rgba(255, 250, 235, 0.78);
+  line-height: 1.75;
+  margin: 0;
+}
+
 .astrology-signal {
   margin: 0 auto;
   max-width: 72rem;
