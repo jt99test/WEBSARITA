@@ -11,6 +11,9 @@ const copy = {
     intro:
       "Sarita Shakti es astróloga psicológica en Barcelona con más de 170 reseñas de 5 estrellas en Google. Sus clientes describen sus sesiones como espacios claros, humanos y transformadores para comprender la carta natal, los procesos internos y el cuerpo.",
     cta: "Dejar una reseña en Google",
+    ctaTitle: "Ver todas las reseñas",
+    ctaText:
+      "Google Places muestra solo una selección limitada de reseñas. Abre la ficha para ver el perfil completo.",
     empty:
       "Las reseñas verificadas se mostrarán aquí cuando la conexión con Google Places esté activa.",
   },
@@ -20,6 +23,9 @@ const copy = {
     intro:
       "Sarita Shakti è astrologa psicologica a Barcellona con oltre 170 recensioni a 5 stelle su Google. Le persone descrivono le sue sessioni come spazi chiari, umani e trasformativi per comprendere carta natale, processi interiori e corpo.",
     cta: "Lascia una recensione su Google",
+    ctaTitle: "Leggi tutte le recensioni",
+    ctaText:
+      "Google Places mostra solo una selezione limitata di recensioni. Apri la scheda per vedere il profilo completo.",
     empty:
       "Le recensioni verificate saranno mostrate qui quando la connessione con Google Places sarà attiva.",
   },
@@ -29,10 +35,16 @@ const copy = {
     intro:
       "Sarita Shakti is a psychological astrologer in Barcelona with more than 170 five-star Google reviews. Clients describe her sessions as clear, human, and transformative spaces for understanding the natal chart, inner processes, and the body.",
     cta: "Leave a Google review",
+    ctaTitle: "Read all reviews",
+    ctaText:
+      "Google Places only shows a limited selection of reviews. Open the listing to see the full profile.",
     empty:
       "Verified reviews will appear here when the Google Places connection is active.",
   },
-} satisfies Record<Locale, { eyebrow: string; title: string; intro: string; cta: string; empty: string }>;
+} satisfies Record<
+  Locale,
+  { eyebrow: string; title: string; intro: string; cta: string; ctaTitle: string; ctaText: string; empty: string }
+>;
 
 function buildReviewsSchema(locale: Locale, summary: Awaited<ReturnType<typeof getGoogleReviews>>) {
   return {
@@ -104,6 +116,18 @@ export async function ReviewsPage({ locale }: { locale: Locale }) {
               <p>{content.empty}</p>
             </article>
           )}
+          {summary.reviews.length ? (
+            <article className="review-card review-card-cta">
+              <span className="review-stars" aria-hidden="true">
+                Google
+              </span>
+              <h3>{content.ctaTitle}</h3>
+              <p>{content.ctaText}</p>
+              <Link href={summary.googleMapsUrl} target="_blank" rel="noreferrer">
+                {content.cta}
+              </Link>
+            </article>
+          ) : null}
         </div>
       </section>
     </>
