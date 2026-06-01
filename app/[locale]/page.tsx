@@ -13,7 +13,10 @@ import { getLocalizedPagePath } from "@/lib/page-routes";
 import { getRequestOrigin } from "@/lib/request-origin";
 import { socialLinks } from "@/lib/social-links";
 import { buildPageMetadata, getHomeSeo } from "@/lib/site";
-import { buildHomeStructuredData } from "@/lib/structured-data";
+import {
+  buildFaqStructuredData,
+  buildHomeStructuredData,
+} from "@/lib/structured-data";
 
 type LocalePageProps = {
   params: Promise<{ locale: string }>;
@@ -63,6 +66,7 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
   return (
     <>
       <JsonLd data={buildHomeStructuredData(locale)} />
+      <JsonLd data={buildFaqStructuredData(locale)} />
       <section className="hero-section">
         <Image
           className="hero-background-image"

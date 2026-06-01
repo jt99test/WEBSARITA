@@ -48,6 +48,8 @@ const faqLabels: Record<Locale, string> = {
   en: "FAQ",
 };
 
+const copyrightYear = new Date().getFullYear();
+
 type SiteShellProps = {
   children: React.ReactNode;
   locale: Locale;
@@ -113,7 +115,7 @@ export function SiteShell({ children, locale }: SiteShellProps) {
         <Link href={`/${locale}/${getLocalizedPagePath(locale, "faq")}`}>
           {faqLabels[locale]}
         </Link>
-        <p>© Sarita Shakti</p>
+        <p>© {copyrightYear} Sarita Shakti</p>
       </footer>
     </div>
   );

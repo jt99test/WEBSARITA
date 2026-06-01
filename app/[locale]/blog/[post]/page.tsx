@@ -4,13 +4,14 @@ import { notFound } from "next/navigation";
 import { PortableText } from "@portabletext/react";
 import type { PortableTextBlock } from "@portabletext/types";
 import Link from "next/link";
+import { JsonLd } from "@/components/json-ld";
 import { getBlogPostAlternates } from "@/lib/blog-alternates";
 import { isLocale, locales } from "@/lib/locales";
 import { getRequestOrigin } from "@/lib/request-origin";
 import { sanityClient } from "@/lib/sanity/client";
 import { urlForImage } from "@/lib/sanity/image";
 import { blogPostBySlugQuery, blogPostSlugsQuery } from "@/lib/sanity/queries";
-import { buildPageMetadata } from "@/lib/site";
+import { buildPageMetadata, siteConfig } from "@/lib/site";
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -134,8 +135,45 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
+  const origin = await getRequestOrigin();
+  const pageUrl = new URL(`/${locale}/blog/${article.slug}`, origin).toString();
+  const imageUrl = article.mainImage
+    ? urlForImage(article.mainImage).width(1200).height(630).url()
+    : article.wixCoverImageUrl;
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: article.title,
+    description: article.seoDescription ?? article.excerpt ?? article.title,
+    inLanguage: locale,
+    url: pageUrl,
+    mainEntityOfPage: pageUrl,
+    author: {
+      "@type": "Person",
+      name: siteConfig.name,
+      url: origin,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: origin,
+      logo: {
+        "@type": "ImageObject",
+        url: new URL("/brand/sarita-logo-transparent.png", origin).toString(),
+      },
+    },
+    ...(article.publishedAt
+      ? {
+          datePublished: article.publishedAt,
+          dateModified: article.publishedAt,
+        }
+      : {}),
+    ...(imageUrl ? { image: [imageUrl] } : {}),
+  };
+
   return (
     <article className="blog-post-section">
+      <JsonLd data={articleSchema} />
       <header className="blog-post-header">
         <p className="eyebrow">Blog</p>
         <h1 className="section-title">{article.title}</h1>
@@ -159,6 +197,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           alt={article.mainImage?.alt ?? ""}
           width={1400}
           height={820}
+          sizes="100vw"
           priority
         />
       ) : null}

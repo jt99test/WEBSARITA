@@ -8,6 +8,7 @@ const vercelUrl = process.env.VERCEL_URL
 export const siteConfig = {
   name: "Sarita Shakti",
   legacyDomain: "https://www.youryogapills.org",
+  defaultOgImage: "/og-default.jpg",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??
     vercelUrl ??
@@ -38,6 +39,12 @@ const homeSeo: Record<Locale, PageSeo> = {
   },
 };
 
+const openGraphLocales: Record<Locale, string> = {
+  it: "it_IT",
+  es: "es_ES",
+  en: "en_US",
+};
+
 export function getHomeSeo(locale: Locale) {
   return homeSeo[locale];
 }
@@ -66,6 +73,12 @@ type PageMetadataOptions = {
 
 function metadataUrl(path: string, origin?: string) {
   return new URL(path, origin ?? siteConfig.url).toString();
+}
+
+function buildOpenGraphTitle(title: string) {
+  return title.includes(siteConfig.name)
+    ? title
+    : `${title} | ${siteConfig.name}`;
 }
 
 export function buildPageMetadata(
@@ -101,11 +114,26 @@ export function buildPageMetadata(
       ),
     },
     openGraph: {
-      title: `${seo.title} | ${siteConfig.name}`,
+      title: buildOpenGraphTitle(seo.title),
       description: seo.description,
+      url: metadataUrl(canonicalPath, options.origin),
       siteName: siteConfig.name,
-      locale,
+      locale: openGraphLocales[locale],
       type: "website",
+      images: [
+        {
+          url: metadataUrl(siteConfig.defaultOgImage, options.origin),
+          width: 1200,
+          height: 630,
+          alt: `${siteConfig.name} - Psychological astrology and therapeutic yoga`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: buildOpenGraphTitle(seo.title),
+      description: seo.description,
+      images: [metadataUrl(siteConfig.defaultOgImage, options.origin)],
     },
   };
 }
