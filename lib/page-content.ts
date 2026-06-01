@@ -80,22 +80,22 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
   },
   training: {
     it: {
-      eyebrow: "Corsi di meditazione",
-      title: "Corsi di meditazione e yoga terapeutico a Barcellona",
+      eyebrow: "Formazione",
+      title: "Formazione in astrologia psicologica e meditazione a Milano",
       intro:
-        "Percorsi mensili in presenza ad Alma Matters Milano per iniziare o approfondire la pratica meditativa.",
+        "Percorsi in presenza ad Alma Matters Milano: scuola di astrologia psicologica 2027 e corso di meditazione livello I.",
     },
     es: {
-      eyebrow: "Cursos de meditación",
-      title: "Cursos de meditación y yoga terapéutico en Milán",
+      eyebrow: "Formación",
+      title: "Formación en astrología psicológica y meditación en Milán",
       intro:
-        "Recorridos mensuales presenciales en Alma Matters Milano para empezar o profundizar la práctica meditativa.",
+        "Recorridos presenciales en Alma Matters Milano: escuela de astrología psicológica 2027 y curso de meditación nivel I.",
     },
     en: {
-      eyebrow: "Meditation courses",
-      title: "Meditation and therapeutic yoga courses in Milan",
+      eyebrow: "Training",
+      title: "Psychological astrology and meditation training in Milan",
       intro:
-        "Monthly in-person paths at Alma Matters Milano for beginning or deepening meditation practice.",
+        "In-person courses at Alma Matters Milano: psychological astrology school 2027 and meditation course level I.",
     },
   },
   blog: {

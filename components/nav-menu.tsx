@@ -23,9 +23,9 @@ const navItems: NavItem[] = [
   {
     href: "training",
     label: {
-      it: "Meditazione",
-      es: "Meditación",
-      en: "Meditation",
+      it: "Formazione",
+      es: "Formación",
+      en: "Training",
     },
   },
   {
