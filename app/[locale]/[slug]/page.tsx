@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AboutPage } from "@/components/about-page";
+import { AstrologyTrainingPage } from "@/components/astrology-training-page";
 import { BlogPage } from "@/components/blog-page";
 import { BookingPage } from "@/components/booking-page";
 import { CoachingPage } from "@/components/coaching-page";
@@ -9,7 +10,7 @@ import { ReviewsPage } from "@/components/reviews-page";
 import { TrainingPage } from "@/components/training-page";
 import { isLocale, Locale } from "@/lib/locales";
 import { pageContent, PageSlug } from "@/lib/page-content";
-import { getPageStaticParams, resolvePageRoute } from "@/lib/page-routes";
+import { getLocalizedPagePath, getPageStaticParams, resolvePageRoute } from "@/lib/page-routes";
 import { getRequestOrigin } from "@/lib/request-origin";
 import { sanityClient } from "@/lib/sanity/client";
 import { trainingOffersQuery } from "@/lib/sanity/queries";
@@ -92,7 +93,24 @@ const specialPageSeo = {
         "FAQ about psychological astrology, natal charts, astrological coaching, and therapeutic yoga.",
     },
   },
-} satisfies Record<"reviews" | "faq", Record<Locale, { title: string; description: string }>>;
+  astrologyTraining: {
+    it: {
+      title: "Corso astrologia psicologica Milano 2027 | Sarita Shakti",
+      description:
+        "Formazione professionale in astrologia psicologica a Milano: 11 weekend in presenza ad Alma Matters con Sarita Shakti e attestato finale.",
+    },
+    es: {
+      title: "Formación astrología psicológica Milán 2027 | Sarita Shakti",
+      description:
+        "Formación profesional en astrología psicológica en Milán: 11 fines de semana presenciales en Alma Matters con Sarita Shakti y certificado final.",
+    },
+    en: {
+      title: "Psychological astrology training Milan 2027 | Sarita Shakti",
+      description:
+        "Professional psychological astrology training in Milan: 11 in-person weekends at Alma Matters with Sarita Shakti and final certificate.",
+    },
+  },
+} satisfies Record<"reviews" | "faq" | "astrologyTraining", Record<Locale, { title: string; description: string }>>;
 
 function mapTrainingOffers(locale: Locale, offers: SanityTrainingOffer[]): TrainingOffer[] {
   return offers.map((offer) => ({
@@ -128,7 +146,7 @@ export async function generateMetadata({
   }
 
   const seo =
-    route === "reviews" || route === "faq"
+    route === "reviews" || route === "faq" || route === "astrologyTraining"
       ? specialPageSeo[route][locale]
       : {
           title: pageContent[route][locale].title,
@@ -144,6 +162,14 @@ export async function generateMetadata({
     },
     {
       origin: await getRequestOrigin(),
+      languages:
+        route === "reviews" || route === "faq" || route === "astrologyTraining"
+          ? {
+              it: `/it/${getLocalizedPagePath("it", route)}`,
+              es: `/es/${getLocalizedPagePath("es", route)}`,
+              en: `/en/${getLocalizedPagePath("en", route)}`,
+            }
+          : undefined,
     },
   );
 }
@@ -167,6 +193,10 @@ export default async function BasicPage({ params }: BasicPageProps) {
 
   if (route === "faq") {
     return <FaqPage locale={locale} />;
+  }
+
+  if (route === "astrologyTraining") {
+    return <AstrologyTrainingPage locale={locale} />;
   }
 
   const content = pageContent[route as PageSlug][locale];

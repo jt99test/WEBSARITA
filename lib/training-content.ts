@@ -151,7 +151,7 @@ export const trainingContent: Record<Locale, TrainingContent> = {
           "Informazioni Alma Matters: info@almamattersmilano.it | 349.4487760.",
         ],
         ctaLabel: "Chiedi informazioni",
-        ctaUrl: "https://www.almamattersmilano.com",
+        ctaUrl: "/it/formazione-astrologia-psicologica-milano",
       },
       {
         eyebrow: "Corso di Meditazione | Livello I",
@@ -219,7 +219,7 @@ export const trainingContent: Record<Locale, TrainingContent> = {
           "Información Alma Matters: info@almamattersmilano.it | 349.4487760.",
         ],
         ctaLabel: "Pedir información",
-        ctaUrl: "https://www.almamattersmilano.com",
+        ctaUrl: "/es/formacion-astrologia-psicologica-milan",
       },
       {
         eyebrow: "Curso de Meditación | Nivel I",
@@ -287,7 +287,7 @@ export const trainingContent: Record<Locale, TrainingContent> = {
           "Alma Matters information: info@almamattersmilano.it | 349.4487760.",
         ],
         ctaLabel: "Ask for details",
-        ctaUrl: "https://www.almamattersmilano.com",
+        ctaUrl: "/en/psychological-astrology-training-milan",
       },
       {
         eyebrow: "Meditation Course | Level I",

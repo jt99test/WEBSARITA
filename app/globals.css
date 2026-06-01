@@ -1086,6 +1086,153 @@ a {
   line-height: 1;
 }
 
+.course-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.72fr);
+  align-items: end;
+  gap: clamp(2rem, 5vw, 4rem);
+  margin: 0 auto;
+  max-width: 78rem;
+  padding: clamp(4rem, 9vw, 7rem) clamp(1rem, 4vw, 2rem) 4rem;
+}
+
+.course-hero-copy {
+  max-width: 54rem;
+}
+
+.course-fact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.course-fact-card,
+.course-audience-card,
+.course-weekend-card,
+.course-method-card,
+.course-contact-card {
+  padding: clamp(1rem, 2vw, 1.35rem);
+}
+
+.course-fact-card p,
+.course-weekend-card span,
+.course-weekend-card > div p {
+  margin: 0;
+  color: var(--dusty-gold);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.course-fact-card span {
+  display: block;
+  margin-top: 0.75rem;
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  line-height: 1.08;
+}
+
+.course-split-section,
+.course-calendar-section,
+.course-method-section {
+  margin: 0 auto;
+  max-width: 78rem;
+  padding: 4rem clamp(1rem, 4vw, 2rem);
+}
+
+.course-split-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(18rem, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.course-copy-block {
+  max-width: 42rem;
+}
+
+.course-copy-block p:not(.eyebrow),
+.course-audience-card p,
+.course-weekend-card p,
+.course-method-card p,
+.course-method-card li,
+.course-contact-card p {
+  color: var(--soft-blue);
+  line-height: 1.65;
+}
+
+.course-audience-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.course-audience-card h3,
+.course-weekend-card h3,
+.course-method-card h2,
+.course-contact-card h2 {
+  margin: 0 0 0.8rem;
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  line-height: 1.05;
+}
+
+.course-audience-card h3,
+.course-weekend-card h3 {
+  font-size: clamp(1.45rem, 2.6vw, 2rem);
+}
+
+.course-weekend-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.course-weekend-card {
+  display: grid;
+  min-height: 16rem;
+  align-content: start;
+  gap: 1rem;
+}
+
+.course-weekend-card > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.course-method-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+  gap: 1rem;
+  padding-bottom: 6rem;
+}
+
+.course-method-card h2,
+.course-contact-card h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.course-method-card ul {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1.25rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.course-contact-links {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.course-contact-links a {
+  color: var(--dusty-gold);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
 .pillar-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2097,7 +2244,10 @@ a {
   /* ── Inner page heroes: center text, image first ──── */
   .coaching-hero,
   .about-hero,
-  .training-hero {
+  .training-hero,
+  .course-hero,
+  .course-split-section,
+  .course-method-section {
     grid-template-columns: 1fr;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -2114,6 +2264,12 @@ a {
   .training-method-copy,
   .curriculum-heading,
   .module-card,
+  .course-hero-copy,
+  .course-copy-block,
+  .course-audience-card,
+  .course-weekend-card,
+  .course-method-card,
+  .course-contact-card,
   .retreat-pillar,
   .retreat-packages-heading,
   .retreat-package-card,
@@ -2201,6 +2357,9 @@ a {
   .blog-grid,
   .training-offers,
   .module-grid,
+  .course-fact-grid,
+  .course-audience-grid,
+  .course-weekend-grid,
   .feature-section,
   .location-list,
   .retreat-pillars,
@@ -2284,9 +2443,26 @@ a {
     padding-bottom: 3rem;
   }
 
+  .course-hero,
+  .course-split-section,
+  .course-calendar-section,
+  .course-method-section {
+    padding-left: clamp(1rem, 6vw, 1.5rem);
+    padding-right: clamp(1rem, 6vw, 1.5rem);
+  }
+
+  .course-weekend-card {
+    min-height: auto;
+  }
+
   .service-card p,
   .coaching-process-copy p,
   .training-method-copy p,
+  .course-copy-block p,
+  .course-audience-card p,
+  .course-weekend-card p,
+  .course-method-card p,
+  .course-contact-card p,
   .nourishment-copy p,
   .practical-copy p,
   .contact-heading p,
@@ -2295,7 +2471,8 @@ a {
   }
 
   .coaching-process-copy ul,
-  .training-method-copy ul {
+  .training-method-copy ul,
+  .course-method-card ul {
     display: inline-grid;
     justify-items: center;
     padding-left: 0;
