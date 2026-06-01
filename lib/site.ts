@@ -23,9 +23,9 @@ type PageSeo = {
 
 const homeSeo: Record<Locale, PageSeo> = {
   it: {
-    title: "Sarita Shakti | Astrologia psicologica Barcellona",
+    title: "Sarita Shakti | Astrologia psicologica Milano",
     description:
-      "Astrologia psicologica a Barcellona, yoga terapeutico e carta natale con Sarita Shakti.",
+      "Astrologia psicologica a Milano, sessioni online e formazione in presenza con Sarita Shakti.",
   },
   es: {
     title: "Sarita Shakti | Astrología Psicológica Barcelona",
@@ -33,9 +33,9 @@ const homeSeo: Record<Locale, PageSeo> = {
       "Astrología psicológica Barcelona, yoga terapéutico y carta natal con Sarita Shakti.",
   },
   en: {
-    title: "Sarita Shakti | Psychological Astrology Barcelona",
+    title: "Sarita Shakti | Psychological Astrology Online",
     description:
-      "Psychological astrology in Barcelona, therapeutic yoga, and natal chart readings with Sarita Shakti.",
+      "Psychological astrology online, Milan training, therapeutic yoga, and natal chart readings with Sarita Shakti.",
   },
 };
 

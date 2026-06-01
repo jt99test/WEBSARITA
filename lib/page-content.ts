@@ -21,9 +21,9 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
   about: {
     it: {
       eyebrow: "About | Contact",
-      title: "Sarita Shakti, astrologa psicologica a Barcellona",
+      title: "Sarita Shakti, astrologa psicologica a Milano",
       intro:
-        "Biografia, contatti e percorso di Sarita Shakti per astrologia psicologica, carta natale e yoga terapeutico a Barcellona.",
+        "Biografia, contatti e percorso di Sarita Shakti per astrologia psicologica, carta natale, formazione a Milano e yoga terapeutico.",
     },
     es: {
       eyebrow: "About | Contacto",
@@ -41,9 +41,9 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
   booking: {
     it: {
       eyebrow: "Booking",
-      title: "Prenota astrologia psicologica a Barcellona",
+      title: "Prenota astrologia psicologica a Milano",
       intro:
-        "Prenota una sessione con Sarita attraverso Calendly o contattala per coordinare un'alternativa.",
+        "Prenota una sessione online o in presenza a Milano quando disponibile attraverso Calendly.",
     },
     es: {
       eyebrow: "Booking",
@@ -61,9 +61,9 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
   coaching: {
     it: {
       eyebrow: "Servizi",
-      title: "Astrologia psicologica e coaching a Barcellona",
+      title: "Astrologia psicologica e coaching a Milano",
       intro:
-        "Letture astrologiche, coaching online, pacchetti brevi e pratiche yogiche con prezzi e durate confermati dalla cliente.",
+        "Letture astrologiche in italiano, coaching online, sessioni a Milano quando disponibili e pratiche yogiche con prezzi confermati.",
     },
     es: {
       eyebrow: "Servicios",

@@ -31,9 +31,9 @@ export type AboutContent = {
 export const aboutContent: Record<Locale, AboutContent> = {
   it: {
     eyebrow: "About | Contact",
-    title: "Sarita Shakti, astrologa psicologica a Barcellona",
+    title: "Sarita Shakti, astrologa psicologica a Milano",
     intro:
-      "Insegnante e accompagnatrice in percorsi di yoga terapeutico, astrologia psicologica e coaching olistico.",
+      "Astrologa psicologica, insegnante e accompagnatrice in percorsi online e in presenza a Milano.",
     primaryCta: "Scrivi a Sarita",
     secondaryCta: "Leggi il percorso",
     imageAlt: {
@@ -53,7 +53,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
       eyebrow: "Contatto",
       title: "Per letture astrologiche, coaching e sessioni di yoga terapeutico.",
       text:
-        "Le sessioni possono iniziare online o tramite contatto diretto. Prima del lancio ricontrolleremo con la cliente i recapiti finali e il flusso di prenotazione.",
+        "Le sessioni possono iniziare online o, quando disponibile, in presenza a Milano. Per formazione e percorsi dal vivo, Sarita lavora principalmente ad Alma Matters Milano.",
       cards: [
         {
           title: "Canali",
@@ -61,7 +61,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
         },
         {
           title: "Sessioni",
-          text: "Letture astrologiche, coaching online, sessioni mensili, pacchetti brevi e pratiche di yoga terapeutico.",
+          text: "Letture astrologiche, coaching online, sessioni mensili, pacchetti brevi e incontri a Milano quando disponibili.",
         },
         {
           title: "Astrologia",
@@ -69,7 +69,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
         },
         {
           title: "Formazione",
-          text: "Bihar School of Yoga, astrologia psicologica transpersonale, astrologia medica e psicologica.",
+          text: "Formazione in astrologia psicologica e meditazione in presenza ad Alma Matters Milano.",
         },
       ],
     },

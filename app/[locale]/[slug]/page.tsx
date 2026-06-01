@@ -6,6 +6,7 @@ import { BlogPage } from "@/components/blog-page";
 import { BookingPage } from "@/components/booking-page";
 import { CoachingPage } from "@/components/coaching-page";
 import { FaqPage } from "@/components/faq-page";
+import { PsychologicalAstrologyMilanPage } from "@/components/psychological-astrology-milan-page";
 import { ReviewsPage } from "@/components/reviews-page";
 import { TrainingPage } from "@/components/training-page";
 import { isLocale, Locale } from "@/lib/locales";
@@ -113,7 +114,27 @@ const specialPageSeo = {
         "Professional psychological astrology training in Milan: 11 in-person weekends at Alma Matters with Sarita Shakti and final certificate.",
     },
   },
-} satisfies Record<"reviews" | "faq" | "astrologyTraining", Record<Locale, { title: string; description: string }>>;
+  psychologicalAstrologyMilan: {
+    it: {
+      title: "Astrologia psicologica Milano | Sarita Shakti",
+      description:
+        "Astrologia psicologica a Milano e online: carta natale, sinastria, rivoluzione solare e coaching astrologico con Sarita Shakti.",
+    },
+    es: {
+      title: "Astrologia psicologica Milan | Sarita Shakti",
+      description:
+        "Astrologia psicologica en Milan y online con Sarita Shakti, manteniendo Barcelona como referencia principal en espanol.",
+    },
+    en: {
+      title: "Psychological astrology Milan | Sarita Shakti",
+      description:
+        "Psychological astrology in Milan and online with Sarita Shakti: natal chart readings, synastry, solar revolution, and coaching.",
+    },
+  },
+} satisfies Record<
+  "reviews" | "faq" | "astrologyTraining" | "psychologicalAstrologyMilan",
+  Record<Locale, { title: string; description: string }>
+>;
 
 function mapTrainingOffers(locale: Locale, offers: SanityTrainingOffer[]): TrainingOffer[] {
   return offers.map((offer) => ({
@@ -149,7 +170,10 @@ export async function generateMetadata({
   }
 
   const seo =
-    route === "reviews" || route === "faq" || route === "astrologyTraining"
+    route === "reviews" ||
+    route === "faq" ||
+    route === "astrologyTraining" ||
+    route === "psychologicalAstrologyMilan"
       ? specialPageSeo[route][locale]
       : {
           title: pageContent[route][locale].title,
@@ -166,7 +190,10 @@ export async function generateMetadata({
     {
       origin: await getRequestOrigin(),
       languages:
-        route === "reviews" || route === "faq" || route === "astrologyTraining"
+        route === "reviews" ||
+        route === "faq" ||
+        route === "astrologyTraining" ||
+        route === "psychologicalAstrologyMilan"
           ? {
               it: `/it/${getLocalizedPagePath("it", route)}`,
               es: `/es/${getLocalizedPagePath("es", route)}`,
@@ -201,6 +228,10 @@ export default async function BasicPage({ params, searchParams }: BasicPageProps
 
   if (route === "astrologyTraining") {
     return <AstrologyTrainingPage locale={locale} />;
+  }
+
+  if (route === "psychologicalAstrologyMilan") {
+    return <PsychologicalAstrologyMilanPage locale={locale} />;
   }
 
   const content = pageContent[route as PageSlug][locale];

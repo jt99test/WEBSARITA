@@ -1,7 +1,11 @@
 import { Locale, locales } from "./locales";
 import { PageSlug, pageSlugs } from "./page-content";
 
-export type SpecialPageKey = "reviews" | "faq" | "astrologyTraining";
+export type SpecialPageKey =
+  | "reviews"
+  | "faq"
+  | "astrologyTraining"
+  | "psychologicalAstrologyMilan";
 export type PageRouteKey = PageSlug | SpecialPageKey;
 
 export const specialPagePaths: Record<SpecialPageKey, Record<Locale, string>> = {
@@ -19,6 +23,11 @@ export const specialPagePaths: Record<SpecialPageKey, Record<Locale, string>> = 
     es: "formacion-astrologia-psicologica-milan",
     it: "formazione-astrologia-psicologica-milano",
     en: "psychological-astrology-training-milan",
+  },
+  psychologicalAstrologyMilan: {
+    es: "astrologia-psicologica-milan",
+    it: "astrologia-psicologica-milano",
+    en: "psychological-astrology-milan",
   },
 };
 

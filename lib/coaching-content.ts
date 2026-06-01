@@ -36,10 +36,10 @@ export type CoachingContent = {
 
 export const coachingContent: Record<Locale, CoachingContent> = {
   it: {
-    eyebrow: "Servizi | Astrologia psicologica | Yoga terapeutico",
-    title: "Servizi di astrologia psicologica a Barcellona",
+    eyebrow: "Servizi | Astrologia psicologica Milano | Online",
+    title: "Astrologia psicologica e coaching a Milano",
     intro:
-      "Letture, sessioni online e percorsi brevi per comprendere i movimenti interiori, accompagnare decisioni e integrare i cicli astrologici nella vita quotidiana.",
+      "Letture di carta natale, sessioni online e incontri a Milano quando disponibili per comprendere i movimenti interiori, accompagnare decisioni e integrare i cicli astrologici nella vita quotidiana.",
     primaryCta: "Prenota una sessione",
     secondaryCta: "Vedi tutti i servizi",
     imageAlt: {
@@ -47,7 +47,7 @@ export const coachingContent: Record<Locale, CoachingContent> = {
       support: "Sarita Shakti in pratica al tramonto sul mare.",
     },
     servicesIntro:
-      "Scegli una lettura puntuale, un accompagnamento mensile, un pacchetto di coaching o una pratica yogica di purificazione.",
+      "Scegli una lettura puntuale, un accompagnamento mensile, un pacchetto di coaching o una pratica yogica di purificazione. Le sessioni sono disponibili online e a Milano quando Sarita apre disponibilita in presenza.",
     services: [
       {
         title: "Lettura di astrologia psicologica",
@@ -118,7 +118,7 @@ export const coachingContent: Record<Locale, CoachingContent> = {
       text:
         "Il punto non è prevedere il futuro, ma rendere visibile ciò che già si muove dentro di te. Le sessioni possono includere riflessione, ascolto corporeo e indicazioni pratiche da portare nella settimana.",
       points: [
-        "Sessioni online e in presenza quando disponibile.",
+        "Sessioni online e in presenza a Milano quando disponibile.",
         "Approccio psicologico, evolutivo e non fatalista.",
         "Possibile integrazione con routine di yoga personalizzate.",
       ],

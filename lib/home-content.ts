@@ -40,18 +40,18 @@ export type HomeContent = {
 
 export const homeContent: Record<Locale, HomeContent> = {
   it: {
-    eyebrow: "Yoga terapeutico | Astrologia psicologica | Coaching",
-    title: "Astrologia psicologica Barcellona con Sarita Shakti",
+    eyebrow: "Astrologia psicologica Milano | Formazione | Coaching",
+    title: "Astrologia psicologica Milano con Sarita Shakti",
     intro:
-      "Letture astrologiche e accompagnamento personale per capire dove sei, cosa si muove dentro di te e quali passi concreti puoi fare ora.",
-    serviceLine: "Astrologia psicologica | coaching online | yoga terapeutico",
+      "Letture astrologiche, coaching e formazione in presenza a Milano per capire dove sei, cosa si muove dentro di te e quali passi concreti puoi fare ora.",
+    serviceLine: "Astrologia psicologica Milano | sessioni online | formazione",
     primaryCta: "Vedi i servizi",
     secondaryCta: "Prenota una chiamata",
     pillars: [
       {
         mark: "01",
         title: "Astrologia psicologica",
-        text: "Carta natale, sinastria e rivoluzione solare lette con Sarita: uno spazio personale, umano e psicologico.",
+        text: "Carta natale, sinastria e rivoluzione solare in italiano, online e in presenza a Milano quando disponibile.",
       },
       {
         mark: "02",
@@ -60,8 +60,8 @@ export const homeContent: Record<Locale, HomeContent> = {
       },
       {
         mark: "03",
-        title: "Yoga terapeutico",
-        text: "Pratiche personalizzate e ascolto somatico per ritrovare presenza, mobilità e radicamento.",
+        title: "Formazione a Milano",
+        text: "Corsi e percorsi dal vivo ad Alma Matters Milano, con astrologia psicologica, meditazione e pratica interiore.",
       },
     ],
     reviews: {
@@ -79,7 +79,7 @@ export const homeContent: Record<Locale, HomeContent> = {
     },
     feature: {
       eyebrow: "About Sarita",
-      title: "Un percorso tra yoga, astrologia e accompagnamento umano.",
+      title: "Un percorso tra yoga, astrologia e formazione a Milano.",
       text:
         "Sarita Shakti accompagna persone e gruppi da oltre vent'anni. La sua formazione unisce Bihar School of Yoga, astrologia psicologica e un modo di lavorare concreto: ascoltare ciò che accade nel corpo, leggerlo anche attraverso la carta natale e trasformarlo in presenza quotidiana.",
       cta: "Conosci Sarita",
@@ -147,10 +147,10 @@ export const homeContent: Record<Locale, HomeContent> = {
   },
   en: {
     eyebrow: "Therapeutic yoga | Psychological astrology | Coaching",
-    title: "Psychological astrology Barcelona with Sarita Shakti",
+    title: "Psychological astrology online with Sarita Shakti",
     intro:
-      "Astrology readings and personal guidance to understand where you are, what is moving inside you, and what concrete steps you can take now.",
-    serviceLine: "Psychological astrology | online coaching | therapeutic yoga",
+      "Astrology readings, online guidance, and in-person training in Milan to understand where you are, what is moving inside you, and what concrete steps you can take now.",
+    serviceLine: "Psychological astrology online | Milan training | Barcelona roots",
     primaryCta: "View services",
     secondaryCta: "Book a call",
     pillars: [
