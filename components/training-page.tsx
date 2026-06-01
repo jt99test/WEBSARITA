@@ -42,8 +42,11 @@ export function TrainingPage({ locale, offers }: TrainingPageProps) {
       </section>
 
       <section className="training-offers" aria-label="Training options">
-        {trainingOffers.map((offer) => (
+        {trainingOffers.map((offer, index) => (
           <article className="panel training-offer-card" key={offer.title}>
+            <div className="training-offer-visual" aria-hidden="true">
+              <span>{String(index + 1).padStart(2, "0")}</span>
+            </div>
             <div>
               <p className="eyebrow">{offer.eyebrow}</p>
               <h2>{offer.title}</h2>

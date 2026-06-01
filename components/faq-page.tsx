@@ -25,7 +25,7 @@ export function FaqPage({ locale }: { locale: Locale }) {
     <>
       <JsonLd data={buildFaqSchema(locale)} />
       <section className="faq-page-section">
-        <div className="page-copy">
+        <div className="page-copy faq-page-hero">
           <p className="eyebrow">FAQ</p>
           <h1 className="section-title">{content.title}</h1>
           <p className="page-intro">{content.intro}</p>

@@ -22,6 +22,9 @@ type BasicPageProps = {
     locale: string;
     slug: string;
   }>;
+  searchParams?: Promise<{
+    page?: string;
+  }>;
 };
 
 type SanityTrainingOffer = {
@@ -174,8 +177,9 @@ export async function generateMetadata({
   );
 }
 
-export default async function BasicPage({ params }: BasicPageProps) {
+export default async function BasicPage({ params, searchParams }: BasicPageProps) {
   const { locale, slug } = await params;
+  const query = await searchParams;
 
   if (!isLocale(locale)) {
     notFound();
@@ -224,7 +228,9 @@ export default async function BasicPage({ params }: BasicPageProps) {
   }
 
   if (route === "blog") {
-    return <BlogPage locale={locale} />;
+    const page = Number.parseInt(query?.page ?? "1", 10);
+
+    return <BlogPage locale={locale} page={Number.isFinite(page) ? page : 1} />;
   }
 
   return (

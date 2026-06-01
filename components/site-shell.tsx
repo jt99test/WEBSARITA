@@ -48,6 +48,39 @@ const faqLabels: Record<Locale, string> = {
   en: "FAQ",
 };
 
+const footerCopy: Record<
+  Locale,
+  {
+    text: string;
+    booking: string;
+    services: string;
+    training: string;
+    blog: string;
+  }
+> = {
+  it: {
+    text: "Astrologia psicologica, yoga terapeutico e formazione con Sarita Shakti.",
+    booking: "Prenota",
+    services: "Servizi",
+    training: "Formazione",
+    blog: "Blog",
+  },
+  es: {
+    text: "Astrología psicológica, yoga terapéutico y formación con Sarita Shakti.",
+    booking: "Reservar",
+    services: "Servicios",
+    training: "Formación",
+    blog: "Blog",
+  },
+  en: {
+    text: "Psychological astrology, therapeutic yoga, and training with Sarita Shakti.",
+    booking: "Book",
+    services: "Services",
+    training: "Training",
+    blog: "Blog",
+  },
+};
+
 const copyrightYear = new Date().getFullYear();
 
 type SiteShellProps = {
@@ -111,11 +144,22 @@ export function SiteShell({ children, locale }: SiteShellProps) {
       <main id="main">{children}</main>
 
       <footer className="site-footer">
+        <div className="site-footer-cta">
+          <p>{footerCopy[locale].text}</p>
+          <Link className="ghost-gold-button" href={`/${locale}/booking`}>
+            {footerCopy[locale].booking}
+          </Link>
+        </div>
+        <nav className="site-footer-links" aria-label="Footer navigation">
+          <Link href={`/${locale}/coaching`}>{footerCopy[locale].services}</Link>
+          <Link href={`/${locale}/training`}>{footerCopy[locale].training}</Link>
+          <Link href={`/${locale}/blog`}>{footerCopy[locale].blog}</Link>
+          <Link href={`/${locale}/${getLocalizedPagePath(locale, "faq")}`}>
+            {faqLabels[locale]}
+          </Link>
+        </nav>
         <SocialLinks className="footer-social-links" />
-        <Link href={`/${locale}/${getLocalizedPagePath(locale, "faq")}`}>
-          {faqLabels[locale]}
-        </Link>
-        <p>© {copyrightYear} Sarita Shakti</p>
+        <p className="site-footer-meta">© {copyrightYear} Sarita Shakti</p>
       </footer>
     </div>
   );

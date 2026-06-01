@@ -73,8 +73,11 @@ export function AboutPage({ locale }: AboutPageProps) {
           <p>{content.contact.text}</p>
         </div>
         <div className="contact-card-grid">
-          {content.contact.cards.map((card) => (
+          {content.contact.cards.map((card, index) => (
             <article className="panel contact-card" key={card.title}>
+              <span className="contact-card-mark" aria-hidden="true">
+                {String(index + 1).padStart(2, "0")}
+              </span>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
             </article>

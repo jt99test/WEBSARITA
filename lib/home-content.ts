@@ -8,6 +8,7 @@ export type HomeContent = {
   primaryCta: string;
   secondaryCta: string;
   pillars: Array<{
+    mark: string;
     title: string;
     text: string;
   }>;
@@ -48,14 +49,17 @@ export const homeContent: Record<Locale, HomeContent> = {
     secondaryCta: "Prenota una chiamata",
     pillars: [
       {
+        mark: "01",
         title: "Astrologia psicologica",
         text: "Carta natale, sinastria e rivoluzione solare lette con Sarita: uno spazio personale, umano e psicologico.",
       },
       {
+        mark: "02",
         title: "Coaching astrologico",
         text: "Sessioni singole, mensili e pacchetti brevi per trasformare una lettura in decisioni, pratica e continuità.",
       },
       {
+        mark: "03",
         title: "Yoga terapeutico",
         text: "Pratiche personalizzate e ascolto somatico per ritrovare presenza, mobilità e radicamento.",
       },
@@ -98,14 +102,17 @@ export const homeContent: Record<Locale, HomeContent> = {
     secondaryCta: "Reservar una llamada",
     pillars: [
       {
+        mark: "01",
         title: "Astrología psicológica",
         text: "Carta natal, sinastría y revolución solar leídas con Sarita: un espacio personal, humano y psicológico.",
       },
       {
+        mark: "02",
         title: "Coaching astrológico",
         text: "Sesiones individuales, mensuales y packs breves para transformar una lectura en decisiones, práctica y continuidad.",
       },
       {
+        mark: "03",
         title: "Yoga terapéutico",
         text: "Prácticas personalizadas y escucha somática para recuperar presencia, movilidad y arraigo.",
       },
@@ -148,14 +155,17 @@ export const homeContent: Record<Locale, HomeContent> = {
     secondaryCta: "Book a call",
     pillars: [
       {
+        mark: "01",
         title: "Psychological astrology",
         text: "Natal chart, synastry, and solar revolution readings with Sarita: personal, human, and psychologically grounded.",
       },
       {
+        mark: "02",
         title: "Astrological coaching",
         text: "Single sessions, monthly support, and short packs for turning a reading into decisions, practice, and continuity.",
       },
       {
+        mark: "03",
         title: "Therapeutic yoga",
         text: "Personalized practices and somatic listening for presence, mobility, and grounded regulation.",
       },

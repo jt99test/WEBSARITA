@@ -69,7 +69,7 @@ export function GoogleReviewsSection({
         </div>
 
         <div className="reviews-score-panel" aria-label={summary.placeName}>
-          <div>
+          <div className="reviews-score-top">
             <span className="reviews-score">
               {numberFormatters[locale].format(summary.rating)}
             </span>

@@ -97,6 +97,9 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
         <div className="pillar-grid">
           {content.pillars.map((pillar) => (
             <article className="panel pillar-card" key={pillar.title}>
+              <span className="pillar-card-mark" aria-hidden="true">
+                {pillar.mark}
+              </span>
               <h2>{pillar.title}</h2>
               <p>{pillar.text}</p>
             </article>
