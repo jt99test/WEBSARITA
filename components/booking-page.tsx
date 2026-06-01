@@ -10,6 +10,7 @@ type BookingContent = {
   pendingText: string;
   openCalendly: string;
   contactFallback: string;
+  sideNote: string;
 };
 
 const content: Record<Locale, BookingContent> = {
@@ -24,6 +25,7 @@ const content: Record<Locale, BookingContent> = {
       "Aggiungi il link dell'evento Calendly nelle variabili del sito per attivare il calendario incorporato.",
     openCalendly: "Apri Calendly",
     contactFallback: "Contatta Sarita",
+    sideNote: "Se preferisci, scrivi direttamente a Sarita per coordinare orario e formato della sessione.",
   },
   es: {
     eyebrow: "Booking",
@@ -36,6 +38,7 @@ const content: Record<Locale, BookingContent> = {
       "Añade el enlace del evento de Calendly en las variables del sitio para activar el calendario integrado.",
     openCalendly: "Abrir Calendly",
     contactFallback: "Contactar a Sarita",
+    sideNote: "Si prefieres, escríbele directamente a Sarita para coordinar horario y formato de la sesión.",
   },
   en: {
     eyebrow: "Booking",
@@ -48,6 +51,7 @@ const content: Record<Locale, BookingContent> = {
       "Add the Calendly event link to the site environment variables to activate the embedded calendar.",
     openCalendly: "Open Calendly",
     contactFallback: "Contact Sarita",
+    sideNote: "If you prefer, write directly to Sarita to coordinate the time and format of your session.",
   },
 };
 
@@ -68,6 +72,15 @@ function getCalendlyUrl() {
 
   if (!url.searchParams.has("hide_gdpr_banner")) {
     url.searchParams.set("hide_gdpr_banner", "1");
+  }
+  if (!url.searchParams.has("background_color")) {
+    url.searchParams.set("background_color", "080d1a");
+  }
+  if (!url.searchParams.has("text_color")) {
+    url.searchParams.set("text_color", "f5f0e8");
+  }
+  if (!url.searchParams.has("primary_color")) {
+    url.searchParams.set("primary_color", "c9a96e");
   }
 
   return url.toString();
@@ -106,7 +119,7 @@ export function BookingPage({ locale }: { locale: Locale }) {
         <aside className="booking-side-note">
           <div>
             <span>01</span>
-            <p>{copy.intro}</p>
+            <p>{copy.sideNote}</p>
           </div>
           <div className="booking-side-actions">
             {calendlyUrl ? (
