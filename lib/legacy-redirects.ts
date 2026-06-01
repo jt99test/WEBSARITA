@@ -99,38 +99,13 @@ export const legacyRedirects: LegacyRedirect[] = [
     statusCode: 301,
   },
   {
-    source: "/post/i-allow-myself-to-think-differently",
-    destination: "/en/blog/i-allow-myself-to-think-differently",
-    statusCode: 301,
-  },
-  {
     source: "/post/luna-nuova-in-toro-16-maggio-2026-semina-quello-che-vuoi-davvero-sostenere",
     destination: "/it/blog/luna-nuova-in-toro-16-maggio-2026-semina-quello-che-vuoi-davvero-sostenere",
     statusCode: 301,
   },
   {
-    source: "/post/astrological-coaching",
-    destination: "/en/coaching",
-    statusCode: 301,
-  },
-  {
     source: "/post/discover-the-ultimate-yoga-retreat-on-the-costa-brava",
     destination: "/en/coaching",
-    statusCode: 301,
-  },
-  {
-    source: "/post/new-roots-new-moon-in-taurus-and-the-path-to-authenticity",
-    destination: "/en/blog/new-roots-new-moon-in-taurus-and-the-path-to-authenticity",
-    statusCode: 301,
-  },
-  {
-    source: "/post/eclipse-with-south-node-in-virgo-and-full-moon-on-march-14-2025-a-call-to-integrate-chaos-and-order",
-    destination: "/en/blog/eclipse-with-south-node-in-virgo-and-full-moon-on-march-14-2025-a-call-to-integrate-chaos-and-order",
-    statusCode: 301,
-  },
-  {
-    source: "/post/fullmooninleoshinewithauthenticity",
-    destination: "/en/blog/fullmooninleoshinewithauthenticity",
     statusCode: 301,
   },
   {

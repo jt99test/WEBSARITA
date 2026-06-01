@@ -11,7 +11,7 @@ export const siteConfig = {
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??
     vercelUrl ??
-    "https://websarita.vercel.app",
+    "https://saritashakti.com",
 };
 
 type PageSeo = {
