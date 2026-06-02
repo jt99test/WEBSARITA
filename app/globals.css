@@ -981,23 +981,17 @@ a {
 .training-offer-visual::after {
   flex: 1;
   max-width: 12rem;
-  height: 2.5rem;
+  height: 2.2rem;
   background:
-    radial-gradient(circle at 0 50%, rgba(245, 215, 130, 0.85) 0 2px, transparent 3px),
-    radial-gradient(circle at 50% 50%, rgba(124, 191, 255, 0.8) 0 2px, transparent 3px),
-    radial-gradient(circle at 100% 50%, rgba(245, 215, 130, 0.85) 0 2px, transparent 3px),
-    linear-gradient(90deg, rgba(245, 215, 130, 0.48), rgba(124, 191, 255, 0.42), rgba(245, 215, 130, 0.48));
+    linear-gradient(90deg, rgba(245, 215, 130, 0.62), rgba(124, 191, 255, 0.18), rgba(245, 215, 130, 0.34)),
+    linear-gradient(90deg, transparent, rgba(255, 250, 240, 0.2), transparent);
   background-position:
-    0 50%,
-    50% 50%,
-    100% 50%,
-    0 50%;
+    0 48%,
+    0 72%;
   background-repeat: no-repeat;
   background-size:
-    0.5rem 0.5rem,
-    0.5rem 0.5rem,
-    0.5rem 0.5rem,
-    100% 1px;
+    100% 1px,
+    72% 1px;
   content: "";
 }
 
@@ -1539,14 +1533,11 @@ a {
 .faq-page-hero::after {
   position: absolute;
   right: clamp(0rem, 6vw, 4rem);
-  bottom: -4rem;
-  width: clamp(9rem, 22vw, 15rem);
-  height: clamp(9rem, 22vw, 15rem);
-  border: 1px solid rgba(245, 215, 130, 0.18);
-  border-radius: 999px;
+  bottom: 0;
+  width: clamp(12rem, 28vw, 22rem);
+  height: 1px;
   background:
-    linear-gradient(90deg, transparent 49%, rgba(245, 215, 130, 0.16) 50%, transparent 51%),
-    linear-gradient(0deg, transparent 49%, rgba(245, 215, 130, 0.16) 50%, transparent 51%);
+    linear-gradient(90deg, transparent, rgba(245, 215, 130, 0.42), rgba(124, 191, 255, 0.18), transparent);
   content: "";
   pointer-events: none;
 }
@@ -1993,8 +1984,9 @@ a {
   aspect-ratio: 4 / 3;
   place-items: center;
   background:
-    radial-gradient(circle at 50% 42%, rgba(245, 215, 130, 0.18), transparent 4rem),
-    radial-gradient(circle at 50% 42%, transparent 0 3.2rem, rgba(245, 215, 130, 0.22) 3.25rem 3.3rem, transparent 3.35rem),
+    linear-gradient(90deg, transparent 0 13%, rgba(245, 215, 130, 0.18) 13% calc(13% + 1px), transparent calc(13% + 1px)),
+    linear-gradient(180deg, transparent 0 18%, rgba(215, 231, 255, 0.12) 18% calc(18% + 1px), transparent calc(18% + 1px)),
+    linear-gradient(135deg, rgba(245, 215, 130, 0.08), transparent 44%),
     linear-gradient(135deg, rgba(4, 13, 32, 0.4), rgba(6, 19, 49, 0.92));
 }
 
