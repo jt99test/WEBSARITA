@@ -1456,6 +1456,10 @@ a {
   font-weight: 700;
 }
 
+.reviews-page-button {
+  margin: 1.35rem 0 2rem;
+}
+
 .review-card-grid {
   grid-column: 1 / -1;
   display: grid;

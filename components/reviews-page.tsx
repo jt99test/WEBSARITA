@@ -88,7 +88,7 @@ export async function ReviewsPage({ locale }: { locale: Locale }) {
           <h1 className="section-title">{content.title}</h1>
           <p className="page-intro">{content.intro}</p>
           <Link
-            className="primary-button"
+            className="primary-button reviews-page-button"
             href={summary.googleMapsUrl}
             target="_blank"
             rel="noreferrer"
