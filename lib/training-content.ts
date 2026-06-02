@@ -159,7 +159,7 @@ export const trainingContent: Record<Locale, TrainingContent> = {
         place: "Alma Matters Milano",
         date:
           "10 settembre, 8 ottobre, 5 novembre e 10 dicembre 2026. Giovedì, 20:00-22:00.",
-        price: "€150",
+        price: "",
         text:
           "Quattro incontri esperienziali per avvicinarsi alla meditazione in modo semplice, autentico e pratico.",
         details: [
@@ -227,7 +227,7 @@ export const trainingContent: Record<Locale, TrainingContent> = {
         place: "Alma Matters Milano",
         date:
           "10 de septiembre, 8 de octubre, 5 de noviembre y 10 de diciembre de 2026. Jueves, 20:00-22:00.",
-        price: "€150",
+        price: "",
         text:
           "Cuatro encuentros experienciales para acercarse a la meditación de forma sencilla, auténtica y práctica.",
         details: [
@@ -295,7 +295,7 @@ export const trainingContent: Record<Locale, TrainingContent> = {
         place: "Alma Matters Milano",
         date:
           "September 10, October 8, November 5, and December 10, 2026. Thursdays, 20:00-22:00.",
-        price: "€150",
+        price: "",
         text:
           "Four experiential meetings for approaching meditation in a simple, authentic, and practical way.",
         details: [
