@@ -101,21 +101,21 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
   blog: {
     it: {
       eyebrow: "Blog",
-      title: "Articoli",
+      title: "Blog di astrologia psicologica e yoga terapeutico",
       intro:
-        "Il blog sarà gestito in Sanity con post filtrati per lingua e varianti non obbligatorie.",
+        "Articoli di Sarita Shakti su astrologia psicologica, carta natale, transiti, coaching astrologico, yoga terapeutico e consapevolezza.",
     },
     es: {
       eyebrow: "Blog",
-      title: "Artículos",
+      title: "Blog de astrología psicológica y yoga terapéutico",
       intro:
-        "El blog se gestionará en Sanity con entradas filtradas por idioma y variantes no obligatorias.",
+        "Artículos de Sarita Shakti sobre astrología psicológica, carta natal, tránsitos, coaching astrológico, yoga terapéutico y autoconocimiento.",
     },
     en: {
       eyebrow: "Blog",
-      title: "Articles",
+      title: "Psychological astrology and therapeutic yoga blog",
       intro:
-        "The blog will be managed in Sanity with posts filtered by language and optional language variants.",
+        "Articles by Sarita Shakti on psychological astrology, natal charts, transits, astrological coaching, therapeutic yoga, and self-knowledge.",
     },
   },
 };

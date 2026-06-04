@@ -27,6 +27,11 @@ export const metadata: Metadata = {
   },
   description:
     "Therapeutic yoga, psychological astrology, and holistic coaching with Sarita Shakti.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     siteName: siteConfig.name,
     images: [

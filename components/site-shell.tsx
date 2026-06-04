@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { NavMenu } from "@/components/nav-menu";
 import { SocialLinks } from "@/components/social-links";
-import { Locale, localeLabels, locales } from "@/lib/locales";
+import { Locale } from "@/lib/locales";
 import { getLocalizedPagePath } from "@/lib/page-routes";
 
 type NavItem =
@@ -126,17 +127,7 @@ export function SiteShell({ children, locale }: SiteShellProps) {
         </nav>
 
         <div className="header-end">
-          <nav className="language-nav" aria-label="Language navigation">
-            {locales.map((language) => (
-              <Link
-                key={language}
-                aria-current={language === locale ? "page" : undefined}
-                href={`/${language}`}
-              >
-                {localeLabels[language].slice(0, 2)}
-              </Link>
-            ))}
-          </nav>
+          <LanguageSwitcher locale={locale} />
           <NavMenu locale={locale} />
         </div>
       </header>

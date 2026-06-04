@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { JsonLd } from "@/components/json-ld";
 import { AboutPage } from "@/components/about-page";
 import { AstrologyTrainingPage } from "@/components/astrology-training-page";
 import { BlogPage } from "@/components/blog-page";
@@ -16,6 +17,10 @@ import { getRequestOrigin } from "@/lib/request-origin";
 import { sanityClient } from "@/lib/sanity/client";
 import { trainingOffersQuery } from "@/lib/sanity/queries";
 import { buildPageMetadata } from "@/lib/site";
+import {
+  buildBreadcrumbStructuredData,
+  buildCoachingStructuredData,
+} from "@/lib/structured-data";
 import { TrainingOffer } from "@/lib/training-content";
 
 type BasicPageProps = {
@@ -235,17 +240,41 @@ export default async function BasicPage({ params, searchParams }: BasicPageProps
   }
 
   const content = pageContent[route as PageSlug][locale];
+  const breadcrumb = (
+    <JsonLd
+      data={buildBreadcrumbStructuredData(locale, [
+        { name: "Sarita Shakti", path: `/${locale}` },
+        { name: content.title, path: `/${locale}/${slug}` },
+      ])}
+    />
+  );
 
   if (route === "about") {
-    return <AboutPage locale={locale} />;
+    return (
+      <>
+        {breadcrumb}
+        <AboutPage locale={locale} />
+      </>
+    );
   }
 
   if (route === "booking") {
-    return <BookingPage locale={locale} />;
+    return (
+      <>
+        {breadcrumb}
+        <BookingPage locale={locale} />
+      </>
+    );
   }
 
   if (route === "coaching") {
-    return <CoachingPage locale={locale} />;
+    return (
+      <>
+        {breadcrumb}
+        <JsonLd data={buildCoachingStructuredData(locale)} />
+        <CoachingPage locale={locale} />
+      </>
+    );
   }
 
   if (route === "training") {
@@ -255,13 +284,23 @@ export default async function BasicPage({ params, searchParams }: BasicPageProps
       { next: { revalidate: 60 } },
     );
 
-    return <TrainingPage locale={locale} offers={mapTrainingOffers(locale, sanityOffers)} />;
+    return (
+      <>
+        {breadcrumb}
+        <TrainingPage locale={locale} offers={mapTrainingOffers(locale, sanityOffers)} />
+      </>
+    );
   }
 
   if (route === "blog") {
     const page = Number.parseInt(query?.page ?? "1", 10);
 
-    return <BlogPage locale={locale} page={Number.isFinite(page) ? page : 1} />;
+    return (
+      <>
+        {breadcrumb}
+        <BlogPage locale={locale} page={Number.isFinite(page) ? page : 1} />
+      </>
+    );
   }
 
   return (

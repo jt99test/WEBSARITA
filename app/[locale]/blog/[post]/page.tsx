@@ -12,6 +12,7 @@ import { sanityClient } from "@/lib/sanity/client";
 import { urlForImage } from "@/lib/sanity/image";
 import { blogPostBySlugQuery, blogPostSlugsQuery } from "@/lib/sanity/queries";
 import { buildPageMetadata, siteConfig } from "@/lib/site";
+import { buildBreadcrumbStructuredData } from "@/lib/structured-data";
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -65,6 +66,12 @@ const relatedLinks = {
       { href: "/en/training", label: "Therapeutic yoga and meditation" },
     ],
   },
+};
+
+const coverImageAltPrefix = {
+  it: "Immagine principale per",
+  es: "Imagen principal de",
+  en: "Main image for",
 };
 
 async function getPost(locale: string, slug: string) {
@@ -140,6 +147,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const imageUrl = article.mainImage
     ? urlForImage(article.mainImage).width(1200).height(630).url()
     : article.wixCoverImageUrl;
+  const imageAlt =
+    article.mainImage?.alt?.trim() || `${coverImageAltPrefix[locale]} ${article.title}`;
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -174,6 +183,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <article className="blog-post-section">
       <JsonLd data={articleSchema} />
+      <JsonLd
+        data={buildBreadcrumbStructuredData(locale, [
+          { name: "Sarita Shakti", path: `/${locale}` },
+          { name: "Blog", path: `/${locale}/blog` },
+          { name: article.title, path: `/${locale}/blog/${article.slug}` },
+        ])}
+      />
       <header className="blog-post-header">
         <p className="eyebrow">Blog</p>
         <h1 className="section-title">{article.title}</h1>
@@ -194,7 +210,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               ? urlForImage(article.mainImage).width(1400).height(820).url()
               : article.wixCoverImageUrl!
           }
-          alt={article.mainImage?.alt ?? ""}
+          alt={imageAlt}
           width={1400}
           height={820}
           sizes="100vw"

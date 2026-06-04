@@ -1,3 +1,4 @@
+import { coachingContent } from "./coaching-content";
 import { faqContent } from "./faq-content";
 import { Locale } from "./locales";
 import { siteConfig } from "./site";
@@ -123,6 +124,99 @@ export function buildFaqStructuredData(locale: Locale) {
         "@type": "Answer",
         text: item.answer,
       },
+    })),
+  };
+}
+
+function parseEuroPrice(price: string) {
+  const match = price.match(/\d+/);
+
+  return match?.[0];
+}
+
+function durationToIso(duration?: string) {
+  if (!duration) {
+    return undefined;
+  }
+
+  const minutes = duration.match(/^(\d+)\s*min$/i);
+  const sessions = duration.match(/^(\d+)\s*x\s*(\d+)\s*min$/i);
+
+  if (minutes) {
+    return `PT${minutes[1]}M`;
+  }
+
+  if (sessions) {
+    return `P${sessions[1]}D`;
+  }
+
+  return undefined;
+}
+
+export function buildCoachingStructuredData(locale: Locale) {
+  const content = coachingContent[locale];
+  const coachingUrl = `${siteConfig.url}/${locale}/coaching`;
+
+  const services = content.services.map((service, index) => {
+    const price = parseEuroPrice(service.price);
+
+    return {
+      "@type": "Service",
+      "@id": `${coachingUrl}#service-${index + 1}`,
+      name: service.title,
+      description: service.summary,
+      provider: { "@id": businessId },
+      areaServed: ["Barcelona", "Milano", "Online"],
+      inLanguage: locale,
+      url: coachingUrl,
+      ...(durationToIso(service.duration) ? { duration: durationToIso(service.duration) } : {}),
+      ...(price
+        ? {
+            offers: {
+              "@type": "Offer",
+              price,
+              priceCurrency: "EUR",
+              availability: "https://schema.org/InStock",
+              url: `${siteConfig.url}/${locale}/booking`,
+            },
+          }
+        : {}),
+    };
+  });
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ItemList",
+        "@id": `${coachingUrl}#services`,
+        name: content.title,
+        description: content.intro,
+        inLanguage: locale,
+        itemListElement: services.map((service, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          item: { "@id": service["@id"] },
+        })),
+      },
+      ...services,
+    ],
+  };
+}
+
+export function buildBreadcrumbStructuredData(
+  locale: Locale,
+  items: Array<{ name: string; path: string }>,
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    inLanguage: locale,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: `${siteConfig.url}${item.path}`,
     })),
   };
 }
