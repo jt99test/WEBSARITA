@@ -1,4 +1,5 @@
 import { Locale } from "./locales";
+import { almaMattersAstrologyCourseUrl } from "./training-content";
 
 export type AstrologyTrainingWeekend = {
   number: string;
@@ -49,6 +50,7 @@ export type AstrologyTrainingContent = {
     emailLabel: string;
     phoneLabel: string;
     webLabel: string;
+    webUrl: string;
   };
 };
 
@@ -128,7 +130,8 @@ export const astrologyTrainingContent: Record<Locale, AstrologyTrainingContent> 
         "La formazione si svolge presso Alma Matters Milano. Per dettagli aggiornati, iscrizioni e disponibilità, contatta direttamente la sede.",
       emailLabel: "info@almamattersmilano.it",
       phoneLabel: "349.4487760",
-      webLabel: "www.almamattersmilano.com",
+      webLabel: "Scheda ufficiale del corso ad Alma Matters Milano",
+      webUrl: almaMattersAstrologyCourseUrl,
     },
   },
   es: {
@@ -206,7 +209,8 @@ export const astrologyTrainingContent: Record<Locale, AstrologyTrainingContent> 
         "La formación se realiza en Alma Matters Milano. Para detalles actualizados, inscripción y disponibilidad, contacta directamente con la sede.",
       emailLabel: "info@almamattersmilano.it",
       phoneLabel: "349.4487760",
-      webLabel: "www.almamattersmilano.com",
+      webLabel: "Ficha oficial del curso en Alma Matters Milano",
+      webUrl: almaMattersAstrologyCourseUrl,
     },
   },
   en: {
@@ -284,7 +288,8 @@ export const astrologyTrainingContent: Record<Locale, AstrologyTrainingContent> 
         "The training takes place at Alma Matters Milano. For updated details, enrollment, and availability, contact the venue directly.",
       emailLabel: "info@almamattersmilano.it",
       phoneLabel: "349.4487760",
-      webLabel: "www.almamattersmilano.com",
+      webLabel: "Official course page at Alma Matters Milano",
+      webUrl: almaMattersAstrologyCourseUrl,
     },
   },
 };

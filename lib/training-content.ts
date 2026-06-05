@@ -10,6 +10,8 @@ export type TrainingOffer = {
   details: string[];
   ctaLabel?: string;
   ctaUrl?: string;
+  externalCtaLabel?: string;
+  externalCtaUrl?: string;
 };
 
 type TrainingModule = {
@@ -17,6 +19,9 @@ type TrainingModule = {
   title: string;
   text: string;
 };
+
+export const almaMattersAstrologyCourseUrl =
+  "https://www.almamattersmilano.com/almamatters/corsi/scuola-astrologia-psicologica/";
 
 export type TrainingContent = {
   eyebrow: string;
@@ -150,8 +155,10 @@ export const trainingContent: Record<Locale, TrainingContent> = {
           "Ultimi weekend dedicati a letture pratiche, test finale e consegna dell'attestato di avvenuta formazione.",
           "Informazioni Alma Matters: info@almamattersmilano.it | 349.4487760.",
         ],
-        ctaLabel: "Chiedi informazioni",
+        ctaLabel: "Vedi programma completo",
         ctaUrl: "/it/formazione-astrologia-psicologica-milano",
+        externalCtaLabel: "Scheda ufficiale Alma Matters",
+        externalCtaUrl: almaMattersAstrologyCourseUrl,
       },
       {
         eyebrow: "Corso di Meditazione | Livello I",
@@ -218,8 +225,10 @@ export const trainingContent: Record<Locale, TrainingContent> = {
           "Últimos fines de semana dedicados a lecturas prácticas, evaluación final y entrega del certificado de formación.",
           "Información Alma Matters: info@almamattersmilano.it | 349.4487760.",
         ],
-        ctaLabel: "Pedir información",
+        ctaLabel: "Ver programa completo",
         ctaUrl: "/es/formacion-astrologia-psicologica-milan",
+        externalCtaLabel: "Ficha oficial Alma Matters",
+        externalCtaUrl: almaMattersAstrologyCourseUrl,
       },
       {
         eyebrow: "Curso de Meditación | Nivel I",
@@ -286,8 +295,10 @@ export const trainingContent: Record<Locale, TrainingContent> = {
           "Final weekends dedicated to practical readings, final assessment, and certificate delivery.",
           "Alma Matters information: info@almamattersmilano.it | 349.4487760.",
         ],
-        ctaLabel: "Ask for details",
+        ctaLabel: "See full program",
         ctaUrl: "/en/psychological-astrology-training-milan",
+        externalCtaLabel: "Official Alma Matters page",
+        externalCtaUrl: almaMattersAstrologyCourseUrl,
       },
       {
         eyebrow: "Meditation Course | Level I",

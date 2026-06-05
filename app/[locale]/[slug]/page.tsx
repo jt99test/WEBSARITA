@@ -21,7 +21,7 @@ import {
   buildBreadcrumbStructuredData,
   buildCoachingStructuredData,
 } from "@/lib/structured-data";
-import { TrainingOffer } from "@/lib/training-content";
+import { almaMattersAstrologyCourseUrl, TrainingOffer } from "@/lib/training-content";
 
 type BasicPageProps = {
   params: Promise<{
@@ -65,6 +65,12 @@ const trainingStatusLabels: Record<
     open: "Open for booking",
     soldOut: "Sold out",
   },
+};
+
+const almaMattersCourseLabels: Record<Locale, string> = {
+  it: "Scheda ufficiale Alma Matters",
+  es: "Ficha oficial Alma Matters",
+  en: "Official Alma Matters page",
 };
 
 const specialPageSeo = {
@@ -142,17 +148,29 @@ const specialPageSeo = {
 >;
 
 function mapTrainingOffers(locale: Locale, offers: SanityTrainingOffer[]): TrainingOffer[] {
-  return offers.map((offer) => ({
-    eyebrow: trainingStatusLabels[locale][offer.status ?? "upcoming"],
-    title: offer.title,
-    place: offer.location,
-    date: offer.dateLabel,
-    price: offer.price ?? "",
-    text: offer.summary,
-    details: offer.details ?? [],
-    ctaLabel: offer.ctaLabel,
-    ctaUrl: offer.ctaUrl,
-  }));
+  return offers.map((offer) => {
+    const isPsychologicalAstrologyCourse =
+      offer.ctaUrl?.includes("astrologia-psicologica") ||
+      offer.title.toLowerCase().includes("astrolog");
+
+    return {
+      eyebrow: trainingStatusLabels[locale][offer.status ?? "upcoming"],
+      title: offer.title,
+      place: offer.location,
+      date: offer.dateLabel,
+      price: offer.price ?? "",
+      text: offer.summary,
+      details: offer.details ?? [],
+      ctaLabel: offer.ctaLabel,
+      ctaUrl: offer.ctaUrl,
+      externalCtaLabel: isPsychologicalAstrologyCourse
+        ? almaMattersCourseLabels[locale]
+        : undefined,
+      externalCtaUrl: isPsychologicalAstrologyCourse
+        ? almaMattersAstrologyCourseUrl
+        : undefined,
+    };
+  });
 }
 
 export function generateStaticParams() {

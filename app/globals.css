@@ -1028,12 +1028,34 @@ a {
   padding-left: 1rem;
 }
 
+.training-offer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1rem;
+  margin-top: auto;
+}
+
 .training-offer-card .ghost-gold-button {
   align-self: start;
   min-width: 11rem;
   min-height: 3.15rem;
-  margin-top: auto;
   padding-inline: 1.35rem;
+}
+
+.text-gold-link {
+  color: var(--dusty-gold);
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.25;
+  text-decoration: underline;
+  text-decoration-color: rgba(245, 215, 130, 0.45);
+  text-underline-offset: 0.28rem;
+}
+
+.text-gold-link:hover {
+  color: var(--ivory);
+  text-decoration-color: rgba(255, 250, 240, 0.7);
 }
 
 .training-facts {

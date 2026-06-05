@@ -18,6 +18,7 @@ function buildCourseSchema(locale: Locale) {
       name: "Istituto S.A.R.I.T.A. | Sarita Shakti",
       url: siteConfig.url,
     },
+    sameAs: content.contact.webUrl,
     hasCourseInstance: {
       "@type": "CourseInstance",
       courseMode: "Onsite",
@@ -125,7 +126,7 @@ export function AstrologyTrainingPage({ locale }: { locale: Locale }) {
           <div className="course-contact-links">
             <a href="mailto:info@almamattersmilano.it">{content.contact.emailLabel}</a>
             <a href="tel:+393494487760">{content.contact.phoneLabel}</a>
-            <Link href="https://www.almamattersmilano.com" target="_blank" rel="noreferrer">
+            <Link href={content.contact.webUrl} target="_blank" rel="noopener">
               {content.contact.webLabel}
             </Link>
           </div>

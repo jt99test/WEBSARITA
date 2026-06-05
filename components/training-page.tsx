@@ -71,15 +71,29 @@ export function TrainingPage({ locale, offers }: TrainingPageProps) {
                 ))}
               </ul>
             ) : null}
-            {offer.ctaLabel ? (
-              <Link
-                className="ghost-gold-button"
-                href={offer.ctaUrl ?? `/${locale}/about#contact`}
-                target={offer.ctaUrl?.startsWith("http") ? "_blank" : undefined}
-                rel={offer.ctaUrl?.startsWith("http") ? "noreferrer" : undefined}
-              >
-                {offer.ctaLabel}
-              </Link>
+            {offer.ctaLabel || offer.externalCtaLabel ? (
+              <div className="training-offer-actions">
+                {offer.ctaLabel ? (
+                  <Link
+                    className="ghost-gold-button"
+                    href={offer.ctaUrl ?? `/${locale}/about#contact`}
+                    target={offer.ctaUrl?.startsWith("http") ? "_blank" : undefined}
+                    rel={offer.ctaUrl?.startsWith("http") ? "noreferrer" : undefined}
+                  >
+                    {offer.ctaLabel}
+                  </Link>
+                ) : null}
+                {offer.externalCtaLabel && offer.externalCtaUrl ? (
+                  <a
+                    className="text-gold-link"
+                    href={offer.externalCtaUrl}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    {offer.externalCtaLabel}
+                  </a>
+                ) : null}
+              </div>
             ) : null}
           </article>
         ))}
