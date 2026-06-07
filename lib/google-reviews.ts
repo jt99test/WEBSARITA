@@ -51,10 +51,27 @@ const fallbackSummary: GoogleReviewsSummary = {
   isLive: false,
 };
 
+const retiredOfferTerms = [
+  "retiro",
+  "retiros",
+  "ritiro",
+  "ritiri",
+  "retreat",
+  "retreats",
+  "sant pol",
+  "sant pol de mar",
+];
+
+function mentionsRetiredOffer(text: string) {
+  const normalized = text.toLocaleLowerCase();
+
+  return retiredOfferTerms.some((term) => normalized.includes(term));
+}
+
 function toReview(review: NonNullable<GooglePlaceDetails["reviews"]>[number]): GoogleReview | null {
   const text = review.text?.text?.trim();
 
-  if (!text) {
+  if (!text || mentionsRetiredOffer(text)) {
     return null;
   }
 
