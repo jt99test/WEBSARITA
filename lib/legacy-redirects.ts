@@ -7,7 +7,6 @@ type LegacyRedirect = {
 };
 
 export const legacyRedirects: LegacyRedirect[] = [
-  ...blogPostRedirects,
   {
     source: "/info",
     destination: "/it/about",
@@ -273,4 +272,5 @@ export const legacyRedirects: LegacyRedirect[] = [
     destination: "/it/coaching",
     statusCode: 301,
   },
+  ...blogPostRedirects,
 ];
