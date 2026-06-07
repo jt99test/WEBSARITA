@@ -16,7 +16,7 @@ type BookingContent = {
 const content: Record<Locale, BookingContent> = {
   it: {
     eyebrow: "Booking",
-    title: "Prenota astrologia psicologica a Barcellona",
+    title: "Prenota astrologia psicologica online",
     intro:
       "Scegli l'orario più adatto e prenota direttamente da Calendly. Se non trovi disponibilità, puoi scrivere a Sarita per coordinare un'alternativa.",
     embedTitle: "Calendly booking",

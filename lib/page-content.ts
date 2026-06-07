@@ -41,9 +41,9 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
   booking: {
     it: {
       eyebrow: "Booking",
-      title: "Prenota astrologia psicologica a Milano",
+      title: "Prenota astrologia psicologica online",
       intro:
-        "Prenota una sessione online o in presenza a Milano quando disponibile attraverso Calendly.",
+        "Prenota una sessione online attraverso Calendly o contatta Sarita per coordinare un'alternativa.",
     },
     es: {
       eyebrow: "Booking",
