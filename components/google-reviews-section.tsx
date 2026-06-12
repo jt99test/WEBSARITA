@@ -89,7 +89,7 @@ export function GoogleReviewsSection({
         </div>
 
         {summary.reviews.length ? (
-          <>
+          <div className="reviews-list-area">
             <div className="review-card-grid">
               {summary.reviews.map((review) => (
                 <article className="review-card" key={`${review.author}-${review.text.slice(0, 18)}`}>
@@ -120,7 +120,7 @@ export function GoogleReviewsSection({
                 </Link>
               </article>
             </div>
-          </>
+          </div>
         ) : null}
       </div>
     </section>

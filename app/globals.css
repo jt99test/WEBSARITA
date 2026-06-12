@@ -1482,8 +1482,13 @@ a {
   margin: 1.35rem 0 2rem;
 }
 
-.review-card-grid {
+.reviews-list-area {
   grid-column: 1 / -1;
+  display: grid;
+  gap: 1.75rem;
+}
+
+.review-card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
@@ -1522,7 +1527,6 @@ a {
 }
 
 .review-card-cta-wrap {
-  grid-column: 1 / -1;
   display: flex;
   justify-content: center;
 }
