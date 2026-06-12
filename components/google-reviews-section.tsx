@@ -24,19 +24,10 @@ const countFormatters: Record<Locale, Intl.NumberFormat> = {
   en: new Intl.NumberFormat("en-US"),
 };
 
-const reviewCardCta: Record<Locale, { title: string; text: string }> = {
-  it: {
-    title: "Leggi tutte le recensioni",
-    text: "Google Places mostra solo una selezione limitata. Apri la scheda Google per vedere il profilo completo.",
-  },
-  es: {
-    title: "Ver todas las reseñas",
-    text: "Google Places muestra solo una selección limitada. Abre la ficha de Google para ver el perfil completo.",
-  },
-  en: {
-    title: "Read all reviews",
-    text: "Google Places only shows a limited selection. Open the Google listing to see the full profile.",
-  },
+const reviewCardCta: Record<Locale, string> = {
+  it: "Leggi tutte le recensioni",
+  es: "Ver todas las reseñas",
+  en: "Read all reviews",
 };
 
 function Stars({ rating }: { rating: number }) {
@@ -109,16 +100,14 @@ export function GoogleReviewsSection({
               ))}
             </div>
             <div className="review-card-cta-wrap">
-              <article className="review-card review-card-cta">
-                <span className="review-stars" aria-hidden="true">
-                  Google
-                </span>
-                <h3>{reviewCardCta[locale].title}</h3>
-                <p>{reviewCardCta[locale].text}</p>
-                <Link href={summary.googleMapsUrl} target="_blank" rel="noreferrer">
-                  {cta}
-                </Link>
-              </article>
+              <Link
+                className="ghost-gold-button"
+                href={summary.googleMapsUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {reviewCardCta[locale]}
+              </Link>
             </div>
           </div>
         ) : null}
