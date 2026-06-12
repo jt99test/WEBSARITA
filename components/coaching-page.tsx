@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { coachingContent } from "@/lib/coaching-content";
 import { Locale } from "@/lib/locales";
-import { socialLinks } from "@/lib/social-links";
 
 type CoachingPageProps = {
   locale: Locale;
@@ -60,34 +59,6 @@ export function CoachingPage({ locale }: CoachingPageProps) {
               <p>{service.summary}</p>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="astrology-choice-section">
-        <div className="panel astrology-choice-panel">
-          <div>
-            <p className="eyebrow">{content.astrologySite.eyebrow}</p>
-            <h2>{content.astrologySite.title}</h2>
-            <p>{content.astrologySite.text}</p>
-          </div>
-          <div className="astrology-choice-art" aria-hidden="true">
-            <Image
-              className="astrology-choice-logo"
-              src="/brand/sarita-logo-transparent.png"
-              alt=""
-              width={240}
-              height={234}
-            />
-            <span className="astrology-choice-label">{content.astrologySite.visualLabel}</span>
-          </div>
-          <Link
-            className="ghost-gold-button"
-            href={socialLinks.astrology}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {content.astrologySite.cta}
-          </Link>
         </div>
       </section>
 

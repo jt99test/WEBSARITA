@@ -3,7 +3,6 @@ import { socialLinks } from "@/lib/social-links";
 
 type SocialLinksProps = {
   className?: string;
-  showAstrology?: boolean;
   compact?: boolean;
 };
 
@@ -41,19 +40,8 @@ function WhatsAppIcon() {
   );
 }
 
-function AstrologyIcon() {
-  return (
-    <svg {...iconProps}>
-      <circle cx="12" cy="12" r="8.5" />
-      <path d="M12 3.5v17M3.5 12h17M6 6l12 12M18 6 6 18" />
-      <circle cx="12" cy="12" r="2" />
-    </svg>
-  );
-}
-
 export function SocialLinks({
   className = "",
-  showAstrology = true,
   compact = false,
 }: SocialLinksProps) {
   const links = [
@@ -72,15 +60,6 @@ export function SocialLinks({
       label: "WhatsApp",
       icon: <WhatsAppIcon />,
     },
-    ...(showAstrology
-      ? [
-          {
-            href: socialLinks.astrology,
-            label: "Sarita Astrology",
-            icon: <AstrologyIcon />,
-          },
-        ]
-      : []),
   ];
 
   return (

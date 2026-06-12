@@ -11,7 +11,6 @@ import { homeContent } from "@/lib/home-content";
 import { isLocale } from "@/lib/locales";
 import { getLocalizedPagePath } from "@/lib/page-routes";
 import { getRequestOrigin } from "@/lib/request-origin";
-import { socialLinks } from "@/lib/social-links";
 import { buildPageMetadata, getHomeSeo } from "@/lib/site";
 import {
   buildFaqStructuredData,
@@ -134,22 +133,6 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
           <p>{content.feature.text}</p>
           <Link className="ghost-gold-button" href={`/${locale}/about`}>
             {content.feature.cta}
-          </Link>
-        </div>
-      </section>
-
-      <section className="astrology-signal">
-        <div className="panel astrology-signal-panel">
-          <p className="eyebrow">{content.astrology.eyebrow}</p>
-          <h2>{content.astrology.title}</h2>
-          <p>{content.astrology.text}</p>
-          <Link
-            className="ghost-gold-button"
-            href={socialLinks.astrology}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {content.astrology.cta}
           </Link>
         </div>
       </section>

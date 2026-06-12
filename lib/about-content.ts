@@ -64,10 +64,6 @@ export const aboutContent: Record<Locale, AboutContent> = {
           text: "Letture astrologiche, coaching online, sessioni mensili, pacchetti brevi e incontri a Milano quando disponibili.",
         },
         {
-          title: "Astrologia",
-          text: "Il servizio dedicato alle letture astrologiche vive anche su saritaastrology.com.",
-        },
-        {
           title: "Formazione",
           text: "Formazione in astrologia psicologica e meditazione in presenza ad Alma Matters Milano.",
         },
@@ -109,10 +105,6 @@ export const aboutContent: Record<Locale, AboutContent> = {
           text: "Lecturas astrológicas, coaching online, sesiones mensuales, packs breves y prácticas de yoga terapéutico.",
         },
         {
-          title: "Astrología",
-          text: "El servicio dedicado a las lecturas astrológicas también vive en saritaastrology.com.",
-        },
-        {
           title: "Formación",
           text: "Bihar School of Yoga, astrología psicológica transpersonal, astrología médica y psicológica.",
         },
@@ -152,10 +144,6 @@ export const aboutContent: Record<Locale, AboutContent> = {
         {
           title: "Sessions",
           text: "Astrology readings, online coaching, monthly sessions, short packs, and therapeutic yoga practices.",
-        },
-        {
-          title: "Astrology",
-          text: "The dedicated astrology reading service also lives at saritaastrology.com.",
         },
         {
           title: "Training",

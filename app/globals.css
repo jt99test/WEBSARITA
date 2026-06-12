@@ -1699,133 +1699,6 @@ a {
   gap: 0.75rem;
 }
 
-.astrology-signal {
-  margin: 0 auto;
-  max-width: 72rem;
-  padding: 0 clamp(1rem, 4vw, 2rem) 5rem;
-}
-
-.astrology-signal-panel {
-  display: grid;
-  max-width: 48rem;
-  gap: 1rem;
-  margin: 0 auto;
-  padding: clamp(1.35rem, 4vw, 2rem);
-  text-align: center;
-}
-
-.astrology-signal-panel h2 {
-  margin: 0;
-  color: var(--ivory);
-  font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 3.25rem);
-  line-height: 1;
-}
-
-.astrology-signal-panel p:not(.eyebrow) {
-  margin: 0 auto;
-  max-width: 38rem;
-  color: var(--soft-blue);
-  line-height: 1.65;
-}
-
-.astrology-signal-panel .ghost-gold-button {
-  justify-self: center;
-  margin-top: 0.5rem;
-}
-
-.astrology-choice-section {
-  margin: 0 auto;
-  max-width: 72rem;
-  padding: 0 clamp(1rem, 4vw, 2rem) 6rem;
-}
-
-.astrology-choice-panel {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(14rem, 0.42fr);
-  gap: clamp(1.25rem, 4vw, 2.5rem);
-  align-items: center;
-  padding: clamp(1.35rem, 4vw, 2rem);
-}
-
-.astrology-choice-panel h2 {
-  margin: 0.75rem 0 1rem;
-  color: var(--ivory);
-  font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 3.25rem);
-  line-height: 1;
-}
-
-.astrology-choice-panel p:not(.eyebrow) {
-  margin: 0;
-  color: var(--soft-blue);
-  line-height: 1.65;
-}
-
-.astrology-choice-art {
-  position: relative;
-  display: grid;
-  gap: 1rem;
-  place-items: center;
-  align-content: center;
-  min-height: 17rem;
-  overflow: hidden;
-  border: 1px solid rgba(245, 215, 130, 0.28);
-  background:
-    radial-gradient(circle at 50% 45%, rgba(245, 215, 130, 0.1), transparent 8rem),
-    linear-gradient(180deg, rgba(7, 20, 55, 0.48), rgba(3, 8, 20, 0.24));
-  text-align: center;
-}
-
-.astrology-choice-art::before,
-.astrology-choice-art::after {
-  content: "";
-  position: absolute;
-  border: 1px solid rgba(215, 231, 255, 0.16);
-  border-radius: 999px;
-  pointer-events: none;
-}
-
-.astrology-choice-art::before {
-  width: 12rem;
-  height: 12rem;
-}
-
-.astrology-choice-art::after {
-  width: 16rem;
-  height: 16rem;
-  transform: rotate(16deg) scaleY(0.56);
-  border-color: rgba(245, 215, 130, 0.2);
-}
-
-.astrology-choice-logo,
-.astrology-choice-label {
-  position: relative;
-  z-index: 1;
-}
-
-.astrology-choice-logo {
-  width: clamp(6.5rem, 12vw, 9rem);
-  height: auto;
-  filter:
-    drop-shadow(0 0 18px rgba(245, 215, 130, 0.22))
-    drop-shadow(0 0 28px rgba(124, 191, 255, 0.1));
-}
-
-.astrology-choice-label {
-  max-width: 16rem;
-  color: var(--dusty-gold);
-  font-size: 0.74rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  line-height: 1.35;
-  text-transform: uppercase;
-}
-
-.astrology-choice-panel .ghost-gold-button {
-  justify-self: start;
-}
-
 .retreat-signal {
   position: relative;
   overflow: hidden;
@@ -2574,7 +2447,6 @@ a {
   .about-path,
   .services-heading,
   .service-grid,
-  .astrology-choice-panel,
   .home-faq-panel,
   .blog-grid,
   .training-offers,
@@ -2603,10 +2475,6 @@ a {
     justify-items: center;
   }
 
-  .astrology-choice-panel {
-    text-align: center;
-  }
-
   .home-faq-heading {
     max-width: none;
     text-align: center;
@@ -2622,14 +2490,6 @@ a {
 
   .home-faq-heading .ghost-gold-button {
     justify-self: center;
-  }
-
-  .astrology-choice-art {
-    min-height: 15rem;
-  }
-
-  .astrology-choice-panel .ghost-gold-button {
-    justify-self: stretch;
   }
 
   /* ── Misc layout adjustments ──────────────────────── */
