@@ -1523,6 +1523,9 @@ a {
 
 .review-card-cta {
   align-content: center;
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(100%, 23.5rem);
   border-color: rgba(245, 215, 130, 0.34);
   background:
     radial-gradient(circle at 90% 10%, rgba(245, 215, 130, 0.1), transparent 8rem),
