@@ -89,34 +89,38 @@ export function GoogleReviewsSection({
         </div>
 
         {summary.reviews.length ? (
-          <div className="review-card-grid">
-            {summary.reviews.map((review) => (
-              <article className="review-card" key={`${review.author}-${review.text.slice(0, 18)}`}>
-                <Stars rating={review.rating} />
-                <p>{review.text}</p>
-                <footer>
-                  {review.authorUrl ? (
-                    <Link href={review.authorUrl} target="_blank" rel="noreferrer">
-                      {review.author}
-                    </Link>
-                  ) : (
-                    <span>{review.author}</span>
-                  )}
-                  {review.dateLabel ? <span>{review.dateLabel}</span> : null}
-                </footer>
+          <>
+            <div className="review-card-grid">
+              {summary.reviews.map((review) => (
+                <article className="review-card" key={`${review.author}-${review.text.slice(0, 18)}`}>
+                  <Stars rating={review.rating} />
+                  <p>{review.text}</p>
+                  <footer>
+                    {review.authorUrl ? (
+                      <Link href={review.authorUrl} target="_blank" rel="noreferrer">
+                        {review.author}
+                      </Link>
+                    ) : (
+                      <span>{review.author}</span>
+                    )}
+                    {review.dateLabel ? <span>{review.dateLabel}</span> : null}
+                  </footer>
+                </article>
+              ))}
+            </div>
+            <div className="review-card-cta-wrap">
+              <article className="review-card review-card-cta">
+                <span className="review-stars" aria-hidden="true">
+                  Google
+                </span>
+                <h3>{reviewCardCta[locale].title}</h3>
+                <p>{reviewCardCta[locale].text}</p>
+                <Link href={summary.googleMapsUrl} target="_blank" rel="noreferrer">
+                  {cta}
+                </Link>
               </article>
-            ))}
-            <article className="review-card review-card-cta">
-              <span className="review-stars" aria-hidden="true">
-                Google
-              </span>
-              <h3>{reviewCardCta[locale].title}</h3>
-              <p>{reviewCardCta[locale].text}</p>
-              <Link href={summary.googleMapsUrl} target="_blank" rel="noreferrer">
-                {cta}
-              </Link>
-            </article>
-          </div>
+            </div>
+          </>
         ) : null}
       </div>
     </section>

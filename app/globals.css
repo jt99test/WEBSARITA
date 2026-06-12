@@ -1521,10 +1521,14 @@ a {
   color: var(--ivory);
 }
 
+.review-card-cta-wrap {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}
+
 .review-card-cta {
   align-content: center;
-  grid-column: 1 / -1;
-  justify-self: center;
   width: min(100%, 23.5rem);
   border-color: rgba(245, 215, 130, 0.34);
   background:
