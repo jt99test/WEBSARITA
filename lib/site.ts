@@ -69,6 +69,7 @@ export function buildAlternates(path = ""): Metadata["alternates"] {
 type PageMetadataOptions = {
   origin?: string;
   languages?: Partial<Record<Locale, string>>;
+  image?: string;
 };
 
 function metadataUrl(path: string, origin?: string) {
@@ -122,7 +123,7 @@ export function buildPageMetadata(
       type: "website",
       images: [
         {
-          url: metadataUrl(siteConfig.defaultOgImage, options.origin),
+          url: options.image ?? metadataUrl(siteConfig.defaultOgImage, options.origin),
           width: 1200,
           height: 630,
           alt: `${siteConfig.name} - Psychological astrology and therapeutic yoga`,
@@ -133,7 +134,7 @@ export function buildPageMetadata(
       card: "summary_large_image",
       title: buildOpenGraphTitle(seo.title),
       description: seo.description,
-      images: [metadataUrl(siteConfig.defaultOgImage, options.origin)],
+      images: [options.image ?? metadataUrl(siteConfig.defaultOgImage, options.origin)],
     },
   };
 }

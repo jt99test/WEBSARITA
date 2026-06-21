@@ -109,6 +109,10 @@ export async function generateMetadata({
   }
 
   const blogAlternates = getBlogPostAlternates(locale, article.slug);
+  const origin = await getRequestOrigin();
+  const ogImage = article.mainImage
+    ? urlForImage(article.mainImage).width(1200).height(630).url()
+    : article.wixCoverImageUrl;
 
   return buildPageMetadata(
     locale,
@@ -118,13 +122,14 @@ export async function generateMetadata({
       path: `blog/${article.slug}`,
     },
     {
-      origin: await getRequestOrigin(),
+      origin,
       languages: Object.fromEntries(
         Object.entries(blogAlternates).map(([alternateLocale, alternateSlug]) => [
           alternateLocale,
           `/${alternateLocale}/blog/${alternateSlug}`,
         ]),
       ),
+      image: ogImage ?? undefined,
     },
   );
 }
