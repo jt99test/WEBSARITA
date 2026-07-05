@@ -66,7 +66,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     stats: [
       { value: "25+", label: "anni di esperienza nel lavoro su corpo, psiche e coscienza" },
       { value: "1.000+", label: "persone accompagnate in processi di crescita personale" },
-      { value: "2001", label: "formazione alla Bihar School of Yoga in India" },
+      { value: "2001", label: "formazione presso la Bihar School of Yoga in India" },
       { value: "170+", label: "recensioni Google a 5 stelle" },
     ],
     bio: {
@@ -74,15 +74,15 @@ export const aboutContent: Record<Locale, AboutContent> = {
       title: "Un lavoro nato tra India, yoga e astrologia psicologica.",
       paragraphs: [
         "Il cammino di Sarita Shakti inizia in India, alla Bihar School of Yoga, dove si diploma nel 2001 e vive per tre anni immersa nello studio personale, nel Karma Yoga e nella pratica quotidiana. Questa esperienza resta la base del suo modo di accompagnare: presenza, ascolto e disciplina interiore.",
-        "La sua formazione yogica comprende Hatha Yoga, Raja Yoga, Karma Yoga, Bhakti Yoga, Pranayama, Yoga Nidra, tecniche di concentrazione e meditazione. Per Sarita, lo yoga non è solo una pratica fisica: è un modo concreto per regolare il sistema nervoso, sviluppare presenza e ritrovare equilibrio.",
-        "Negli anni integra questo percorso con l'astrologia psicologica, studiando con astrologi specializzati in Argentina, Cile e Colombia e approfondendo autori come Carl Gustav Jung, Dane Rudhyar, Liz Greene e Stephen Arroyo. La carta natale diventa così uno strumento di comprensione, non di previsione.",
+        "La sua formazione nello yoga comprende Hatha Yoga, Raja Yoga, Karma Yoga, Bhakti Yoga, Pranayama, Yoga Nidra, tecniche di concentrazione e meditazione. Per Sarita, lo yoga non è solo una pratica fisica: è un modo concreto per regolare il sistema nervoso, sviluppare presenza e ritrovare equilibrio.",
+        "Negli anni integra questo percorso con l'astrologia psicologica, studiando con astrologi specializzati in Argentina, Cile e Colombia e approfondendo autori come Carl Gustav Jung, Dane Rudhyar, Liz Greene e Stephen Arroyo. La carta natale diventa così uno strumento di comprensione, non di previsione del futuro.",
       ],
     },
     credentials: {
       eyebrow: "Formazione",
       title: "Una base ampia, costruita in più di due decenni.",
       text:
-        "Sarita unisce tradizione yogica, lettura simbolica, educazione emotiva e accompagnamento umano. Le sue formazioni non vivono come compartimenti separati: dialogano in una metodologia pratica e personale.",
+        "Sarita unisce tradizione yogica, lettura simbolica, educazione emotiva e accompagnamento umano. Le sue formazioni non restano in comparti stagni: dialogano in un metodo pratico e personale.",
       cards: [
         {
           title: "Bihar School of Yoga",
@@ -106,7 +106,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
       eyebrow: "Metodo",
       title: "Astrologia, corpo e coscienza nello stesso processo.",
       text:
-        "Ogni sessione parte dalla storia reale della persona. La mappa astrologica offre linguaggio e orientamento; il lavoro corporeo e meditativo aiuta a integrare ciò che si comprende.",
+        "Ogni sessione parte dalla storia reale della persona. La mappa astrologica offre linguaggio e orientamento; il lavoro corporeo e meditativo aiuta a integrare ciò che emerge dalla comprensione.",
       pillars: [
         {
           title: "Astrologia psicologica",
