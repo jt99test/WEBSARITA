@@ -43,19 +43,19 @@ export const pageContent: Record<PageSlug, Record<Locale, BasicPageContent>> = {
       eyebrow: "Booking",
       title: "Prenota astrologia psicologica online",
       intro:
-        "Prenota una sessione online attraverso Calendly o contatta Sarita per coordinare un'alternativa.",
+        "Prenota una sessione online dal calendario di Sarita o contattala per coordinare un'alternativa.",
     },
     es: {
       eyebrow: "Booking",
       title: "Reserva astrología psicológica en Barcelona",
       intro:
-        "Reserva una sesión con Sarita a través de Calendly o contáctala para coordinar una alternativa.",
+        "Reserva una sesión con Sarita desde su calendario o contáctala para coordinar una alternativa.",
     },
     en: {
       eyebrow: "Booking",
       title: "Book psychological astrology in Barcelona",
       intro:
-        "Book a session with Sarita through Calendly or contact her to coordinate another option.",
+        "Book a session with Sarita through her calendar or contact her to coordinate another option.",
     },
   },
   coaching: {

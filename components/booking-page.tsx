@@ -8,22 +8,26 @@ type BookingContent = {
   embedTitle: string;
   pendingTitle: string;
   pendingText: string;
-  openCalendly: string;
+  openBookingCalendar: string;
   contactFallback: string;
   sideNote: string;
 };
+
+const googleCalendarAppointmentUrl =
+  process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_APPOINTMENT_URL ??
+  "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0uq8bDwYLyhN860cb5nHzuQxHwA7M_4L0EJJylyJKazghQzP_T021xRUNDCw3VRyJPKsiUoQhy?gv=true";
 
 const content: Record<Locale, BookingContent> = {
   it: {
     eyebrow: "Booking",
     title: "Prenota astrologia psicologica online",
     intro:
-      "Scegli l'orario più adatto e prenota direttamente da Calendly. Se non trovi disponibilità, puoi scrivere a Sarita per coordinare un'alternativa.",
-    embedTitle: "Calendly booking",
-    pendingTitle: "Calendly è quasi pronto.",
+      "Scegli l'orario più adatto e prenota direttamente dal calendario di Sarita. Se non trovi disponibilità, puoi scriverle per coordinare un'alternativa.",
+    embedTitle: "Calendario prenotazioni Sarita Shakti",
+    pendingTitle: "Il calendario prenotazioni è quasi pronto.",
     pendingText:
-      "Aggiungi il link dell'evento Calendly nelle variabili del sito per attivare il calendario incorporato.",
-    openCalendly: "Apri Calendly",
+      "Aggiungi il link di Google Calendar Appointment Schedule nelle variabili del sito per attivare il calendario incorporato.",
+    openBookingCalendar: "Apri calendario",
     contactFallback: "Contatta Sarita",
     sideNote: "Se preferisci, scrivi direttamente a Sarita per coordinare orario e formato della sessione.",
   },
@@ -31,56 +35,41 @@ const content: Record<Locale, BookingContent> = {
     eyebrow: "Booking",
     title: "Reserva astrología psicológica en Barcelona",
     intro:
-      "Elige el horario que mejor te encaje y reserva directamente desde Calendly. Si no encuentras disponibilidad, puedes escribir a Sarita para coordinar una alternativa.",
-    embedTitle: "Reservas Calendly",
-    pendingTitle: "Calendly está casi listo.",
+      "Elige el horario que mejor te encaje y reserva directamente desde el calendario de Sarita. Si no encuentras disponibilidad, puedes escribirle para coordinar una alternativa.",
+    embedTitle: "Calendario de reservas Sarita Shakti",
+    pendingTitle: "El calendario de reservas está casi listo.",
     pendingText:
-      "Añade el enlace del evento de Calendly en las variables del sitio para activar el calendario integrado.",
-    openCalendly: "Abrir Calendly",
+      "Añade el enlace de Google Calendar Appointment Schedule en las variables del sitio para activar el calendario integrado.",
+    openBookingCalendar: "Abrir calendario",
     contactFallback: "Contactar a Sarita",
-    sideNote: "Si prefieres, escríbele directamente a Sarita para coordinar horario y formato de la sesión.",
+    sideNote: "Si prefieres, escribe directamente a Sarita para coordinar horario y formato de la sesión.",
   },
   en: {
     eyebrow: "Booking",
     title: "Book psychological astrology in Barcelona",
     intro:
-      "Choose the time that works best and book directly through Calendly. If you do not find availability, you can contact Sarita to coordinate another option.",
-    embedTitle: "Calendly booking",
-    pendingTitle: "Calendly is almost ready.",
+      "Choose the time that works best and book directly through Sarita's calendar. If you do not find availability, you can contact her to coordinate another option.",
+    embedTitle: "Sarita Shakti booking calendar",
+    pendingTitle: "The booking calendar is almost ready.",
     pendingText:
-      "Add the Calendly event link to the site environment variables to activate the embedded calendar.",
-    openCalendly: "Open Calendly",
+      "Add the Google Calendar Appointment Schedule link to the site environment variables to activate the embedded calendar.",
+    openBookingCalendar: "Open calendar",
     contactFallback: "Contact Sarita",
     sideNote: "If you prefer, write directly to Sarita to coordinate the time and format of your session.",
   },
 };
 
-function getCalendlyUrl() {
-  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL;
-
-  if (!calendlyUrl) {
+function getGoogleCalendarAppointmentUrl() {
+  if (!googleCalendarAppointmentUrl) {
     return null;
   }
 
   let url: URL;
 
   try {
-    url = new URL(calendlyUrl);
+    url = new URL(googleCalendarAppointmentUrl);
   } catch {
     return null;
-  }
-
-  if (!url.searchParams.has("hide_gdpr_banner")) {
-    url.searchParams.set("hide_gdpr_banner", "1");
-  }
-  if (!url.searchParams.has("background_color")) {
-    url.searchParams.set("background_color", "080d1a");
-  }
-  if (!url.searchParams.has("text_color")) {
-    url.searchParams.set("text_color", "f5f0e8");
-  }
-  if (!url.searchParams.has("primary_color")) {
-    url.searchParams.set("primary_color", "c9a96e");
   }
 
   return url.toString();
@@ -88,7 +77,7 @@ function getCalendlyUrl() {
 
 export function BookingPage({ locale }: { locale: Locale }) {
   const copy = content[locale];
-  const calendlyUrl = getCalendlyUrl();
+  const bookingCalendarUrl = getGoogleCalendarAppointmentUrl();
 
   return (
     <section className="booking-section">
@@ -100,10 +89,10 @@ export function BookingPage({ locale }: { locale: Locale }) {
 
       <div className="booking-layout">
         <div className="panel booking-embed-panel">
-          {calendlyUrl ? (
+          {bookingCalendarUrl ? (
             <iframe
               title={copy.embedTitle}
-              src={calendlyUrl}
+              src={bookingCalendarUrl}
               loading="lazy"
               referrerPolicy="strict-origin-when-cross-origin"
             />
@@ -122,10 +111,10 @@ export function BookingPage({ locale }: { locale: Locale }) {
             <p>{copy.sideNote}</p>
           </div>
           <div className="booking-side-actions">
-            {calendlyUrl ? (
-              <Link className="ghost-gold-button" href={calendlyUrl} target="_blank" rel="noreferrer">
-                {copy.openCalendly}
-              </Link>
+            {bookingCalendarUrl ? (
+              <a className="ghost-gold-button" href={bookingCalendarUrl} target="_blank" rel="noreferrer">
+                {copy.openBookingCalendar}
+              </a>
             ) : null}
             <Link className="ghost-gold-button" href={`/${locale}/about`}>
               {copy.contactFallback}
