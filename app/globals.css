@@ -793,6 +793,107 @@ a {
   font-size: 1.05rem;
 }
 
+.about-authority-section,
+.about-credentials-section,
+.about-method-section {
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 0 clamp(1rem, 4vw, 2rem) 6rem;
+}
+
+.about-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-stat-card {
+  min-height: 11.5rem;
+  padding: clamp(1rem, 2vw, 1.35rem);
+}
+
+.about-stat-card span {
+  display: block;
+  color: var(--dusty-gold);
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  line-height: 0.9;
+}
+
+.about-stat-card p {
+  margin: 1rem 0 0;
+  color: var(--soft-blue);
+  line-height: 1.55;
+}
+
+.about-section-heading {
+  max-width: 52rem;
+  margin-bottom: 2rem;
+}
+
+.about-section-heading h2 {
+  margin: 0.75rem 0 1rem;
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.about-section-heading p:not(.eyebrow),
+.about-credential-card p,
+.about-method-card p {
+  color: var(--soft-blue);
+  line-height: 1.65;
+}
+
+.about-credential-grid,
+.about-method-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.about-credential-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.about-method-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.about-credential-card,
+.about-method-card {
+  min-height: 15rem;
+  padding: clamp(1.05rem, 2vw, 1.35rem);
+}
+
+.about-credential-card span {
+  display: inline-grid;
+  width: 2.45rem;
+  height: 2.45rem;
+  place-items: center;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(245, 215, 130, 0.38);
+  border-radius: 999px;
+  color: var(--dusty-gold);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.about-credential-card h3,
+.about-method-card h3 {
+  margin: 0 0 0.75rem;
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  font-size: clamp(1.55rem, 2.6vw, 2.15rem);
+  line-height: 1;
+}
+
+.about-credential-card p,
+.about-method-card p {
+  margin: 0;
+}
+
 .contact-section {
   margin: 0 auto;
   max-width: 72rem;
@@ -2222,6 +2323,11 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .about-stat-grid,
+  .about-credential-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .reviews-signal-inner,
   .review-card-grid,
   .booking-layout {
@@ -2342,6 +2448,10 @@ a {
   .about-hero-copy,
   .training-hero-copy,
   .about-path-copy,
+  .about-section-heading,
+  .about-stat-card,
+  .about-credential-card,
+  .about-method-card,
   .services-heading,
   .service-card,
   .coaching-process-copy,
@@ -2434,6 +2544,9 @@ a {
 
   /* ── Collapse all two-column grids ────────────────── */
   .about-path,
+  .about-stat-grid,
+  .about-credential-grid,
+  .about-method-grid,
   .services-heading,
   .service-grid,
   .home-faq-panel,

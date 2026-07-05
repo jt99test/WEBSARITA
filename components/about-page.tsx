@@ -46,6 +46,17 @@ export function AboutPage({ locale }: AboutPageProps) {
         </div>
       </section>
 
+      <section className="about-authority-section" aria-label={content.credentials.eyebrow}>
+        <div className="about-stat-grid">
+          {content.stats.map((stat) => (
+            <article className="panel about-stat-card" key={stat.value}>
+              <span>{stat.value}</span>
+              <p>{stat.label}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="about-path" id="path">
         <div className="about-path-image-wrap">
           <Image
@@ -62,6 +73,39 @@ export function AboutPage({ locale }: AboutPageProps) {
           <h2 className="section-title">{content.bio.title}</h2>
           {content.bio.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+      </section>
+
+      <section className="about-credentials-section">
+        <div className="about-section-heading">
+          <p className="eyebrow">{content.credentials.eyebrow}</p>
+          <h2>{content.credentials.title}</h2>
+          <p>{content.credentials.text}</p>
+        </div>
+        <div className="about-credential-grid">
+          {content.credentials.cards.map((card, index) => (
+            <article className="panel about-credential-card" key={card.title}>
+              <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="about-method-section">
+        <div className="about-section-heading">
+          <p className="eyebrow">{content.method.eyebrow}</p>
+          <h2>{content.method.title}</h2>
+          <p>{content.method.text}</p>
+        </div>
+        <div className="about-method-grid">
+          {content.method.pillars.map((pillar) => (
+            <article className="panel about-method-card" key={pillar.title}>
+              <h3>{pillar.title}</h3>
+              <p>{pillar.text}</p>
+            </article>
           ))}
         </div>
       </section>
