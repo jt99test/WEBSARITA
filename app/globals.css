@@ -1358,22 +1358,50 @@ a {
 
 .course-weekend-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
 }
 
 .course-weekend-card {
   display: grid;
-  min-height: 16rem;
+  grid-template-columns: clamp(9rem, 18vw, 12rem) minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(1.5rem, 3.5vw, 3rem);
+  row-gap: 0.3rem;
   align-content: start;
-  gap: 1rem;
 }
 
 .course-weekend-card > div {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  grid-row: 1 / 3;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding-right: 1rem;
+  height: 100%;
+}
+
+.course-weekend-card > div p {
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+  line-height: 1.15;
+}
+
+.course-weekend-card h3 {
+  margin: 0;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  line-height: 1.2;
+}
+
+.course-weekend-card > p {
+  margin: 0;
+  max-width: 46rem;
 }
 
 .course-method-section {
@@ -2636,7 +2664,18 @@ a {
   }
 
   .course-weekend-card {
-    min-height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 0.5rem;
+  }
+
+  .course-weekend-card > div {
+    grid-row: auto;
+    flex-direction: row;
+    align-items: baseline;
+    border-right: none;
+    padding-right: 0;
+    height: auto;
   }
 
   .service-card p,

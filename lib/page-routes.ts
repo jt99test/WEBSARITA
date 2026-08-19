@@ -5,6 +5,7 @@ export type SpecialPageKey =
   | "reviews"
   | "faq"
   | "astrologyTraining"
+  | "astrologyTrainingBarcelona"
   | "psychologicalAstrologyMilan";
 export type PageRouteKey = PageSlug | SpecialPageKey;
 
@@ -23,6 +24,11 @@ export const specialPagePaths: Record<SpecialPageKey, Record<Locale, string>> = 
     es: "formacion-astrologia-psicologica-milan",
     it: "formazione-astrologia-psicologica-milano",
     en: "psychological-astrology-training-milan",
+  },
+  astrologyTrainingBarcelona: {
+    es: "formacion-astrologia-psicologica-barcelona",
+    it: "formazione-astrologia-psicologica-barcellona",
+    en: "psychological-astrology-training-barcelona",
   },
   psychologicalAstrologyMilan: {
     es: "astrologia-psicologica-milan",

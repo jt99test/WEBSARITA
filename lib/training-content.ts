@@ -68,7 +68,7 @@ const curriculumModules = {
     ],
     [
       "Formato",
-      "In presenza ad Alma Matters Milano",
+      "In presenza a Milano e Barcellona",
       "Percorsi dal vivo, gruppi contenuti e pratica accompagnata direttamente da Sarita Shakti.",
     ],
   ],
@@ -90,7 +90,7 @@ const curriculumModules = {
     ],
     [
       "Formato",
-      "Presencial en Alma Matters Milano",
+      "Presencial en Milán y Barcelona",
       "Recorridos en vivo, grupos reducidos y práctica acompañada directamente por Sarita Shakti.",
     ],
   ],
@@ -112,7 +112,7 @@ const curriculumModules = {
     ],
     [
       "Format",
-      "In person at Alma Matters Milano",
+      "In person in Milan and Barcelona",
       "Live courses, small groups, and practice guided directly by Sarita Shakti.",
     ],
   ],
@@ -128,10 +128,10 @@ function mapModules(locale: Locale): TrainingModule[] {
 
 export const trainingContent: Record<Locale, TrainingContent> = {
   it: {
-    eyebrow: "Formazione | Milano",
+    eyebrow: "Formazione | Milano e Barcellona",
     title: "Formazione in astrologia psicologica e meditazione.",
     intro:
-      "Percorsi in presenza ad Alma Matters Milano per studiare astrologia psicologica, meditazione, respiro e pratica interiore con Sarita Shakti.",
+      "Percorsi in presenza a Milano e Barcellona per studiare astrologia psicologica, meditazione, respiro e pratica interiore con Sarita Shakti.",
     primaryCta: "Chiedi informazioni",
     secondaryCta: "Vedi i percorsi",
     priceNote: "4 incontri",
@@ -144,21 +144,27 @@ export const trainingContent: Record<Locale, TrainingContent> = {
         eyebrow: "Formazione professionale | Milano 2027",
         title: "Scuola di Astrologia Psicologica",
         place: "Alma Matters, Via Stradella 5, Milano",
-        date:
-          "11 weekend, gennaio-dicembre 2027. Sabato 9:00-13:00 e 14:30-17:30; domenica 9:00-12:30.",
+        date: "11 weekend, gennaio-dicembre 2027.",
         price: "",
         text:
           "Un percorso annuale per imparare a leggere il tema natale come mappa dell'anima, con metodo strutturato, pratica di gruppo e attestato finale.",
-        details: [
-          "Fondamenti, pianeti, segni, case, reggenze e aspetti planetari.",
-          "Sole, Luna, Mercurio, Venere, Marte, Giove, Saturno, Urano, Nettuno, Plutone, Lilith, Ascendente, Chirone e Nodi Lunari.",
-          "Ultimi weekend dedicati a letture pratiche, test finale e consegna dell'attestato di avvenuta formazione.",
-          "Informazioni Alma Matters: info@almamattersmilano.it | 349.4487760.",
-        ],
+        details: [],
         ctaLabel: "Vedi programma completo",
         ctaUrl: "/it/formazione-astrologia-psicologica-milano",
         externalCtaLabel: "Scheda ufficiale Alma Matters",
         externalCtaUrl: almaMattersAstrologyCourseUrl,
+      },
+      {
+        eyebrow: "Formazione | Barcellona 2027",
+        title: "Formazione in Astrologia Psicologica — 1° Anno",
+        place: "Barcellona",
+        date: "11 incontri di fine settimana, gennaio-dicembre 2027.",
+        price: "",
+        text:
+          "Un viaggio per comprenderti, integrare i simboli del cielo e imparare a interpretare il tema natale.",
+        details: [],
+        ctaLabel: "Vedi programma completo",
+        ctaUrl: "/it/formazione-astrologia-psicologica-barcellona",
       },
       {
         eyebrow: "Corso di Meditazione | Livello I",
@@ -191,17 +197,17 @@ export const trainingContent: Record<Locale, TrainingContent> = {
       text:
         "Sarita integra quasi trent'anni di pratica yogica, astrologia psicologica e accompagnamento umano in percorsi concreti, progressivi e dal vivo.",
       items: [
-        "Lezioni in presenza ad Alma Matters Milano.",
+        "Lezioni in presenza ad Alma Matters Milano e a Barcellona.",
         "Gruppi piccoli, pratica accompagnata e spazio per domande reali.",
         "Astrologia e meditazione come strumenti di conoscenza di sé, non di previsione.",
       ],
     },
   },
   es: {
-    eyebrow: "Formación | Milán",
+    eyebrow: "Formación | Milán y Barcelona",
     title: "Formación en astrología psicológica y meditación.",
     intro:
-      "Recorridos presenciales en Alma Matters Milano para estudiar astrología psicológica, meditación, respiración y práctica interior con Sarita Shakti.",
+      "Recorridos presenciales en Milán y Barcelona para estudiar astrología psicológica, meditación, respiración y práctica interior con Sarita Shakti.",
     primaryCta: "Pedir información",
     secondaryCta: "Ver recorridos",
     priceNote: "4 encuentros",
@@ -214,21 +220,27 @@ export const trainingContent: Record<Locale, TrainingContent> = {
         eyebrow: "Formación profesional | Milán 2027",
         title: "Escuela de Astrología Psicológica",
         place: "Alma Matters, Via Stradella 5, Milán",
-        date:
-          "11 fines de semana, enero-diciembre 2027. Sábado 9:00-13:00 y 14:30-17:30; domingo 9:00-12:30.",
+        date: "11 fines de semana, enero-diciembre 2027.",
         price: "",
         text:
           "Un recorrido anual para aprender a leer la carta natal como mapa del alma, con método estructurado, práctica grupal y certificado final.",
-        details: [
-          "Fundamentos, planetas, signos, casas, regencias y aspectos planetarios.",
-          "Sol, Luna, Mercurio, Venus, Marte, Júpiter, Saturno, Urano, Neptuno, Plutón, Lilith, Ascendente, Quirón y Nodos Lunares.",
-          "Últimos fines de semana dedicados a lecturas prácticas, evaluación final y entrega del certificado de formación.",
-          "Información Alma Matters: info@almamattersmilano.it | 349.4487760.",
-        ],
+        details: [],
         ctaLabel: "Ver programa completo",
         ctaUrl: "/es/formacion-astrologia-psicologica-milan",
         externalCtaLabel: "Ficha oficial Alma Matters",
         externalCtaUrl: almaMattersAstrologyCourseUrl,
+      },
+      {
+        eyebrow: "Formación | Barcelona 2027",
+        title: "Formación en Astrología Psicológica — 1º Año",
+        place: "Barcelona",
+        date: "11 encuentros de fin de semana, enero-diciembre 2027.",
+        price: "",
+        text:
+          "Un viaje para comprenderte, integrar los símbolos del cielo y aprender a interpretar la Carta Natal.",
+        details: [],
+        ctaLabel: "Ver programa completo",
+        ctaUrl: "/es/formacion-astrologia-psicologica-barcelona",
       },
       {
         eyebrow: "Curso de Meditación | Nivel I",
@@ -261,17 +273,17 @@ export const trainingContent: Record<Locale, TrainingContent> = {
       text:
         "Sarita integra casi treinta años de práctica yóguica, astrología psicológica y acompañamiento humano en recorridos concretos, progresivos y presenciales.",
       items: [
-        "Clases presenciales en Alma Matters Milano.",
+        "Clases presenciales en Alma Matters Milano y en Barcelona.",
         "Grupos reducidos, práctica acompañada y espacio para preguntas reales.",
         "Astrología y meditación como herramientas de autoconocimiento, no de predicción.",
       ],
     },
   },
   en: {
-    eyebrow: "Training | Milan",
+    eyebrow: "Training | Milan & Barcelona",
     title: "Psychological astrology and meditation training.",
     intro:
-      "In-person courses at Alma Matters Milano for studying psychological astrology, meditation, breath, and inner practice with Sarita Shakti.",
+      "In-person courses in Milan and Barcelona for studying psychological astrology, meditation, breath, and inner practice with Sarita Shakti.",
     primaryCta: "Ask for details",
     secondaryCta: "See courses",
     priceNote: "4 meetings",
@@ -284,21 +296,27 @@ export const trainingContent: Record<Locale, TrainingContent> = {
         eyebrow: "Professional training | Milan 2027",
         title: "School of Psychological Astrology",
         place: "Alma Matters, Via Stradella 5, Milan",
-        date:
-          "11 weekends, January-December 2027. Saturday 9:00-13:00 and 14:30-17:30; Sunday 9:00-12:30.",
+        date: "11 weekends, January-December 2027.",
         price: "",
         text:
           "A year-long training to learn how to read the natal chart as a map of the soul, with a structured method, group practice, and final certificate.",
-        details: [
-          "Foundations, planets, signs, houses, rulerships, and planetary aspects.",
-          "Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto, Lilith, Ascendant, Chiron, and Lunar Nodes.",
-          "Final weekends dedicated to practical readings, final assessment, and certificate delivery.",
-          "Alma Matters information: info@almamattersmilano.it | 349.4487760.",
-        ],
+        details: [],
         ctaLabel: "See full program",
         ctaUrl: "/en/psychological-astrology-training-milan",
         externalCtaLabel: "Official Alma Matters page",
         externalCtaUrl: almaMattersAstrologyCourseUrl,
+      },
+      {
+        eyebrow: "Training | Barcelona 2027",
+        title: "Psychological Astrology Training — Year 1",
+        place: "Barcelona",
+        date: "11 weekend meetings, January-December 2027.",
+        price: "",
+        text:
+          "A journey to understand yourself, integrate the symbols of the sky, and learn to interpret the natal chart.",
+        details: [],
+        ctaLabel: "See full program",
+        ctaUrl: "/en/psychological-astrology-training-barcelona",
       },
       {
         eyebrow: "Meditation Course | Level I",
@@ -331,7 +349,7 @@ export const trainingContent: Record<Locale, TrainingContent> = {
       text:
         "Sarita integrates almost thirty years of yogic practice, psychological astrology, and human accompaniment into grounded, progressive, in-person courses.",
       items: [
-        "In-person classes at Alma Matters Milano.",
+        "In-person classes at Alma Matters Milano and in Barcelona.",
         "Small groups, guided practice, and space for real questions.",
         "Astrology and meditation as tools for self-knowledge, not prediction.",
       ],

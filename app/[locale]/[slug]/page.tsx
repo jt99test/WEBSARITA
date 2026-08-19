@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/json-ld";
 import { AboutPage } from "@/components/about-page";
 import { AstrologyTrainingPage } from "@/components/astrology-training-page";
+import { AstrologyTrainingBarcelonaPage } from "@/components/astrology-training-barcelona-page";
 import { BlogPage } from "@/components/blog-page";
 import { BookingPage } from "@/components/booking-page";
 import { CoachingPage } from "@/components/coaching-page";
@@ -125,6 +126,23 @@ const specialPageSeo = {
         "Professional psychological astrology training in Milan: 11 in-person weekends at Alma Matters with Sarita Shakti and final certificate.",
     },
   },
+  astrologyTrainingBarcelona: {
+    it: {
+      title: "Formazione astrologia psicologica Barcellona 2027 | Sarita Shakti",
+      description:
+        "Formazione in astrologia psicologica a Barcellona: 11 incontri di fine settimana nel 2027 con Sarita Shakti, dal tema natale al laboratorio di interpretazione.",
+    },
+    es: {
+      title: "Formación astrología psicológica Barcelona 2027 | Sarita Shakti",
+      description:
+        "Formación en astrología psicológica en Barcelona: 11 encuentros de fin de semana en 2027 con Sarita Shakti, de la Carta Natal al laboratorio de interpretación.",
+    },
+    en: {
+      title: "Psychological astrology training Barcelona 2027 | Sarita Shakti",
+      description:
+        "Psychological astrology training in Barcelona: 11 weekend meetings in 2027 with Sarita Shakti, from the natal chart to the interpretation lab.",
+    },
+  },
   psychologicalAstrologyMilan: {
     it: {
       title: "Astrologia psicologica Milano | Sarita Shakti",
@@ -143,7 +161,11 @@ const specialPageSeo = {
     },
   },
 } satisfies Record<
-  "reviews" | "faq" | "astrologyTraining" | "psychologicalAstrologyMilan",
+  | "reviews"
+  | "faq"
+  | "astrologyTraining"
+  | "astrologyTrainingBarcelona"
+  | "psychologicalAstrologyMilan",
   Record<Locale, { title: string; description: string }>
 >;
 
@@ -196,6 +218,7 @@ export async function generateMetadata({
     route === "reviews" ||
     route === "faq" ||
     route === "astrologyTraining" ||
+    route === "astrologyTrainingBarcelona" ||
     route === "psychologicalAstrologyMilan"
       ? specialPageSeo[route][locale]
       : {
@@ -216,6 +239,7 @@ export async function generateMetadata({
         route === "reviews" ||
         route === "faq" ||
         route === "astrologyTraining" ||
+        route === "astrologyTrainingBarcelona" ||
         route === "psychologicalAstrologyMilan"
           ? {
               it: `/it/${getLocalizedPagePath("it", route)}`,
@@ -251,6 +275,10 @@ export default async function BasicPage({ params, searchParams }: BasicPageProps
 
   if (route === "astrologyTraining") {
     return <AstrologyTrainingPage locale={locale} />;
+  }
+
+  if (route === "astrologyTrainingBarcelona") {
+    return <AstrologyTrainingBarcelonaPage locale={locale} />;
   }
 
   if (route === "psychologicalAstrologyMilan") {
