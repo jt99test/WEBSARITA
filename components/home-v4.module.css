@@ -242,7 +242,7 @@
 .heroMedia img {
   height: 100%;
   object-fit: cover;
-  object-position: 50% 30%;
+  object-position: 50% 0%;
 }
 .heroMedia::after {
   content: "";
@@ -822,7 +822,7 @@
   .heroMedia img {
     height: 100%;
     max-height: none;
-    object-position: 50% 12%;
+    object-position: 50% 0%;
   }
   .heroMedia::after {
     content: "";
