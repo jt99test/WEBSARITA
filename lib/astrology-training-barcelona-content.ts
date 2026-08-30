@@ -10,9 +10,9 @@ export const astrologyTrainingBarcelonaContent: Record<Locale, AstrologyTraining
     eyebrow: "Formazione | Barcellona 2027",
     title: "Formazione in Astrologia Psicologica a Barcellona — 1° Anno",
     intro:
-      "Un viaggio per comprenderti, integrare i simboli del cielo e imparare a interpretare il tema natale. Undici incontri di fine settimana, da gennaio a dicembre 2027.",
-    primaryCta: "Chiedi informazioni",
-    secondaryCta: "Vedi calendario",
+      "Impara a interpretare una Carta Natale dalla base e finisci l'anno capendo come unire segni, pianeti, case e aspetti in una lettura completa. 11 incontri in presenza di fine settimana a Barcellona · Da gennaio a dicembre 2027 · Gruppi ridotti.",
+    primaryCta: "Voglio informazioni",
+    secondaryCta: "Vedi le date 2027",
     facts: [
       { label: "Durata", value: "11 incontri, gennaio-dicembre 2027" },
       { label: "Formato", value: "In presenza" },
@@ -21,25 +21,29 @@ export const astrologyTrainingBarcelonaContent: Record<Locale, AstrologyTraining
     ],
     positioning: {
       eyebrow: "Il percorso",
-      title: "Imparare l'astrologia è imparare il linguaggio simbolico dell'anima.",
+      title: "Da concetti sparsi a interpretare una Carta Natale completa.",
       text:
-        "Questo primo anno è l'inizio di un cammino di autoconoscenza e trasformazione. Incontro dopo incontro si costruisce il tema natale e si impara a leggerlo: segni, pianeti, case, aspetti e punti evolutivi, fino alla pratica di interpretazione.",
+        "Non serve memorizzare centinaia di significati isolati. Durante il primo anno imparerai progressivamente cosa rappresenta ogni elemento della carta e, soprattutto, come metterli in relazione per costruire un'interpretazione coerente.",
     },
     audience: {
       eyebrow: "A chi si rivolge",
       title: "Per chi vuole studiare, integrare o accompagnare.",
       items: [
         {
-          title: "Curiosi e appassionati",
-          text: "Per chi desidera approfondire l'astrologia come sistema di autoconoscenza e crescita personale.",
+          title: "Leggi già di astrologia ma fai fatica a unire i pezzi",
+          text: "Conosci concetti sparsi e vuoi imparare a integrarli in una lettura coerente.",
         },
         {
-          title: "Operatori olistici",
-          text: "Per integrare l'astrologia psicologica nel proprio lavoro di accompagnamento.",
+          title: "Vuoi imparare a interpretare la tua Carta Natale",
+          text: "Andare oltre una lettura singola e capire la tua mappa da solo.",
         },
         {
-          title: "Psicologi e operatori della relazione",
-          text: "Per accedere ai contenuti simbolici e inconsci del consultante senza etichette riduttive.",
+          title: "Vuoi usare l'astrologia come strumento di accompagnamento",
+          text: "Integrarla in un lavoro professionale di accompagnamento di altre persone.",
+        },
+        {
+          title: "Cerchi una formazione progressiva e in presenza",
+          text: "Imparare con continuità, in gruppo ridotto e con pratica reale, non solo teoria.",
         },
       ],
     },
@@ -69,6 +73,7 @@ export const astrologyTrainingBarcelonaContent: Record<Locale, AstrologyTraining
         "Ogni incontro unisce teoria e pratica in gruppo, per integrare i simboli del cielo nell'esperienza personale.",
       items: [
         "Incontri di fine settimana, una volta al mese.",
+        "Formato in presenza a Barcellona.",
         "Gruppi contenuti e pratica accompagnata.",
         "Orari, sede esatta e prezzo vengono comunicati al momento dell'iscrizione.",
         "Docente: Sarita Shakti, con oltre 15 anni di esperienza nel settore.",
@@ -76,9 +81,9 @@ export const astrologyTrainingBarcelonaContent: Record<Locale, AstrologyTraining
     },
     contact: {
       eyebrow: "Iscrizioni",
-      title: "Informazioni e prenotazioni",
+      title: "Vuoi sapere se questa formazione fa per te?",
       text:
-        "Per orari, sede, prezzo e disponibilità, contatta direttamente Sarita.",
+        "Raccontami che esperienza hai con l'astrologia e cosa vorresti imparare. Ti invierò informazioni su programma, funzionamento, disponibilità e prenotazione.",
       emailLabel: saritaContactEmail,
       phoneLabel: saritaContactPhone,
       webLabel: "Scrivi a Sarita su WhatsApp",
@@ -89,9 +94,9 @@ export const astrologyTrainingBarcelonaContent: Record<Locale, AstrologyTraining
     eyebrow: "Formación | Barcelona 2027",
     title: "Formación en Astrología Psicológica en Barcelona — 1º Año",
     intro:
-      "Un viaje para comprenderte, integrar los símbolos del cielo y aprender a interpretar la Carta Natal. Once encuentros de fin de semana, de enero a diciembre de 2027.",
-    primaryCta: "Pedir información",
-    secondaryCta: "Ver calendario",
+      "Aprende a interpretar una Carta Natal desde la base y termina el año entendiendo cómo unir signos, planetas, casas y aspectos en una lectura completa. 11 encuentros presenciales de fin de semana en Barcelona · Enero a diciembre de 2027 · Grupos reducidos.",
+    primaryCta: "Quiero información",
+    secondaryCta: "Ver fechas 2027",
     facts: [
       { label: "Duración", value: "11 encuentros, enero-diciembre 2027" },
       { label: "Formato", value: "Presencial" },
@@ -100,25 +105,29 @@ export const astrologyTrainingBarcelonaContent: Record<Locale, AstrologyTraining
     ],
     positioning: {
       eyebrow: "El recorrido",
-      title: "Aprender astrología es aprender el lenguaje simbólico del alma.",
+      title: "De conceptos sueltos a interpretar una Carta Natal completa.",
       text:
-        "Este primer año es el inicio de un camino de autoconocimiento y transformación. Encuentro a encuentro se construye la Carta Natal y se aprende a leerla: signos, planetas, casas, aspectos y puntos evolutivos, hasta la práctica de interpretación.",
+        "No necesitas memorizar cientos de significados aislados. Durante el primer año aprenderás progresivamente qué representa cada elemento de la carta y, sobre todo, cómo relacionarlos entre sí para construir una interpretación coherente.",
     },
     audience: {
       eyebrow: "A quién va dirigido",
       title: "Para estudiar, integrar o acompañar.",
       items: [
         {
-          title: "Personas curiosas y apasionadas",
-          text: "Para profundizar en la astrología como sistema de autoconocimiento y crecimiento personal.",
+          title: "Ya lees sobre astrología pero te cuesta unir las piezas",
+          text: "Sabes conceptos sueltos y quieres aprender a integrarlos en una lectura coherente.",
         },
         {
-          title: "Operadores holísticos",
-          text: "Para integrar la astrología psicológica en un trabajo de acompañamiento.",
+          title: "Quieres aprender a interpretar tu propia Carta Natal",
+          text: "Ir más allá de una lectura puntual y entender tu mapa por ti mismo.",
         },
         {
-          title: "Psicólogos y profesionales de la relación",
-          text: "Para acceder a contenidos simbólicos e inconscientes sin reducir a la persona a una etiqueta.",
+          title: "Quieres usar la astrología como herramienta de acompañamiento",
+          text: "Integrarla en un trabajo profesional de acompañamiento a otras personas.",
+        },
+        {
+          title: "Buscas una formación progresiva y presencial",
+          text: "Aprender con continuidad, en grupo reducido y con práctica real, no solo teoría.",
         },
       ],
     },
@@ -148,16 +157,18 @@ export const astrologyTrainingBarcelonaContent: Record<Locale, AstrologyTraining
         "Cada encuentro une teoría y práctica en grupo, para integrar los símbolos del cielo en la experiencia personal.",
       items: [
         "Encuentros de fin de semana, una vez al mes.",
+        "Formato presencial en Barcelona.",
         "Grupos reducidos y práctica acompañada.",
+        "Cada encuentro incluye teoría, ejercicios y laboratorio de interpretación.",
         "Horarios, sede exacta y precio se comunican al inscribirse.",
         "Docente: Sarita Shakti, con más de 15 años de experiencia en el sector.",
       ],
     },
     contact: {
       eyebrow: "Inscripciones",
-      title: "Información y reservas",
+      title: "¿Quieres saber si esta formación encaja contigo?",
       text:
-        "Para horarios, sede, precio y disponibilidad, contacta directamente con Sarita.",
+        "Cuéntame qué experiencia tienes con la astrología y qué te gustaría aprender. Te enviaré información sobre programa, funcionamiento, disponibilidad y reserva.",
       emailLabel: saritaContactEmail,
       phoneLabel: saritaContactPhone,
       webLabel: "Escribe a Sarita por WhatsApp",
@@ -168,9 +179,9 @@ export const astrologyTrainingBarcelonaContent: Record<Locale, AstrologyTraining
     eyebrow: "Training | Barcelona 2027",
     title: "Psychological Astrology Training in Barcelona — Year 1",
     intro:
-      "A journey to understand yourself, integrate the symbols of the sky, and learn to interpret the natal chart. Eleven weekend meetings, January to December 2027.",
-    primaryCta: "Ask for details",
-    secondaryCta: "See calendar",
+      "Learn to interpret a birth chart from the ground up and end the year understanding how to bring signs, planets, houses, and aspects together into a complete reading. 11 in-person weekend meetings in Barcelona · January to December 2027 · Small groups.",
+    primaryCta: "I want information",
+    secondaryCta: "See the 2027 dates",
     facts: [
       { label: "Duration", value: "11 meetings, January-December 2027" },
       { label: "Format", value: "In person" },
@@ -179,25 +190,29 @@ export const astrologyTrainingBarcelonaContent: Record<Locale, AstrologyTraining
     ],
     positioning: {
       eyebrow: "The training",
-      title: "Learning astrology is learning the symbolic language of the soul.",
+      title: "From scattered concepts to interpreting a complete birth chart.",
       text:
-        "This first year is the beginning of a path of self-knowledge and transformation. Meeting by meeting you build the natal chart and learn to read it: signs, planets, houses, aspects, and evolutionary points, all the way to interpretation practice.",
+        "You don't need to memorize hundreds of isolated meanings. Over the first year you will progressively learn what each element of the chart represents and, above all, how to relate them to build a coherent interpretation.",
     },
     audience: {
       eyebrow: "Who it is for",
       title: "For study, integration, or accompaniment.",
       items: [
         {
-          title: "Curious students and astrology lovers",
-          text: "For those who want to deepen astrology as a system of self-knowledge and personal growth.",
+          title: "You already read about astrology but struggle to connect the pieces",
+          text: "You know scattered concepts and want to learn to integrate them into a coherent reading.",
         },
         {
-          title: "Holistic practitioners",
-          text: "For integrating psychological astrology into accompaniment and wellbeing work.",
+          title: "You want to learn to interpret your own birth chart",
+          text: "Going beyond a one-off reading and understanding your map yourself.",
         },
         {
-          title: "Psychologists and relational professionals",
-          text: "For accessing symbolic and unconscious material without reducing the person to a label.",
+          title: "You want to use astrology as a guidance tool",
+          text: "Integrating it into professional guidance work with other people.",
+        },
+        {
+          title: "You want a progressive, in-person training",
+          text: "Learning with continuity, in a small group, with real practice — not just theory.",
         },
       ],
     },
@@ -227,6 +242,7 @@ export const astrologyTrainingBarcelonaContent: Record<Locale, AstrologyTraining
         "Each meeting combines theory and group practice, integrating the symbols of the sky into personal experience.",
       items: [
         "Weekend meetings, once a month.",
+        "In-person format in Barcelona.",
         "Small groups and guided practice.",
         "Times, exact venue, and price are shared when you enroll.",
         "Teacher: Sarita Shakti, with more than 15 years of experience in the field.",
@@ -234,9 +250,9 @@ export const astrologyTrainingBarcelonaContent: Record<Locale, AstrologyTraining
     },
     contact: {
       eyebrow: "Enrollment",
-      title: "Information and booking",
+      title: "Want to know whether this training fits you?",
       text:
-        "For times, venue, price, and availability, contact Sarita directly.",
+        "Tell me what experience you have with astrology and what you would like to learn. I will send you information about the program, how it works, availability, and booking.",
       emailLabel: saritaContactEmail,
       phoneLabel: saritaContactPhone,
       webLabel: "Message Sarita on WhatsApp",

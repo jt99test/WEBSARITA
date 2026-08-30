@@ -56,9 +56,9 @@ export const aboutContent: Record<Locale, AboutContent> = {
     eyebrow: "About | Contact",
     title: "Sarita Shakti, astrologa psicologica a Milano",
     intro:
-      "Da oltre 25 anni accompagna processi di trasformazione personale integrando astrologia psicologica, yoga, meditazione e coaching astrologico.",
-    primaryCta: "Scrivi a Sarita",
-    secondaryCta: "Leggi il percorso",
+      "Da più di 25 anni accompagno persone che vogliono capirsi meglio, attraversare cambiamenti e comprendere schemi che si ripetono nelle relazioni e nella vita. Il mio lavoro integra astrologia psicologica, coaching, yoga e meditazione, ma parte sempre dalla stessa idea: uno strumento ha valore solo se ti aiuta a comprendere qualcosa che puoi usare nella tua vita.",
+    primaryCta: "Vedi le sessioni",
+    secondaryCta: "Conosci il mio percorso",
     imageAlt: {
       portrait: "Sarita Shakti seduta durante una spiegazione in una sessione di gruppo.",
       practice: "Sarita Shakti in una posizione di yoga al tramonto vicino al mare.",
@@ -71,7 +71,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     ],
     bio: {
       eyebrow: "Il percorso",
-      title: "Un lavoro nato tra India, yoga e astrologia psicologica.",
+      title: "Più di 25 anni di lavoro con le persone, non solo con le carte.",
       paragraphs: [
         "Il cammino di Sarita Shakti inizia in India, alla Bihar School of Yoga, dove si diploma nel 2001 e vive per tre anni immersa nello studio personale, nel Karma Yoga e nella pratica quotidiana. Questa esperienza resta la base del suo modo di accompagnare: presenza, ascolto e disciplina interiore.",
         "La sua formazione nello yoga comprende Hatha Yoga, Raja Yoga, Karma Yoga, Bhakti Yoga, Pranayama, Yoga Nidra, tecniche di concentrazione e meditazione. Per Sarita, lo yoga non è solo una pratica fisica: è un modo concreto per regolare il sistema nervoso, sviluppare presenza e ritrovare equilibrio.",
@@ -104,7 +104,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     },
     method: {
       eyebrow: "Metodo",
-      title: "Astrologia, corpo e coscienza nello stesso processo.",
+      title: "Il mio modo di lavorare",
       text:
         "Ogni sessione parte dalla storia reale della persona. La mappa astrologica offre linguaggio e orientamento; il lavoro corporeo e meditativo aiuta a integrare ciò che emerge dalla comprensione.",
       pillars: [
@@ -124,7 +124,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     },
     contact: {
       eyebrow: "Contatto",
-      title: "Per letture astrologiche, coaching e sessioni di yoga terapeutico.",
+      title: "Se vuoi lavorare con me, iniziamo dal capire di cosa hai bisogno.",
       text:
         "Le sessioni possono iniziare online o, quando disponibile, in presenza a Milano. Per formazione e percorsi dal vivo, Sarita lavora principalmente ad Alma Matters Milano.",
       cards: [
@@ -147,9 +147,9 @@ export const aboutContent: Record<Locale, AboutContent> = {
     eyebrow: "About | Contacto",
     title: "Sarita Shakti, astróloga psicológica en Barcelona",
     intro:
-      "Desde hace más de 25 años acompaña procesos de transformación personal integrando astrología psicológica, yoga, meditación y coaching astrológico.",
-    primaryCta: "Escribir a Sarita",
-    secondaryCta: "Leer el recorrido",
+      "Desde hace más de 25 años acompaño a personas que quieren entenderse mejor, atravesar cambios y comprender patrones que se repiten en sus relaciones y en su vida. Mi trabajo integra astrología psicológica, coaching, yoga y meditación, pero parte siempre de la misma idea: una herramienta solo tiene valor si te ayuda a comprender algo que puedas utilizar en tu vida.",
+    primaryCta: "Ver sesiones",
+    secondaryCta: "Conocer mi recorrido",
     imageAlt: {
       portrait: "Sarita Shakti sentada durante una explicación en una sesión grupal.",
       practice: "Sarita Shakti en una postura de yoga al atardecer junto al mar.",
@@ -162,7 +162,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     ],
     bio: {
       eyebrow: "El recorrido",
-      title: "Un trabajo nacido entre India, yoga y astrología psicológica.",
+      title: "Más de 25 años trabajando con personas, no solo con cartas.",
       paragraphs: [
         "El camino de Sarita Shakti comienza en India, en la Bihar School of Yoga, donde se gradúa en 2001 y vive durante tres años dedicada al estudio personal, al Karma Yoga y a la práctica diaria. Esa experiencia sigue siendo la base de su forma de acompañar: presencia, escucha y disciplina interior.",
         "Su formación yóguica incluye Hatha Yoga, Raja Yoga, Karma Yoga, Bhakti Yoga, Pranayama, Yoga Nidra, técnicas de concentración y meditación. Para Sarita, el yoga no es solo una práctica física: es una herramienta concreta para regular el sistema nervioso, desarrollar presencia y recuperar equilibrio.",
@@ -195,7 +195,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     },
     method: {
       eyebrow: "Método",
-      title: "Astrología, cuerpo y conciencia dentro del mismo proceso.",
+      title: "Mi forma de trabajar",
       text:
         "Cada sesión parte de la historia real de la persona. El mapa astrológico aporta lenguaje y orientación; el trabajo corporal y meditativo ayuda a integrar lo que se comprende.",
       pillars: [
@@ -215,9 +215,9 @@ export const aboutContent: Record<Locale, AboutContent> = {
     },
     contact: {
       eyebrow: "Contacto",
-      title: "Para lecturas astrológicas, coaching y sesiones de yoga terapéutico.",
+      title: "Si quieres trabajar conmigo, empecemos por saber qué necesitas.",
       text:
-        "Las sesiones pueden empezar online o a través de contacto directo. Antes del lanzamiento revisaremos con la clienta los datos finales y el flujo de reservas.",
+        "Las sesiones pueden empezar online o a través de contacto directo. Escríbeme por WhatsApp y coordinamos el formato y el horario que mejor te encaje.",
       cards: [
         {
           title: "Canales",
@@ -238,9 +238,9 @@ export const aboutContent: Record<Locale, AboutContent> = {
     eyebrow: "About | Contact",
     title: "Sarita Shakti, psychological astrologer in Barcelona",
     intro:
-      "For more than 25 years, Sarita has guided personal transformation through psychological astrology, yoga, meditation, and astrological coaching.",
-    primaryCta: "Write to Sarita",
-    secondaryCta: "Read the path",
+      "For more than 25 years I have guided people who want to understand themselves better, move through change, and make sense of patterns that repeat in their relationships and life. My work integrates psychological astrology, coaching, yoga, and meditation, but always starts from the same idea: a tool only has value if it helps you understand something you can use in your life.",
+    primaryCta: "See the sessions",
+    secondaryCta: "Get to know my path",
     imageAlt: {
       portrait: "Sarita Shakti seated while explaining during a group session.",
       practice: "Sarita Shakti in a yoga posture at sunset by the sea.",
@@ -253,7 +253,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     ],
     bio: {
       eyebrow: "The Path",
-      title: "Work shaped by India, yoga, and psychological astrology.",
+      title: "More than 25 years working with people, not just with charts.",
       paragraphs: [
         "Sarita Shakti's path began in India at the Bihar School of Yoga, where she graduated in 2001 and lived for three years immersed in personal study, Karma Yoga, and daily practice. That experience remains the foundation of her way of guiding: presence, listening, and inner discipline.",
         "Her yogic training includes Hatha Yoga, Raja Yoga, Karma Yoga, Bhakti Yoga, Pranayama, Yoga Nidra, concentration techniques, and meditation. For Sarita, yoga is not only physical practice: it is a practical way to regulate the nervous system, develop presence, and restore balance.",
@@ -286,7 +286,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     },
     method: {
       eyebrow: "Method",
-      title: "Astrology, body, and consciousness in one process.",
+      title: "How I work",
       text:
         "Each session begins with the person's real story. The astrological map offers language and orientation; body-based and meditative work helps integrate what is understood.",
       pillars: [
@@ -306,9 +306,9 @@ export const aboutContent: Record<Locale, AboutContent> = {
     },
     contact: {
       eyebrow: "Contact",
-      title: "For astrology readings, coaching, and therapeutic yoga sessions.",
+      title: "If you want to work with me, let's start by knowing what you need.",
       text:
-        "Sessions can begin online or through direct contact. Before launch, we will recheck final contact details and the booking flow with the client.",
+        "Sessions can begin online or through direct contact. Message me on WhatsApp and we will arrange the format and time that suits you best.",
       cards: [
         {
           title: "Channels",

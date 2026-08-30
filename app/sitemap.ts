@@ -93,5 +93,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       alternates: blogAlternates(post.language, post.slug),
     }));
 
-  return [...homeEntries, ...pageEntries, ...blogEntries];
+  const all = [...homeEntries, ...pageEntries, ...blogEntries];
+  const seen = new Set<string>();
+
+  return all.filter((entry) => {
+    if (seen.has(entry.url)) {
+      return false;
+    }
+    seen.add(entry.url);
+    return true;
+  });
 }

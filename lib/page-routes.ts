@@ -6,7 +6,15 @@ export type SpecialPageKey =
   | "faq"
   | "astrologyTraining"
   | "astrologyTrainingBarcelona"
-  | "psychologicalAstrologyMilan";
+  | "psychologicalAstrologyMilan"
+  | "cartaNatal"
+  | "sinastria"
+  | "revolucionSolar"
+  | "coachingAstrologico"
+  | "cartaNatalMilan"
+  | "sinastriaMilan"
+  | "revolucionSolarMilan"
+  | "coachingAstrologicoMilan";
 export type PageRouteKey = PageSlug | SpecialPageKey;
 
 export const specialPagePaths: Record<SpecialPageKey, Record<Locale, string>> = {
@@ -34,6 +42,46 @@ export const specialPagePaths: Record<SpecialPageKey, Record<Locale, string>> = 
     es: "astrologia-psicologica-milan",
     it: "astrologia-psicologica-milano",
     en: "psychological-astrology-milan",
+  },
+  cartaNatal: {
+    es: "carta-natal-barcelona",
+    it: "carta-natale-milano",
+    en: "birth-chart-reading-barcelona",
+  },
+  sinastria: {
+    es: "sinastria-barcelona",
+    it: "sinastria-milano",
+    en: "synastry-reading-barcelona",
+  },
+  revolucionSolar: {
+    es: "revolucion-solar-barcelona",
+    it: "rivoluzione-solare-milano",
+    en: "solar-return-reading-barcelona",
+  },
+  coachingAstrologico: {
+    es: "coaching-astrologico-barcelona",
+    it: "coaching-astrologico-milano",
+    en: "astrological-coaching-barcelona",
+  },
+  cartaNatalMilan: {
+    es: "carta-natal-milan",
+    it: "carta-natale-milano",
+    en: "birth-chart-reading-milan",
+  },
+  sinastriaMilan: {
+    es: "sinastria-milan",
+    it: "sinastria-milano",
+    en: "synastry-reading-milan",
+  },
+  revolucionSolarMilan: {
+    es: "revolucion-solar-milan",
+    it: "rivoluzione-solare-milano",
+    en: "solar-return-reading-milan",
+  },
+  coachingAstrologicoMilan: {
+    es: "coaching-astrologico-milan",
+    it: "coaching-astrologico-milano",
+    en: "astrological-coaching-milan",
   },
 };
 

@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { WhatsAppIcon } from "@/components/whatsapp-icon";
+import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { SocialLinks } from "@/components/social-links";
 import { aboutContent } from "@/lib/about-content";
 import { Locale } from "@/lib/locales";
@@ -25,9 +27,9 @@ export function AboutPage({ locale }: AboutPageProps) {
           <h1 className="section-title">{content.title}</h1>
           <p className="page-intro">{content.intro}</p>
           <div className="hero-actions">
-            <a className="primary-button" href="#contact">
+            <Link className="primary-button" href={`/${locale}/coaching`}>
               {content.primaryCta}
-            </a>
+            </Link>
             <a className="ghost-gold-button" href="#path">
               {content.secondaryCta}
             </a>
@@ -36,10 +38,10 @@ export function AboutPage({ locale }: AboutPageProps) {
         <div className="about-portrait-wrap">
           <Image
             className="about-portrait"
-            src="/images/explicacion.jpeg"
+            src="/images/home/hero-v2.jpg"
             alt={content.imageAlt.portrait}
-            width={573}
-            height={860}
+            width={1122}
+            height={1402}
             priority
             sizes="(max-width: 820px) 100vw, 34vw"
           />
@@ -61,7 +63,7 @@ export function AboutPage({ locale }: AboutPageProps) {
         <div className="about-path-image-wrap">
           <Image
             className="about-path-image"
-            src="/images/Camelo Saritashakti.jpg"
+            src="/images/Yoga playa.jpg"
             alt={content.imageAlt.practice}
             width={2048}
             height={1024}
@@ -129,9 +131,20 @@ export function AboutPage({ locale }: AboutPageProps) {
         </div>
         <div className="contact-actions">
           <SocialLinks />
-          <Link className="ghost-gold-button" href={`/${locale}/booking`}>
-            {bookingLabels[locale]}
-          </Link>
+          <a
+            className="primary-button"
+            href={buildWhatsAppLink(
+              locale === "it"
+                ? "Ciao Sarita, vorrei una sessione con te."
+                : locale === "en"
+                  ? "Hi Sarita, I would like a session with you."
+                  : "Hola Sarita, me gustaría hacer una sesión contigo.",
+            )}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Escribir a Sarita
+          </a>
         </div>
       </section>
     </>

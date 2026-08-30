@@ -1,5 +1,5 @@
-import { FaqAccordion } from "@/components/faq-accordion";
 import { JsonLd } from "@/components/json-ld";
+import styles from "@/components/home-v4.module.css";
 import { faqContent } from "@/lib/faq-content";
 import { Locale } from "@/lib/locales";
 
@@ -24,13 +24,28 @@ export function FaqPage({ locale }: { locale: Locale }) {
   return (
     <>
       <JsonLd data={buildFaqSchema(locale)} />
-      <section className="faq-page-section">
-        <div className="page-copy faq-page-hero">
-          <p className="eyebrow">FAQ</p>
-          <h1 className="section-title">{content.title}</h1>
-          <p className="page-intro">{content.intro}</p>
+      <section className={styles.subHero}>
+        <div className={styles.wrap}>
+          <div className={styles.eyebrow} style={{ marginTop: "18px" }}>
+            FAQ
+          </div>
+          <h1 className={styles.subTitle} style={{ maxWidth: "22ch" }}>
+            {content.title}
+          </h1>
+          <p className={styles.subIntro}>{content.intro}</p>
         </div>
-        <FaqAccordion items={content.items} />
+      </section>
+      <section className={styles.section}>
+        <div className={`${styles.wrap} ${styles.faqWrap}`}>
+          <div className={styles.faqGrid}>
+            {content.items.map((item, index) => (
+              <details key={item.question} name="faq-page" open={index === 0}>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
       </section>
     </>
   );

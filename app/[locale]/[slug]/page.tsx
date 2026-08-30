@@ -10,7 +10,27 @@ import { CoachingPage } from "@/components/coaching-page";
 import { FaqPage } from "@/components/faq-page";
 import { PsychologicalAstrologyMilanPage } from "@/components/psychological-astrology-milan-page";
 import { ReviewsPage } from "@/components/reviews-page";
+import { ServicePage } from "@/components/service-page";
 import { TrainingPage } from "@/components/training-page";
+import {
+  milanOverrides,
+  milanServiceKeys,
+  milanToBaseKey,
+  MilanServiceKey,
+} from "@/lib/service-milan-overrides";
+import {
+  ServiceKey,
+  serviceKeys,
+  servicePagesContent,
+} from "@/lib/service-pages-content";
+
+function isServiceRoute(route: string): route is ServiceKey {
+  return (serviceKeys as readonly string[]).includes(route);
+}
+
+function isMilanServiceRoute(route: string): route is MilanServiceKey {
+  return (milanServiceKeys as readonly string[]).includes(route);
+}
 import { isLocale, Locale } from "@/lib/locales";
 import { pageContent, PageSlug } from "@/lib/page-content";
 import { getLocalizedPagePath, getPageStaticParams, resolvePageRoute } from "@/lib/page-routes";
@@ -18,10 +38,7 @@ import { getRequestOrigin } from "@/lib/request-origin";
 import { sanityClient } from "@/lib/sanity/client";
 import { trainingOffersQuery } from "@/lib/sanity/queries";
 import { buildPageMetadata } from "@/lib/site";
-import {
-  buildBreadcrumbStructuredData,
-  buildCoachingStructuredData,
-} from "@/lib/structured-data";
+import { buildBreadcrumbStructuredData } from "@/lib/structured-data";
 import { almaMattersAstrologyCourseUrl, TrainingOffer } from "@/lib/training-content";
 
 type BasicPageProps = {
@@ -214,6 +231,50 @@ export async function generateMetadata({
     return {};
   }
 
+  if (isMilanServiceRoute(route)) {
+    const baseKey = milanToBaseKey[route];
+    const override = milanOverrides[baseKey][locale];
+    const base = servicePagesContent[baseKey][locale];
+
+    return buildPageMetadata(
+      locale,
+      {
+        title: override?.seoTitle ?? base.seoTitle,
+        description: override?.seoDescription ?? base.seoDescription,
+        path: slug,
+      },
+      {
+        origin: await getRequestOrigin(),
+        languages: {
+          it: `/it/${getLocalizedPagePath("it", route)}`,
+          es: `/es/${getLocalizedPagePath("es", route)}`,
+          en: `/en/${getLocalizedPagePath("en", route)}`,
+        },
+      },
+    );
+  }
+
+  if (isServiceRoute(route)) {
+    const service = servicePagesContent[route][locale];
+
+    return buildPageMetadata(
+      locale,
+      {
+        title: service.seoTitle,
+        description: service.seoDescription,
+        path: slug,
+      },
+      {
+        origin: await getRequestOrigin(),
+        languages: {
+          it: `/it/${getLocalizedPagePath("it", route)}`,
+          es: `/es/${getLocalizedPagePath("es", route)}`,
+          en: `/en/${getLocalizedPagePath("en", route)}`,
+        },
+      },
+    );
+  }
+
   const seo =
     route === "reviews" ||
     route === "faq" ||
@@ -263,6 +324,14 @@ export default async function BasicPage({ params, searchParams }: BasicPageProps
 
   if (!route) {
     notFound();
+  }
+
+  if (isMilanServiceRoute(route)) {
+    return <ServicePage locale={locale} serviceKey={milanToBaseKey[route]} milan />;
+  }
+
+  if (isServiceRoute(route)) {
+    return <ServicePage locale={locale} serviceKey={route} />;
   }
 
   if (route === "reviews") {
@@ -317,7 +386,6 @@ export default async function BasicPage({ params, searchParams }: BasicPageProps
     return (
       <>
         {breadcrumb}
-        <JsonLd data={buildCoachingStructuredData(locale)} />
         <CoachingPage locale={locale} />
       </>
     );

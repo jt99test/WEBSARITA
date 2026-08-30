@@ -26,7 +26,7 @@ export const psychologicalAstrologyMilanContent: Record<
     eyebrow: "Astrologia psicologica | Milano e online",
     title: "Astrologia psicologica a Milano con Sarita Shakti",
     intro:
-      "Letture di carta natale, sinastria, rivoluzione solare e coaching astrologico in italiano, con sessioni online e incontri in presenza a Milano quando disponibili.",
+      "Capisci cosa ti sta succedendo, perché certi schemi si ripetono e cosa puoi farci — in italiano, online o in presenza a Milano quando disponibile.",
     primaryCta: "Prenota una sessione",
     secondaryCta: "Vedi i servizi",
     highlights: [
@@ -59,11 +59,11 @@ export const psychologicalAstrologyMilanContent: Record<
     },
   },
   es: {
-    eyebrow: "Astrologia psicologica | Milan y online",
-    title: "Astrologia psicologica en Milan con Sarita Shakti",
+    eyebrow: "Astrología psicológica | Milán y online",
+    title: "Astrología psicológica en Milán con Sarita Shakti",
     intro:
-      "Sesiones de carta natal, sinastria, revolucion solar y coaching astrologico para personas que buscan trabajar con Sarita en italiano, espanol o ingles, online y en Milan cuando haya disponibilidad.",
-    primaryCta: "Reservar una sesion",
+      "Comprende lo que te está pasando, por qué ciertos patrones se repiten y qué puedes hacer con ello — en italiano, español o inglés, online o presencialmente en Milán cuando haya disponibilidad.",
+    primaryCta: "Reservar una sesión",
     secondaryCta: "Ver servicios",
     highlights: [
       {
@@ -72,9 +72,9 @@ export const psychologicalAstrologyMilanContent: Record<
           "Una lectura psicologica para comprender patrones, talentos, bloqueos y momentos de cambio desde una mirada evolutiva.",
       },
       {
-        title: "Barcelona sigue siendo el eje en espanol",
+        title: "Sesiones en tu idioma",
         text:
-          "En espanol, la web mantiene Barcelona y el trabajo online como referencia principal para sesiones y acompanamiento personal.",
+          "Las sesiones online en espanol, italiano e ingles siguen disponibles vivas donde vivas.",
       },
       {
         title: "Milan para formacion y encuentros",
@@ -83,14 +83,14 @@ export const psychologicalAstrologyMilanContent: Record<
       },
     ],
     method: {
-      eyebrow: "Metodo",
-      title: "Astrologia psicologica sin fatalismo.",
+      eyebrow: "Método",
+      title: "Astrología psicológica sin fatalismo.",
       text:
-        "El objetivo no es predecir, sino ordenar lo que ya se mueve dentro de ti y convertir la lectura en decisiones, presencia y practica.",
+        "El objetivo no es predecir, sino ordenar lo que ya se mueve dentro de ti y convertir la lectura en decisiones, presencia y práctica.",
       points: [
         "Lecturas individuales de 90 minutos.",
-        "Coaching astrologico online y procesos breves.",
-        "Posible integracion con yoga terapeutico y escucha corporal.",
+        "Coaching astrológico online y procesos breves.",
+        "Posible integración con yoga terapéutico y escucha corporal.",
       ],
     },
   },
@@ -98,7 +98,7 @@ export const psychologicalAstrologyMilanContent: Record<
     eyebrow: "Psychological astrology | Milan and online",
     title: "Psychological astrology in Milan with Sarita Shakti",
     intro:
-      "Natal chart readings, synastry, solar revolution, and astrological coaching with Sarita Shakti, online and in Milan when in-person availability is open.",
+      "Understand what is happening to you, why certain patterns repeat, and what you can do about it — in English, Italian, or Spanish, online or in Milan when availability opens.",
     primaryCta: "Book a session",
     secondaryCta: "View services",
     highlights: [
@@ -115,7 +115,7 @@ export const psychologicalAstrologyMilanContent: Record<
       {
         title: "Milan without losing the wider context",
         text:
-          "This page gives Milan a clear SEO focus while keeping Sarita's wider Barcelona and online work coherent.",
+          "Sessions in English, Italian, and Spanish remain available online wherever you live.",
       },
     ],
     method: {

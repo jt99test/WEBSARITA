@@ -42,3 +42,21 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local working files — not part of the site
+.next-dev*.log
+.next-direct*.log
+.build-check.log
+.tmp/
+Assets/
+Formacion_assets/
+service_assets/
+audit-screens/
+audit-screenshots.mjs
+shot-*.tmp.mjs
+Sarita.png
+ChatGPT Image*.png
+GBP*.JPG
+"GBP P.JPG"
+Google search console.JPG
+.claude/
