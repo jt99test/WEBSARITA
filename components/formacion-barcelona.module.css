@@ -511,9 +511,9 @@
     inset: 0;
     background: linear-gradient(
       180deg,
-      rgba(32, 16, 21, 0) 46%,
-      rgba(32, 16, 21, 0.24) 70%,
-      rgba(32, 16, 21, 0.58) 100%
+      rgba(32, 16, 21, 0) 30%,
+      rgba(32, 16, 21, 0.38) 62%,
+      rgba(32, 16, 21, 0.72) 100%
     );
   }
   .heroCol {

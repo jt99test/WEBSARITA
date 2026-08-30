@@ -255,10 +255,10 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
           </div>
           <div className={styles.trainingMedia}>
             <Image
-              src="/images/home/formacion.jpg"
+              src="/images/formacion/grupo-ancho.jpg"
               alt={content.training.imageAlt}
-              width={1068}
-              height={418}
+              width={1800}
+              height={1012}
               sizes="(max-width: 900px) 100vw, 55vw"
             />
           </div>

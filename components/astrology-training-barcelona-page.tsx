@@ -132,24 +132,24 @@ const reviewsCopy: Record<
 
 const imageAlts: Record<Locale, { hero: string; flatlay: string; hand: string; group: string; venue: string }> = {
   es: {
-    hero: "Sarita Shakti enseñando una carta natal a un grupo reducido en Barcelona",
-    flatlay: "Carta natal impresa junto a un café y flores secas",
-    hand: "Mano dibujando una carta natal en un cuaderno",
-    group: "Grupo de estudiantes conversando en círculo",
+    hero: "Sarita Shakti explicando una carta natal proyectada durante una clase de la formación",
+    flatlay: "Sarita Shakti en el estudio durante un encuentro de la formación",
+    hand: "Sarita Shakti enseñando delante de una carta natal proyectada",
+    group: "Foto de grupo de una promoción de la escuela de astrología psicológica",
     venue: "Sala cálida preparada para un encuentro presencial",
   },
   it: {
-    hero: "Sarita Shakti insegna un tema natale a un piccolo gruppo a Barcellona",
-    flatlay: "Carta natale stampata accanto a un caffè e fiori secchi",
-    hand: "Mano che disegna una carta natale su un quaderno",
-    group: "Gruppo di studenti in cerchio",
+    hero: "Sarita Shakti spiega un tema natale proiettato durante una lezione della formazione",
+    flatlay: "Sarita Shakti nello studio durante un incontro della formazione",
+    hand: "Sarita Shakti insegna davanti a un tema natale proiettato",
+    group: "Foto di gruppo di una classe della scuola di astrologia psicologica",
     venue: "Sala calda preparata per un incontro in presenza",
   },
   en: {
-    hero: "Sarita Shakti teaching a natal chart to a small group in Barcelona",
-    flatlay: "Printed natal chart next to a coffee and dried flowers",
-    hand: "Hand drawing a natal chart in a notebook",
-    group: "Group of students in a circle",
+    hero: "Sarita Shakti explaining a projected birth chart during a training class",
+    flatlay: "Sarita Shakti in the studio during a training meeting",
+    hand: "Sarita Shakti teaching in front of a projected birth chart",
+    group: "Group photo of a psychological astrology school class",
     venue: "Warm room prepared for an in-person meeting",
   },
 };
@@ -249,7 +249,7 @@ export async function AstrologyTrainingBarcelonaPage({ locale }: { locale: Local
             </div>
             <div className={styles.photo}>
               <Image
-                src="/images/formacion/hero.jpg"
+                src="/images/formacion/clase-pantalla.jpg"
                 alt={alts.hero}
                 width={1200}
                 height={896}
@@ -265,13 +265,13 @@ export async function AstrologyTrainingBarcelonaPage({ locale }: { locale: Local
         <div className={`${styles.wrap} ${styles.introGrid}`}>
           <div className={styles.collage}>
             <div className={styles.visual}>
-              <Image src="/images/formacion/collage-flatlay.jpg" alt={alts.flatlay} width={600} height={600} sizes="(max-width: 1100px) 50vw, 22vw" />
+              <Image src="/images/formacion/sarita-estudio.jpg" alt={alts.flatlay} width={600} height={600} style={{ objectPosition: "50% 18%" }} sizes="(max-width: 1100px) 50vw, 22vw" />
             </div>
             <div className={`${styles.visual} ${styles.visualTall}`}>
-              <Image src="/images/formacion/collage-hand.jpg" alt={alts.hand} width={600} height={800} sizes="(max-width: 1100px) 50vw, 24vw" />
+              <Image src="/images/formacion/clase-carta.jpg" alt={alts.hand} width={600} height={800} sizes="(max-width: 1100px) 50vw, 24vw" />
             </div>
             <div className={styles.visual}>
-              <Image src="/images/formacion/collage-group.jpg" alt={alts.group} width={640} height={430} sizes="(max-width: 1100px) 50vw, 22vw" />
+              <Image src="/images/formacion/grupo-ancho.jpg" alt={alts.group} width={640} height={430} sizes="(max-width: 1100px) 50vw, 22vw" />
             </div>
           </div>
 

@@ -173,7 +173,7 @@ export const homeV4Content: Record<Locale, HomeV4Content> = {
       year: "",
       text: "Si quieres ir más allá de una lectura puntual, puedes aprender astrología psicológica desde la base y terminar el año comprendiendo cómo se construye y se interpreta una Carta Natal completa.",
       cta: "Ver la formación 2027",
-      imageAlt: "Espacio cálido preparado para una formación presencial de astrología",
+      imageAlt: "Foto de grupo de una promoción de la formación de astrología psicológica",
     },
     about: {
       title: "Más de 25 años ayudando a convertir una carta natal en algo que puedas comprender.",
@@ -322,7 +322,7 @@ export const homeV4Content: Record<Locale, HomeV4Content> = {
       year: "",
       text: "Se vuoi andare oltre una lettura singola, puoi imparare l'astrologia psicologica dalla base e finire l'anno capendo come si costruisce e si interpreta una Carta Natale completa.",
       cta: "Vedi la formazione",
-      imageAlt: "Spazio caldo preparato per una formazione in presenza di astrologia",
+      imageAlt: "Foto di gruppo di una classe della formazione di astrologia psicologica",
     },
     about: {
       title: "Più di 25 anni ad aiutare le persone a trasformare una carta natale in qualcosa che possano comprendere.",
@@ -471,7 +471,7 @@ export const homeV4Content: Record<Locale, HomeV4Content> = {
       year: "",
       text: "If you want to go beyond a one-off reading, you can learn psychological astrology from the ground up and end the year understanding how a complete birth chart is built and interpreted.",
       cta: "See the 2027 training",
-      imageAlt: "Warm space prepared for an in-person astrology training",
+      imageAlt: "Group photo of a psychological astrology training class",
     },
     about: {
       title: "More than 25 years helping turn a birth chart into something you can understand.",
