@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/json-ld";
 import { WhatsAppIcon } from "@/components/whatsapp-icon";
+import { ZodiacWheel } from "@/components/zodiac-wheel";
 import styles from "@/components/home-v4.module.css";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { homeV4Content } from "@/lib/home-v4-content";
@@ -63,6 +64,21 @@ function ProofIcon({ kind }: { kind: "people" | "star" | "google" }) {
   );
 }
 
+const quoteBand = {
+  es: {
+    text: "El punto no es predecir el futuro, sino hacer visible lo que ya se mueve dentro de ti.",
+    author: "Sarita Shakti",
+  },
+  it: {
+    text: "Il punto non è prevedere il futuro, ma rendere visibile ciò che già si muove dentro di te.",
+    author: "Sarita Shakti",
+  },
+  en: {
+    text: "The point is not to predict the future, but to make visible what is already moving within you.",
+    author: "Sarita Shakti",
+  },
+} as const;
+
 const allReviewsLabels = {
   es: "Leer todas las reseñas en Google",
   it: "Vedi tutte le recensioni su Google",
@@ -90,7 +106,10 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
       <JsonLd data={buildHomeStructuredData(locale)} />
       <JsonLd data={buildFaqStructuredData(locale)} />
 
-      <section className={styles.hero} id="inicio">
+      <section className={`${styles.hero} motif-host`} id="inicio">
+        <div className="motif" style={{ left: "-130px", bottom: "-150px" }}>
+          <ZodiacWheel size={460} />
+        </div>
         <div className={styles.heroCopy}>
           <h1>{content.hero.title}</h1>
           <p className={styles.lead}>{content.hero.lead}</p>
@@ -170,6 +189,16 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className={`${styles.quoteBand} motif-host`}>
+        <div className="motif" style={{ right: "-160px", top: "-170px" }}>
+          <ZodiacWheel size={520} />
+        </div>
+        <div className={styles.wrap}>
+          <blockquote>{quoteBand[locale].text}</blockquote>
+          <cite>{quoteBand[locale].author}</cite>
         </div>
       </section>
 

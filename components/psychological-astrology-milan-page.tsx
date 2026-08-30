@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { WhatsAppIcon } from "@/components/whatsapp-icon";
+import { ZodiacWheel } from "@/components/zodiac-wheel";
 import styles from "@/components/home-v4.module.css";
 import formStyles from "@/components/formacion-barcelona.module.css";
 import { getGoogleReviews } from "@/lib/google-reviews";

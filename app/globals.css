@@ -3059,3 +3059,34 @@ html {
   color: #fff;
   border-color: transparent;
 }
+
+/* ============ V4 finishing layer: paper grain + motif utilities ============ */
+.paper-grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+  opacity: 0.3;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.28 0 0 0 0 0.2 0 0 0 0 0.16 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.motif-host {
+  position: relative;
+  overflow: hidden;
+}
+.motif {
+  position: absolute;
+  pointer-events: none;
+  color: var(--wine2, #744651);
+  opacity: 0.07;
+  z-index: 0;
+}
+.motif--light {
+  color: #ffffff;
+  opacity: 0.09;
+}
+.motif-host > *:not(.motif) {
+  position: relative;
+  z-index: 1;
+}

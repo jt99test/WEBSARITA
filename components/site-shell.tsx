@@ -39,7 +39,7 @@ export function SiteShell({
   const content = homeV4Content[locale];
 
   return (
-    <div className={styles.page}>
+    <div className={`${styles.page} paper-grain`}>
       <a className={styles.skipLink} href="#main">
         {skipLabels[locale]}
       </a>

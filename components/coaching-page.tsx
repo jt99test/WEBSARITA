@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { WhatsAppIcon } from "@/components/whatsapp-icon";
+import { ZodiacWheel } from "@/components/zodiac-wheel";
 import styles from "@/components/service-v4.module.css";
 import { homeV4Content } from "@/lib/home-v4-content";
 import { Locale } from "@/lib/locales";
@@ -257,7 +258,10 @@ export function CoachingPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className={`${styles.section} ${styles.location}`}>
+      <section className={`${styles.section} ${styles.location} motif-host`}>
+        <div className="motif motif--light" style={{ right: "-160px", bottom: "-170px" }}>
+          <ZodiacWheel size={500} />
+        </div>
         <div className={styles.wrap}>
           <div className={styles.eyebrow}>{copy.formacion.eyebrow}</div>
           <h2 className={`${styles.serif} ${styles.title}`}>{copy.formacion.title}</h2>

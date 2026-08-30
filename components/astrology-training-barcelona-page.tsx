@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { JsonLd } from "@/components/json-ld";
 import { WhatsAppIcon } from "@/components/whatsapp-icon";
+import { ZodiacWheel } from "@/components/zodiac-wheel";
 import styles from "@/components/formacion-barcelona.module.css";
 import {
   astrologyTrainingBarcelonaContent,
@@ -331,7 +332,10 @@ export async function AstrologyTrainingBarcelonaPage({ locale }: { locale: Local
         </div>
       </section>
 
-      <section className={`${styles.section} ${styles.calendar}`} id="calendario">
+      <section className={`${styles.section} ${styles.calendar} motif-host`} id="calendario">
+        <div className="motif" style={{ right: "-170px", top: "-160px", opacity: 0.06 }}>
+          <ZodiacWheel size={540} />
+        </div>
         <div className={styles.wrap}>
           <div className={styles.calendarHead}>
             <div>

@@ -1319,3 +1319,36 @@
   font-size: 15px;
   flex-shrink: 0;
 }
+
+
+/* editorial quote band */
+.quoteBand {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  padding: clamp(56px, 7vw, 96px) 0;
+  text-align: center;
+}
+.quoteBand blockquote {
+  margin: 0 auto;
+  max-width: 20ch;
+  font-family: var(--serif);
+  font-size: clamp(30px, 3.6vw, 54px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.quoteBand blockquote {
+  max-width: 26ch;
+}
+.quoteBand cite {
+  display: block;
+  margin-top: 22px;
+  font-style: normal;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--wine2);
+}

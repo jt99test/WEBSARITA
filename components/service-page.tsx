@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { WhatsAppIcon } from "@/components/whatsapp-icon";
+import { ZodiacWheel } from "@/components/zodiac-wheel";
 import styles from "@/components/service-v4.module.css";
 import { Locale } from "@/lib/locales";
 import { getLocalizedPagePath } from "@/lib/page-routes";
@@ -289,7 +290,10 @@ export function ServicePage({
         </div>
       </section>
 
-      <section className={`${styles.section} ${styles.location}`}>
+      <section className={`${styles.section} ${styles.location} motif-host`}>
+        <div className="motif motif--light" style={{ left: "-150px", bottom: "-180px" }}>
+          <ZodiacWheel size={500} />
+        </div>
         <div className={`${styles.wrap} ${styles.locationGrid}`}>
           <div>
             <div className={styles.eyebrow}>{extraLabels.locationEyebrow}</div>
