@@ -854,6 +854,11 @@
   .trainingMedia {
     order: -1;
   }
+  .trainingCopy .btn {
+    display: flex;
+    width: 100%;
+    max-width: 340px;
+  }
   .about {
     grid-template-columns: 1fr;
   }
