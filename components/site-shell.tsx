@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { LocationAwareNavLink } from "@/components/location-aware-nav";
+import { MobileNav } from "@/components/mobile-nav";
 import { WhatsAppIcon } from "@/components/whatsapp-icon";
 import { homeV4Content } from "@/lib/home-v4-content";
 import { Locale } from "@/lib/locales";
@@ -108,6 +109,7 @@ export function SiteShell({
               <WhatsAppIcon size={15} />
               {content.nav.whatsappCta}
             </a>
+            <MobileNav locale={locale} />
           </nav>
         </div>
         <a

@@ -64,21 +64,6 @@ function ProofIcon({ kind }: { kind: "people" | "star" | "google" }) {
   );
 }
 
-const quoteBand = {
-  es: {
-    text: "El punto no es predecir el futuro, sino hacer visible lo que ya se mueve dentro de ti.",
-    author: "Sarita Shakti",
-  },
-  it: {
-    text: "Il punto non è prevedere il futuro, ma rendere visibile ciò che già si muove dentro di te.",
-    author: "Sarita Shakti",
-  },
-  en: {
-    text: "The point is not to predict the future, but to make visible what is already moving within you.",
-    author: "Sarita Shakti",
-  },
-} as const;
-
 const allReviewsLabels = {
   es: "Leer todas las reseñas en Google",
   it: "Vedi tutte le recensioni su Google",
@@ -189,16 +174,6 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
               </article>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className={`${styles.quoteBand} motif-host`}>
-        <div className="motif" style={{ right: "-160px", top: "-170px" }}>
-          <ZodiacWheel size={520} />
-        </div>
-        <div className={styles.wrap}>
-          <blockquote>{quoteBand[locale].text}</blockquote>
-          <cite>{quoteBand[locale].author}</cite>
         </div>
       </section>
 
