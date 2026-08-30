@@ -1,3 +1,8 @@
+
+/* beat the shell-level `.page a { color: inherit }` rule */
+.root a.btnPrimary {
+  color: #fff;
+}
 /* Ported 1:1 from the Codex formación Barcelona design (main sections; site shell provides chrome). */
 
 .root {
@@ -476,23 +481,71 @@
     padding: 0 18px;
   }
   .hero {
-    padding: 42px 0 28px;
+    padding: 0 0 26px;
+  }
+  .hero .wrap {
+    padding: 0;
+    width: 100%;
   }
   .hero h1 {
-    font-size: 49px;
-  }
-  .heroCopy {
-    font-size: 17px;
+    font-size: 34px;
   }
   .heroGrid {
-    gap: 24px;
+    display: block;
+    position: relative;
+    gap: 0;
   }
   .photo {
-    min-height: 360px;
-    border-radius: 20px;
+    position: absolute;
+    inset: 0;
+    min-height: 0;
+    order: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    z-index: 1;
   }
-  .facts {
-    grid-template-columns: 1fr 1fr;
+  .photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(32, 16, 21, 0) 46%,
+      rgba(32, 16, 21, 0.24) 70%,
+      rgba(32, 16, 21, 0.58) 100%
+    );
+  }
+  .heroCol {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: min(80svh, 620px);
+    padding: 24px 18px 26px;
+    text-align: center;
+  }
+  .heroCol .eyebrow,
+  .heroCol .heroCopy,
+  .heroCol .facts {
+    display: none;
+  }
+  .heroCol h1 {
+    color: #fff;
+    text-shadow: 0 2px 22px rgba(32, 16, 21, 0.5);
+  }
+  .heroActions {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 18px auto 0;
+    width: 100%;
+    max-width: 340px;
+  }
+  .heroCol .btnSecondary {
+    background: rgba(255, 250, 244, 0.94);
+    border-color: transparent;
   }
   .section {
     padding: 58px 0;

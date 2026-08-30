@@ -165,18 +165,15 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  border-radius: 12px 4px 12px 4px;
-  padding: 13px 20px;
-  font-family: var(--serif);
-  font-size: 15.5px;
-  font-weight: 500;
-  letter-spacing: 0.01em;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 13px;
+  font-weight: 700;
   border: 1px solid transparent;
-  transition: border-radius 0.22s ease, transform 0.18s ease, background 0.18s ease;
+  transition: 0.18s;
 }
 .btn:hover {
   transform: translateY(-1px);
-  border-radius: 4px 12px 4px 12px;
 }
 .btnPrimary {
   background: var(--wine);
@@ -184,6 +181,10 @@
 }
 .btnPrimary:hover {
   background: var(--wine2);
+}
+/* .page a { color: inherit } outranks .btnPrimary — restore white CTA text */
+.page a.btnPrimary {
+  color: #fff;
 }
 .btnSecondary {
   border-color: #bba99a;
@@ -773,31 +774,67 @@
     gap: 10px;
   }
   .hero {
-    grid-template-columns: 1fr;
+    display: block;
+    position: relative;
+    max-width: none;
+    min-height: 0;
   }
   .heroCopy {
-    padding: 22px 20px 28px;
+    position: relative;
+    z-index: 2;
+    min-height: min(82svh, 640px);
+    padding: 24px 20px 26px;
     align-items: center;
     text-align: center;
+    justify-content: flex-end;
+    background: none;
   }
-  .heroCopy h1,
-  .heroCopy .lead {
+  .heroCopy h1 {
     margin-inline: auto;
+    color: #fff;
+    text-shadow: 0 2px 22px rgba(32, 16, 21, 0.5);
+  }
+  .heroCopy .lead,
+  .heroCopy .heroText,
+  .heroCopy .proof {
+    display: none;
+  }
+  .heroCopy .freeNote {
+    color: rgba(255, 253, 249, 0.85);
+    text-shadow: 0 1px 10px rgba(32, 16, 21, 0.6);
+  }
+  .heroCopy .btnSecondary {
+    background: rgba(255, 253, 249, 0.92);
+    border-color: transparent;
   }
   .actions {
     justify-content: center;
+    margin-top: 18px;
   }
   .heroMedia {
+    position: absolute;
+    inset: 0;
     min-height: 0;
-    max-height: 300px;
-    order: -1;
+    max-height: none;
+    order: 0;
+    z-index: 1;
   }
   .heroMedia img {
     height: 100%;
-    max-height: 300px;
+    max-height: none;
+    object-position: 50% 12%;
   }
-  .proof {
-    margin-top: 28px;
+  .heroMedia::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(32, 16, 21, 0) 46%,
+      rgba(32, 16, 21, 0.24) 70%,
+      rgba(32, 16, 21, 0.58) 100%
+    );
   }
   .services {
     grid-template-columns: repeat(2, 1fr);
@@ -858,8 +895,13 @@
   .freeNote {
     font-size: 10.5px;
   }
+  .actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 340px;
+  }
   .actions .btn {
-    flex: 1;
+    width: 100%;
   }
   .proof {
     grid-template-columns: repeat(3, 1fr);
@@ -1198,9 +1240,73 @@
 }
 
 @media (max-width: 900px) {
+  .subHero {
+    padding: 0 0 40px;
+  }
+  .subHero .wrap {
+    width: 100%;
+  }
   .subHeroGrid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    display: block;
+    position: relative;
+    margin-top: 0 !important;
+  }
+  .subHeroMedia {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .subHeroMedia img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    border-radius: 0;
+    border: none;
+    object-fit: cover;
+  }
+  .subHeroMedia::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(32, 16, 21, 0) 46%,
+      rgba(32, 16, 21, 0.24) 70%,
+      rgba(32, 16, 21, 0.58) 100%
+    );
+  }
+  .subHeroCopy {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: min(80svh, 620px);
+    padding: 24px 18px 26px;
+    text-align: center;
+  }
+  .subHeroCopy .eyebrow,
+  .subHeroCopy .subIntro {
+    display: none;
+  }
+  .subHeroCopy .subTitle {
+    color: #fff;
+    text-shadow: 0 2px 22px rgba(32, 16, 21, 0.5);
+  }
+  .subHeroCopy .actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 340px;
+    margin-top: 6px;
+  }
+  .subHeroCopy .actions .btn {
+    width: 100%;
+  }
+  .subHeroCopy .btnSecondary {
+    background: rgba(255, 253, 249, 0.92);
+    border-color: transparent;
   }
   .steps {
     grid-template-columns: 1fr;

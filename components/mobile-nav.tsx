@@ -21,10 +21,22 @@ const locationLabels: Record<Locale, { menu: string; barcelona: string; milan: s
 export function MobileNav({ locale }: { locale: Locale }) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [panelTop, setPanelTop] = useState(104);
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (!open) return;
+    const measure = () => {
+      const header = document.querySelector("header");
+      if (header) setPanelTop(Math.round(header.getBoundingClientRect().bottom));
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [open]);
   const pathname = usePathname() ?? "";
   const content = homeV4Content[locale];
   const locations = locationLabels[locale];
@@ -62,7 +74,7 @@ export function MobileNav({ locale }: { locale: Locale }) {
 
       {open && mounted
         ? createPortal(
-            <div className={styles.mobilePanel}>
+            <div className={styles.mobilePanel} style={{ marginTop: panelTop }}>
           <div className={styles.mobileGroup}>
             <span className={styles.mobileGroupTitle}>{content.nav.sessions}</span>
             {content.services.cards.map((card, index) => (

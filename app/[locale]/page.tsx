@@ -4,7 +4,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/json-ld";
 import { WhatsAppIcon } from "@/components/whatsapp-icon";
-import { ZodiacWheel } from "@/components/zodiac-wheel";
 import styles from "@/components/home-v4.module.css";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { homeV4Content } from "@/lib/home-v4-content";
@@ -91,10 +90,7 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
       <JsonLd data={buildHomeStructuredData(locale)} />
       <JsonLd data={buildFaqStructuredData(locale)} />
 
-      <section className={`${styles.hero} motif-host`} id="inicio">
-        <div className="motif" style={{ left: "-130px", bottom: "-150px" }}>
-          <ZodiacWheel size={460} />
-        </div>
+      <section className={styles.hero} id="inicio">
         <div className={styles.heroCopy}>
           <h1>{content.hero.title}</h1>
           <p className={styles.lead}>{content.hero.lead}</p>

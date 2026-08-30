@@ -1,3 +1,8 @@
+
+/* beat the shell-level `.page a { color: inherit }` rule */
+.root a.btnPrimary {
+  color: #fff;
+}
 /* Ported from the Codex service-page design (main sections; site shell provides chrome). */
 
 .root {
@@ -56,18 +61,15 @@
   justify-content: center;
   gap: 8px;
   min-height: 51px;
-  padding: 0 22px;
-  border-radius: 14px 5px 14px 5px;
-  font-family: var(--serif);
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 0.01em;
+  padding: 0 21px;
+  border-radius: 999px;
+  font-weight: 850;
+  font-size: 14px;
   border: 1px solid var(--srose);
-  transition: border-radius 0.22s ease, transform 0.18s ease;
+  transition: 0.18s ease;
 }
 .btn:hover {
   transform: translateY(-1px);
-  border-radius: 5px 14px 5px 14px;
 }
 .btnPrimary {
   background: var(--srose);
@@ -586,16 +588,74 @@
     padding: 58px 0;
   }
   .hero {
-    padding: 18px 0 48px;
+    padding: 0 0 40px;
   }
-  .hero h1 {
-    font-size: 47px;
+  .hero .wrap:has(.heroGrid) {
+    padding: 0;
+    width: 100%;
   }
-  .heroSub {
-    font-size: 21px;
+  .heroGrid {
+    display: block;
+    position: relative;
   }
   .chartStage {
-    min-height: 340px;
+    position: absolute;
+    inset: 0;
+    min-height: 0;
+    order: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    z-index: 1;
+  }
+  .chartStage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(32, 16, 21, 0) 46%,
+      rgba(32, 16, 21, 0.24) 70%,
+      rgba(32, 16, 21, 0.58) 100%
+    );
+  }
+  .chartNote {
+    display: none;
+  }
+  .heroCopyCol {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: min(80svh, 620px);
+    padding: 24px 18px 26px;
+    text-align: center;
+  }
+  .heroCopyCol .eyebrow,
+  .heroCopyCol .heroCopy,
+  .heroCopyCol .meta,
+  .heroCopyCol .heroSub {
+    display: none;
+  }
+  .heroCopyCol h1 {
+    color: #fff;
+    text-shadow: 0 2px 22px rgba(32, 16, 21, 0.5);
+  }
+  .heroActions {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 18px auto 0;
+    width: 100%;
+    max-width: 340px;
+  }
+  .heroCopyCol .btnSecondary {
+    background: rgba(255, 250, 245, 0.94);
+    border-color: transparent;
+  }
+  .heroCopyCol h1 {
+    font-size: 34px;
   }
   .benefitHead {
     display: block;

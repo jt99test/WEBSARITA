@@ -226,7 +226,7 @@ export async function AstrologyTrainingBarcelonaPage({ locale }: { locale: Local
       <section className={styles.hero}>
         <div className={styles.wrap}>
           <div className={styles.heroGrid}>
-            <div>
+            <div className={styles.heroCol}>
               <div className={styles.eyebrow}>{content.eyebrow}</div>
               <h1 className={styles.serif}>{content.title}</h1>
               <p className={styles.heroCopy}>{content.intro}</p>

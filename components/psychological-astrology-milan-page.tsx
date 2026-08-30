@@ -240,7 +240,7 @@ export async function PsychologicalAstrologyMilanPage({ locale }: { locale: Loca
       <section className={styles.subHero}>
         <div className={styles.wrap}>
           <div className={styles.subHeroGrid} style={{ marginTop: "26px" }}>
-            <div>
+            <div className={styles.subHeroCopy}>
               <div className={styles.eyebrow}>{content.eyebrow}</div>
               <h1 className={styles.subTitle}>{content.title}</h1>
               <p className={styles.subIntro}>{content.intro}</p>

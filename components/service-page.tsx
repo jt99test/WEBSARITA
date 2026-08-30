@@ -145,7 +145,7 @@ export function ServicePage({
 
       <section className={styles.hero}>
         <div className={`${styles.wrap} ${styles.heroGrid}`}>
-          <div>
+          <div className={styles.heroCopyCol}>
             <div className={styles.eyebrow}>{content.eyebrow}</div>
             <h1 className={styles.serif}>{content.title}</h1>
             <p className={styles.heroSub}>{content.lead}</p>
