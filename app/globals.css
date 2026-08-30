@@ -3153,3 +3153,47 @@ html {
     flex-direction: column;
   }
 }
+
+/* Mobile sticky bottom CTA bar (desktop keeps the floating circle) */
+.mobile-cta-bar {
+  display: none;
+}
+@media (max-width: 900px) {
+  .wa-float {
+    display: none !important;
+  }
+  .mobile-cta-bar {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: rgba(255, 253, 249, 0.94);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid #ded2c7;
+    transform: translateY(110%);
+    transition: transform 0.25s ease;
+  }
+  .mobile-cta-bar[data-visible="true"] {
+    transform: translateY(0);
+  }
+  .mobile-cta-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    width: 100%;
+    min-height: 48px;
+    border-radius: 10px;
+    background: #8d5a66;
+    color: #fff !important;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .mobile-cta-bar a:active {
+    background: #744651;
+  }
+}

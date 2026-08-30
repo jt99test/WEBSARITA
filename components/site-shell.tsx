@@ -2,6 +2,7 @@ import Link from "next/link";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { LocationAwareNavLink } from "@/components/location-aware-nav";
 import { MobileNav } from "@/components/mobile-nav";
+import { StickyCtaBar } from "@/components/sticky-cta-bar";
 import { WhatsAppIcon } from "@/components/whatsapp-icon";
 import { homeV4Content } from "@/lib/home-v4-content";
 import { Locale } from "@/lib/locales";
@@ -183,7 +184,7 @@ export function SiteShell({
       </footer>
 
       <a
-        className={styles.waFloat}
+        className={`${styles.waFloat} wa-float`}
         href={buildWhatsAppLink(content.whatsappMessages.consult)}
         target="_blank"
         rel="noopener noreferrer"
@@ -191,6 +192,7 @@ export function SiteShell({
       >
         <WhatsAppIcon size={30} />
       </a>
+      <StickyCtaBar href={buildWhatsAppLink(content.whatsappMessages.consult)} label={content.mobileCta} />
     </div>
   );
 }
