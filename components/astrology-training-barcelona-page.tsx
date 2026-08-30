@@ -132,21 +132,21 @@ const reviewsCopy: Record<
 
 const imageAlts: Record<Locale, { hero: string; flatlay: string; hand: string; group: string; venue: string }> = {
   es: {
-    hero: "Sarita Shakti explicando una carta natal proyectada durante una clase de la formación",
+    hero: "Sarita Shakti enseñando delante de una carta natal proyectada en clase",
     flatlay: "Sarita Shakti en el estudio durante un encuentro de la formación",
     hand: "Sarita Shakti enseñando delante de una carta natal proyectada",
     group: "Foto de grupo de una promoción de la escuela de astrología psicológica",
     venue: "Sala cálida preparada para un encuentro presencial",
   },
   it: {
-    hero: "Sarita Shakti spiega un tema natale proiettato durante una lezione della formazione",
+    hero: "Sarita Shakti insegna davanti a un tema natale proiettato in classe",
     flatlay: "Sarita Shakti nello studio durante un incontro della formazione",
     hand: "Sarita Shakti insegna davanti a un tema natale proiettato",
     group: "Foto di gruppo di una classe della scuola di astrologia psicologica",
     venue: "Sala calda preparata per un incontro in presenza",
   },
   en: {
-    hero: "Sarita Shakti explaining a projected birth chart during a training class",
+    hero: "Sarita Shakti teaching in front of a projected birth chart in class",
     flatlay: "Sarita Shakti in the studio during a training meeting",
     hand: "Sarita Shakti teaching in front of a projected birth chart",
     group: "Group photo of a psychological astrology school class",
@@ -249,7 +249,7 @@ export async function AstrologyTrainingBarcelonaPage({ locale }: { locale: Local
             </div>
             <div className={styles.photo}>
               <Image
-                src="/images/formacion/clase-pantalla.jpg"
+                src="/images/formacion/clase-carta.jpg"
                 alt={alts.hero}
                 width={1200}
                 height={896}
@@ -268,7 +268,7 @@ export async function AstrologyTrainingBarcelonaPage({ locale }: { locale: Local
               <Image src="/images/formacion/sarita-estudio.jpg" alt={alts.flatlay} width={600} height={600} style={{ objectPosition: "50% 18%" }} sizes="(max-width: 1100px) 50vw, 22vw" />
             </div>
             <div className={`${styles.visual} ${styles.visualTall}`}>
-              <Image src="/images/formacion/clase-carta.jpg" alt={alts.hand} width={600} height={800} sizes="(max-width: 1100px) 50vw, 24vw" />
+              <Image src="/images/formacion/clase-pantalla.jpg" alt={alts.hand} width={600} height={800} sizes="(max-width: 1100px) 50vw, 24vw" />
             </div>
             <div className={styles.visual}>
               <Image src="/images/formacion/grupo-ancho.jpg" alt={alts.group} width={640} height={430} sizes="(max-width: 1100px) 50vw, 22vw" />

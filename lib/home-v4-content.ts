@@ -112,7 +112,7 @@ export const homeV4Content: Record<Locale, HomeV4Content> = {
       primaryCta: "Quiero orientación por WhatsApp",
       secondaryCta: "Ver las sesiones",
       freeNote: "¿No sabes qué sesión elegir? La primera orientación por WhatsApp es gratuita y sin compromiso.",
-      imageAlt: "Sarita Shakti explicando durante una sesión de astrología psicológica",
+      imageAlt: "Sarita Shakti, astróloga psicológica en Barcelona, riendo al aire libre",
       proof: [
         { strong: "25+ años", label: "de experiencia" },
         { strong: "Más de 1.000", label: "personas atendidas" },
@@ -261,7 +261,7 @@ export const homeV4Content: Record<Locale, HomeV4Content> = {
       primaryCta: "Voglio un orientamento su WhatsApp",
       secondaryCta: "Vedi le sessioni",
       freeNote: "Non sai quale sessione scegliere? Il primo orientamento su WhatsApp è gratuito e senza impegno.",
-      imageAlt: "Sarita Shakti durante una sessione di astrologia psicologica",
+      imageAlt: "Sarita Shakti, astrologa psicologica, che ride all'aperto",
       proof: [
         { strong: "25+ anni", label: "di esperienza" },
         { strong: "Più di 1.000", label: "persone accompagnate" },
@@ -410,7 +410,7 @@ export const homeV4Content: Record<Locale, HomeV4Content> = {
       primaryCta: "I want guidance on WhatsApp",
       secondaryCta: "See the sessions",
       freeNote: "Not sure which session to choose? The first WhatsApp orientation is free, with no obligation.",
-      imageAlt: "Sarita Shakti explaining during a psychological astrology session",
+      imageAlt: "Sarita Shakti, psychological astrologer in Barcelona, laughing outdoors",
       proof: [
         { strong: "25+ years", label: "of experience" },
         { strong: "More than 1,000", label: "people guided" },

@@ -128,10 +128,10 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
         </div>
         <div className={styles.heroMedia}>
           <Image
-            src="/images/home/hero-v3.jpg"
+            src="/images/home/sarita-risa.jpg"
             alt={content.hero.imageAlt}
-            width={1122}
-            height={1122}
+            width={1200}
+            height={1600}
             priority
             sizes="(max-width: 900px) 100vw, 56vw"
           />
