@@ -1,6 +1,7 @@
 /* Ported 1:1 from the Codex formación Barcelona design (main sections; site shell provides chrome). */
 
 .root {
+  --serif: var(--font-fraunces), Georgia, "Times New Roman", serif;
   --fbg: #f6f0e8;
   --fpaper: #fffaf4;
   --fink: #2f241e;
@@ -33,7 +34,7 @@
 }
 
 .serif {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-fraunces), Georgia, "Times New Roman", serif;
   font-weight: 400;
   letter-spacing: -0.035em;
   margin: 0;
@@ -193,7 +194,7 @@
 }
 .feature b {
   display: block;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-fraunces), Georgia, "Times New Roman", serif;
   font-size: 21px;
   font-weight: 400;
   line-height: 1.15;
@@ -300,7 +301,7 @@
   gap: 20px;
 }
 .sessionNo {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-fraunces), Georgia, "Times New Roman", serif;
   font-size: 42px;
   line-height: 1;
   color: var(--rose);
@@ -369,7 +370,7 @@
   border-radius: 18px;
   background: rgba(125, 70, 84, 0.93);
   color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-fraunces), Georgia, "Times New Roman", serif;
   font-size: 27px;
   line-height: 1.08;
 }
@@ -545,7 +546,7 @@
   padding: 10px 18px;
 }
 .scoreChip b {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-fraunces), Georgia, "Times New Roman", serif;
   font-size: 26px;
   font-weight: 400;
 }

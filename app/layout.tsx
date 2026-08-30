@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Cormorant_Garamond, Fraunces, Inter } from "next/font/google";
 import { isLocale } from "@/lib/locales";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
@@ -9,6 +9,12 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  axes: ["SOFT", "WONK", "opsz"],
 });
 
 const cormorant = Cormorant_Garamond({
@@ -61,7 +67,7 @@ export default async function RootLayout({
   return (
     <html
       lang={htmlLocale}
-      className={`${cormorant.variable} ${inter.variable} h-full antialiased`}
+      className={`${cormorant.variable} ${fraunces.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full">{children}</body>
     </html>

@@ -1,6 +1,7 @@
 /* Ported from the Codex service-page design (main sections; site shell provides chrome). */
 
 .root {
+  --serif: var(--font-fraunces), Georgia, "Times New Roman", serif;
   --sbg: #f7f1e9;
   --spaper: #fffaf5;
   --sink: #30231d;
@@ -33,7 +34,7 @@
   margin-bottom: 14px;
 }
 .serif {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-fraunces), Georgia, "Times New Roman", serif;
   font-weight: 400;
   letter-spacing: -0.035em;
   margin: 0;
@@ -55,15 +56,18 @@
   justify-content: center;
   gap: 8px;
   min-height: 51px;
-  padding: 0 21px;
-  border-radius: 999px;
-  font-weight: 850;
-  font-size: 14px;
+  padding: 0 22px;
+  border-radius: 14px 5px 14px 5px;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.01em;
   border: 1px solid var(--srose);
-  transition: 0.18s ease;
+  transition: border-radius 0.22s ease, transform 0.18s ease;
 }
 .btn:hover {
   transform: translateY(-1px);
+  border-radius: 5px 14px 5px 14px;
 }
 .btnPrimary {
   background: var(--srose);
@@ -115,7 +119,7 @@
   color: var(--sroseDark);
 }
 .heroSub {
-  font: 400 clamp(21px, 2vw, 25px) / 1.35 Georgia, serif;
+  font: var(--serif, Georgia, serif);
   color: #5d4437;
   max-width: 720px;
   margin: 22px 0 0;
@@ -182,7 +186,7 @@
   width: 230px;
 }
 .chartNote b {
-  font: 400 21px Georgia, serif;
+  font: var(--serif, Georgia, serif);
 }
 .chartNote span {
   display: block;
@@ -651,7 +655,7 @@
   color: var(--sroseDark);
 }
 .hubLead {
-  font: 400 18px/1.4 Georgia, serif;
+  font: var(--serif, Georgia, serif);
   color: #5d4437;
   margin: 12px 0 0;
 }
